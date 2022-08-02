@@ -33,7 +33,7 @@ p{
     font-size: 1rem;
 }
 
-@media screen and (max-width:320px){     /* ----- Media Queries Mobile Encabezados ----- */
+@media screen and (max-width:480px){     /* ----- Media Queries Mobile Encabezados ----- */
     .EncabezadoSecciones h1{
         font-size: 13px;
         padding: 5px;
@@ -121,13 +121,13 @@ nav{
     justify-content: center;
 }
 
-@media screen and (max-width:320px) {     /* ----- Media Queries Mobile Header ----- */
+@media screen and (max-width:480px) {     /* ----- Media Queries Mobile Header ----- */
     nav{
         height: auto;
     }
     .menu li a{
         font-size: 12px;
-        padding: 5px 10px;
+        padding: 5px 20px;
         margin: 0;
     }
 
@@ -137,6 +137,9 @@ nav{
     }
     .icono{
         width: 110px;
+    }
+    .descargar{
+        display: none;
     }
 }
 
@@ -200,11 +203,11 @@ box-shadow: black 3px 3px 6px 0px;
     box-shadow: black 0px 0px 25px 10px;
 }
 
-@media screen and (max-width:320px){   /* ----- Media Queries Mobile SECCION 1 Inicio Bienvenidos----- */
+@media screen and (max-width:480px){   /* ----- Media Queries Mobile SECCION 1 Inicio Bienvenidos----- */
     .SeccionBienvenidos{
         display: flex;
         flex-direction: column;
-        padding: 0px;
+        padding: 20px;
     }
     .SobreElJuego{
         padding: 10px;
@@ -220,6 +223,7 @@ box-shadow: black 3px 3px 6px 0px;
         border: none;
         padding: 20px;
         align-items: center;
+        margin-bottom: 20px;
     }
     .plataformas2 img{
         width: 40px;
@@ -231,8 +235,7 @@ box-shadow: black 3px 3px 6px 0px;
         width: 40px;
     }
     .mobile{
-        width: 280px;
-        padding-top: 10px;
+        width: 100%;
     }
 }
 
@@ -251,13 +254,13 @@ box-shadow: black 3px 3px 6px 0px;
     background-size: cover;
     color: #ffffff;
     padding: 30px 0px 0px 40px;
-    box-shadow: black 3px 3px 6px 0px;
+    border: 1px solid #7e7e7e;
+
     height: 240px;
 }
 
-.DivDLCSadako img{ /* ----- Inicio DLC Sadako Rising ----- */  
+.DivDLCSadako img{      /* ----- Inicio DLC Sadako Rising ----- */  
     width: 700px;
-    box-shadow: black 3px 3px 6px 0px;
 }
 .ContieneSadako{      
     display: grid;
@@ -267,14 +270,14 @@ box-shadow: black 3px 3px 6px 0px;
 }
 .SeccionDLC>.DivDLCSadako{
     transition: 0.5s;
+    box-shadow: black 0px 0px 25px 10px;
 }
 .SeccionDLC>.DivDLCSadako:hover{
     transform: scale(1.1,1.1);
 }
 
-.DivDLCResident img{     /* ----- Inicio DLC Resident Evil ----- */
+.DivDLCResident img{    /* ----- Inicio DLC Resident Evil ----- */
     width: 700px;
-    box-shadow: black 3px 3px 6px 0px;
 }
 .ContieneResident{     
 display: grid;
@@ -284,29 +287,31 @@ grid-row-gap: 30px;
 }
 .SeccionDLC>.DivDLCResident{
     transition: 0.5s;
+    box-shadow: black 0px 0px 25px 10px;
 }
 .SeccionDLC>.DivDLCResident:hover{
     transform: scale(1.1,1.1);
 }
 
-@media screen and (max-width:320px){     /* ----- Media Queries Mobile SECCION 2 Inicio DLC ----- */
+@media screen and (max-width:480px){     /* ----- Media Queries Mobile SECCION 2 Inicio DLC ----- */
 
     .SeccionDLC{
         display: flex;
         flex-direction: column;
         padding: 10px;
+        align-items: center;
     }
     .DivDLC{
         padding: 10px;
         height: auto;
-        width: 290px;
+        width: 350px;
     }
     .DivDLCSadako img{
-        width: 290px;
+        width: 350px;
     }
     .DivDLCResident img{
-        width: 290px;
-        padding-top: 20px;
+        width: 350px;
+        margin-top: 20px;
     }
 }
 
@@ -393,14 +398,14 @@ grid-row-gap: 30px;
     transform: scale(1.1,1.1);
 }
 
-@media screen and (max-width:320px){     /* ----- Media Queries Mobile SECCION 3 Inicio De que lado estas?----- */
+@media screen and (max-width:480px){     /* ----- Media Queries Mobile SECCION 3 Inicio De que lado estas?----- */
     .EncabezadoSeccion3{
         display: none;
     }
     .personajes{
         display: flex;
         flex-direction: column;
-        padding: 10px;
+        padding: 20px;
     }
     .DivMikaela1{
         display: flex;
@@ -410,14 +415,14 @@ grid-row-gap: 30px;
         padding-top: 10px;
     }
     .DivMikaela1 img{
-        width: 290px;
+        width: 330px;
     }
     .DivMikaela2{
         margin: 0px;
         margin-bottom: 25px;
         padding: 10px;
         height: auto;
-        width: 290px;
+        width: auto;
     }
     .DivTrickster1{
         display: flex;
@@ -427,13 +432,13 @@ grid-row-gap: 30px;
         padding-bottom: 10px;
     }
     .DivTrickster1 img{
-        width: 290px;
+        width: 330px;
     }
     .DivTrickster2{
         margin: 0px;
         padding: 10px;
         height: auto;
-        width: 290px;
+        width: auto;
     }
 }
 
@@ -461,12 +466,12 @@ grid-row-gap: 30px;
 }
 .InicioNoticias img:hover{
     transform: scale(1.1,1.1);
+    border: 2px solid #7c0000;
 }
-.InicioAniversario{ /* --- Noticias Aniversario --- */
+.InicioAniversario{   /* --- Noticias Aniversario --- */
     background-image: url(../Media/Background.jpg);
     background-size: cover;
-    border: 1px solid black;
-    box-shadow: black 3px 3px 6px 0px;
+    box-shadow: black 0px 0px 25px 10px;
     grid-area: InicioAniversario;
 }
 .InicioAniversarioMedia{
@@ -480,41 +485,39 @@ grid-row-gap: 30px;
 .InicioAniversarioMedia iframe{
     width: 600px;
     height: 300px;
-    border: 1px solid black;
-    box-shadow: black 3px 3px 6px 0px;
+    border: 1px solid #7c0000;
+    box-shadow: black 0px 0px 25px 10px;
 }
 .InicioAniversarioMedia img{
-    border: 1px solid black;
-    box-shadow: black 3px 3px 6px 0px;
+    border: 1px solid #7c0000;
+    box-shadow: black 0px 0px 25px 10px;
 }
 
-.InicioCapitulo24{ /* --- Noticias Capitulo 24 --- */
+.InicioCapitulo24{   /* --- Noticias Capitulo 24 --- */
     background-image: url(../Media/Background.jpg);
-    border: 1px solid black;
-    box-shadow: black 3px 3px 6px 0px;
+    box-shadow: black 0px 0px 25px 10px;
     grid-area: InicioCapitulo24;
     justify-items: center;
     
 }
 .InicioCapitulo24 img{
     width: 480px;
-    border: 1px solid black;
-    box-shadow: black 3px 3px 6px 0px;
+    border: 1px solid #7c0000;
+    box-shadow: black 0px 0px 25px 10px;
 }
 
-.InicioTomo12{ /* --- Noticias Tomo 11 --- */
+.InicioTomo12{   /* --- Noticias Tomo 12 --- */
     background-image: url(../Media/Background.jpg);
-    border: 1px solid black;
-    box-shadow: black 3px 3px 6px 0px;
+    box-shadow: black 0px 0px 25px 10px;
     grid-area: InicioTomo12;
 }
 .InicioTomo12 img{
     width: 480px;
-    border: 1px solid black;
-    box-shadow: black 3px 3px 6px 0px;
+    border: 1px solid #7c0000;
+    box-shadow: black 0px 0px 25px 10px;
 }
 
-@media screen and (max-width:320px){     /* ----- Media Queries Mobile SECCION 4 Inicio Noticias ----- */
+@media screen and (max-width:480px){     /* ----- Media Queries Mobile SECCION 4 Inicio Noticias ----- */
     .InicioNoticias{
         display: flex;
         flex-direction: column;
@@ -585,7 +588,7 @@ footer{
     width: 300px;
 }
 
-@media screen and (max-width:320px){     /* ----- Media Queries Mobile Inicio Footer ----- */
+@media screen and (max-width:480px){     /* ----- Media Queries Mobile Inicio Footer ----- */
     .DivFooter{
         display: flex;
         flex-direction: column;
@@ -670,9 +673,11 @@ justify-content: space-around;
 }
 
 
-@media screen and (max-width:320px) { /* ---------- Media Queries Mobile Juego Personajes ----------*/ 
+@media screen and (max-width:480px) { /* ---------- Media Queries Mobile Juego Personajes ----------*/ 
     .JuegoSobrevivientes{ /* ----- Sobreviviente -----*/
         padding-top: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
         display: grid;
         grid-template-columns: 1fr;
     }
@@ -680,10 +685,13 @@ justify-content: space-around;
         width: 130px;
     }
     .JuegoSobrevivientes>div{
-        padding: 25px;
+        width: auto;
     }
     .JuegoAsesinos{ /* ----- Asesino -----*/
         padding-bottom: 10px;
+        padding-top: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
         display: grid;
         grid-template-columns: 1fr;
     }
@@ -691,7 +699,7 @@ justify-content: space-around;
         width: 130px;
     }
     .JuegoAsesinos>div{
-        padding: 25px;
+        width: auto;
     }
 }
 
@@ -702,7 +710,8 @@ justify-content: space-around;
 .comunidad{
     color: white;
     background-color: #000000;
-    background-image: linear-gradient(315deg, #0e0e0e 0%, #000 74%); 
+    background-image: linear-gradient(315deg, black 0%, #0e0e0e 74%);
+    background-size: cover;
     display: grid;
     grid-template-columns: 1fr 1fr;
     justify-items: center;
@@ -713,11 +722,11 @@ justify-content: space-around;
 }
 .ComunidadMedia img{
     width: 100%;
-    box-shadow: #1a1a1a 0px 0px 25px 0px;
-    
+    box-shadow: #727272 0px 0px 25px 0px;
 }
 .ComunidadIconos img{
     width: 100px;
+    border-radius: 100px;
 }
 .ComunidadIconos h2{
     padding: 20px;
@@ -763,6 +772,7 @@ justify-content: space-around;
 }
 .ComunidadRedesIconos img{
     width: 100px;
+    border-radius: 100px;
 }
 .ComunidadRedesIconos h2{
     padding: 20px;
@@ -779,7 +789,7 @@ justify-content: space-around;
 
 
 
-@media screen and (max-width:320px){ /* ---------- Media Queries Mobile Comunidad ----------*/
+@media screen and (max-width:480px){ /* ---------- Media Queries Mobile Comunidad ----------*/
     .ComunidadIconos img, .ComunidadRedesIconos img{
         width: 30px;
     }
@@ -842,6 +852,8 @@ justify-content: space-around;
 .aniversario iframe{ 
     width: 600px;
     height: 300px;
+    border: 1px solid #7c0000;
+    box-shadow: black 0px 0px 25px 10px;
 }
 .AniversarioMedia{
     display: grid;
@@ -849,9 +861,25 @@ justify-content: space-around;
     justify-content: center;
     padding-top: 30px;
 }
+.aniversario img{
+    border: 1px solid #7c0000;
+    box-shadow: black 0px 0px 25px 10px;
+    transition: 0.5s;
+}
+.aniversario img:hover{
+    transform: scale(1.1,1.1);
+    border: 2px solid #7c0000;
+}
 
 .capitulo24 img{ /* ----- Capitulo 24 ----- */
     width: 480px;
+    border: 1px solid #7c0000;
+    box-shadow: black 0px 0px 25px 10px;
+    transition: 0.5s;
+}
+.capitulo24 img:hover{
+    transform: scale(1.1,1.1);
+    border: 2px solid #7c0000;
 }
 .capitulo24{
     background-image: url(../Media/Noticias/Noticias\ fondo.png);
@@ -860,6 +888,13 @@ justify-content: space-around;
 
 .tomo12 img{ /* ----- Tomo 12 ----- */
     width: 480px;
+    border: 1px solid #7c0000;
+    box-shadow: black 0px 0px 25px 10px;
+    transition: 0.5s;
+}
+.tomo12 img:hover{
+    transform: scale(1.1,1.1);
+    border: 2px solid #7c0000;
 }
 .tomo12{
     background-image: url(../Media/Noticias/Noticias\ fondo.png);
@@ -868,6 +903,13 @@ justify-content: space-around;
 
 .titan img{ /* ----- Attack of Titan ----- */
     width: 480px;
+    border: 1px solid #7c0000;
+    box-shadow: black 0px 0px 25px 10px;
+    transition: 0.5s;
+}
+.titan img:hover{
+    transform: scale(1.1,1.1);
+    border: 2px solid #7c0000;
 }
 .titan{
     background-image: url(../Media/Noticias/Noticias\ fondo.png);
@@ -876,13 +918,20 @@ justify-content: space-around;
 
 .rock img{ /* ----- Rock a Bolly ----- */
     width: 480px;
+    border: 1px solid #7c0000;
+    box-shadow: black 0px 0px 25px 10px;
+    transition: 0.5s;
+}
+.rock img:hover{
+    transform: scale(1.1,1.1);
+    border: 2px solid #7c0000;
 }
 .rock{
     background-image: url(../Media/Noticias/Noticias\ fondo.png);
     grid-area: rock;
 }
 
-@media screen and (max-width:320px){
+@media screen and (max-width:480px){
     .noticias{
         display: flex;
         flex-direction: column;
@@ -979,7 +1028,7 @@ textarea{
     padding-left: 90px;
 }
 
-@media screen and (max-width:320px){
+@media screen and (max-width:480px){
     .contacto{
         display: flex;
         flex-direction: column-reverse;
@@ -990,16 +1039,30 @@ textarea{
         width: 100vw;
     }
     .FormTexto p{
-        font-size: 1rem;
+        font-size: 0.9rem;
         text-align: center;
     }
     .formulario{
         padding-bottom: 40px;
+        width: 75%;
     }
     form{
         width: 90vw;
     }
     legend{
-        font-size: 1.1rem;
+        font-size: 1rem;
+    }
+    label{
+        font-size: 0.7rem;
+    }
+    textarea{
+        height: 70px;
+    }
+    .box{
+        margin: 0px 50px 0px 20px;
+    }
+    #asunto{
+        width: auto;
+        font-size: 0.6rem;
     }
 }
