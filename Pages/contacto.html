@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../Css/estilo.css">
+    <title>Contacto</title>
+</head>
+<body>
+    <header> <!----- Inicio Logo ----->
+        <div>
+        <img src="../Media/Icono.png" alt="icono" class="icono"> 
+        </div>
+    </header>
+    
+    <nav> <!----- Inicio Menu Nav ----->
+        <ul class="menu"> 
+            <li><a href="../index.html">Inicio</a>
+                <ul>
+                    <li><a href="">Submenu1</a></li>
+                    <li><a href="">Submenu2</a></li>
+                    <li><a href="">Submenu3</a></li>
+                </ul>
+            </li>
+            <li><a href="../Pages/juego.html">Juego</a></li>
+            <li><a href="../Pages/comunidad.html">Comunidad</a></li>
+            <li><a href="../Pages/noticias.html">Noticias</a></li>
+            <li><a href="../Pages/contacto.html">Contacto</a></li>
+            <a class="descargar" href="./Pages/descargar.html">DESCARGAR</a>
+        </ul>
+    </nav>
+
+    <main>
+        <!--------------- Banner principal --------------->
+        <section class="banner"> 
+            <img src="../Media/Banner.jpg" alt="Foto principal" width="1750px">
+        </section> 
+
+        <div class="EncabezadoSecciones">
+            <h1>Contacto</h1>
+        </div>
+
+        <div class="contacto"> <!----- Formulario ----->
+            <div class="formulario">
+                <form> 
+                    <div>
+                        <legend> Completa el formulario </legend></div>  <br>
+                    <div class="box">
+                        <label for="Nombre:">Nombre:</label> 
+                        <input type="text" name="Nombre:" required>  <br> <br>
+                    </div>
+                    <div class="box">
+                        <label for="Apellido:">Apellido:</label> 
+                        <input type="text" name="Apellido:" required> <br> <br>
+                    </div>
+                    <div class="box">
+                        <label for="Email:">Email:</label> 
+                        <input type="email" name="Email:" required> <br> <br>
+                    </div>
+                    
+                <div>
+                    <select name="asunto" id="asunto"> 
+                        <option value="Sugerencia">Sugerencia</option>
+                        <option value="Soporte">Soporte</option>
+                        <option value="Otro">Otro</option>
+                    </select> <br> <br>
+                </div>
+
+                    <div class="novedades">
+                        <label for="Aceptar">¿Deseas recibir las últimas novedades?</label>
+                        <input type="checkbox" name="Aceptar"> <br> <br>
+
+                        <textarea name="Comentarios" id="Comentarios" cols="50" rows="10" placeholder="Deja un comentario"></textarea> <br> 
+
+                        <input type="submit" value="Enviar datos" class="enviar">
+                    </div>
+                </form> 
+            </div>
+
+            <div class="FormTexto">
+                <p> Si tienes alguna sugerencia, necesitas soporte con el juego u otro asunto, por favor completa el formulario y nos pondremos en contacto. </p>
+            </div>
+        </div>
+    </main>
+    
+    <footer> <!--------------- SECCION 5 INICIO FOOTER --------------->
+        <div class="DivFooter">
+            <div class="MenuFooter"> <!----- Menú Footer ----->
+                <ul>
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="../Pages/juego.html">Juego</a></li>
+                    <li><a href="../Pages/comunidad.html">Comunidad</a></li>
+                    <li><a href="../Pages/noticias.html">Noticias</a></li>
+                    <li><a href="../Pages/contacto.html">Contacto</a></li>
+                    <li><a href="../Pages/descargar.html">Descargar</a></li>
+                </ul>
+            </div>
+            <div> <!----- Redes Footer ----->
+                <div class="unete">
+                    <h2>Únete a la comunidad!</h2>
+                </div>
+                <div class="IconoRedes">
+                    <div><img src="../Media/Redes/Instagram.png" alt="Instagram" width="40px"></div>
+                    <div><img src="../Media/Redes/Tiktok.png" alt=" Tik Tok" width="40px"></div>
+                    <div><img src="../Media/Redes/Youtube.png" alt="Youtube" width="40px"></div>
+                    <div><img src="../Media/Redes/Twitter.png" alt="Twitter" width="40px"></div>
+                    <div><img src="../Media/Redes/Facebook.png" alt="Facebook" width="40px"></div>
+                </div>
+            </div>
+            <div class="IconoFooter"> <!----- Icono Footer ----->
+                <img src="../Media/Icono.png" alt="Icono Logo" width="300px">
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
