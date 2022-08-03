@@ -971,7 +971,11 @@ form{
     color: #000000;
     background-color: #ffffff;
     font-family: "roboto";
-    box-shadow: 0 0 6px #ffffffcc;
+    box-shadow: 0px 0px 6px 0px #ffffffcc;
+    transition: 0.5s;
+}
+form:hover{
+    box-shadow: 0px 0px 6px 5px #ffffffcc;
 }
 .box{
 margin: 30px 50px 10px 20px;
@@ -1022,10 +1026,26 @@ textarea{
 .FormTexto p{
     font-size: 2rem;
     color: white;
+    animation: contacto_animacion;
+    animation-duration: 5s;
+    transition: 0.5s ease-in-out;
+    animation-iteration-count: infinite;
+    position: relative;
 }
 .FormTexto{
     width: 25vw;
     padding-left: 90px;
+}
+@keyframes contacto_animacion{
+    0%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(-20px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
 }
 
 @media screen and (max-width:480px){
