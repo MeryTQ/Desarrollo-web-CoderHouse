@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="./Css/bootstrap.min.css">
     <link rel="stylesheet" href="./Css/estilo.css">
     <title>Dead by Daylight</title>
 </head>
@@ -41,13 +42,13 @@
             <img src="./Media/Banner.jpg" alt="Foto principal" class="wow animate__animated animate__fadeIn">
         </section> 
         
-        <!--------------- SECCION 1 INICIO BIENVENIDOS --------------->
+        <!--------------------------------------------------------------------------------- SECCION 1 INICIO BIENVENIDOS ---------------------------------------------------------------------------------------------->
 
         <div class="EncabezadoSecciones" >
             <h1> Bienvenidx a este juego de horror, donde la muerte no es una salida. </h1>
         </div>
         <section class="SeccionBienvenidos">  
-            <article class="SobreElJuego" > <!----- Sobre el juego ----->
+            <article class="SobreElJuego wow animate__animated animate__fadeIn" > <!----- Sobre el juego ----->
                 <h2>¿Queres saber de que se trata?</h2> <br>
                 <p>Dead by Daylight es un juego de horror de multijugador (4 contra 1) en el que un jugador representa el rol del asesino despiadado y los 4 restantes juegan como supervivientes que intentan escapar de él para evitar ser capturados y asesinados.</p> <br>
                 <h3>Survivor:</h3>
@@ -58,7 +59,7 @@
                 <p>Al cazar a los supervivientes, el asesino debe capturarlos golpeándolos dos veces con su arma, atraparlos dentro de los casilleros, mientras reparan un generador o intentan salvar a un compañero superviviente. El asesino puede matar inicialmente a los sobrevivientes arrojándolos sobre uno de los muchos ganchos de carne en el área y esperando que las garras de The Entity finalmente terminen con el sobreviviente, llevando su alma al cielo. Sin embargo, después de que un jugador haya ganado suficientes puntos de experiencia como asesino, se pueden desbloquear ciertos objetos de un solo uso llamados 'Memento Mori' que incluyen la habilidad de acabar con los sobrevivientes instantáneamente con su arma.</p>
             </article>
             
-            <article class="plataformas1"> <!----- Plataformas disponibles ----->
+            <article class="plataformas1 wow animate__animated animate__fadeIn"> <!----- Plataformas disponibles ----->
                 <div class="plataformas2">
                     <div>
                         <h2>¡Disponible en todas las plataformas!</h2> <br>
@@ -81,61 +82,148 @@
             </article>
         </section>
         
-        <!--------------- SECCION 2 INICIO DLC --------------->
+        <!---------------------------------------------------------------------------------- SECCION 2 INICIO DLC ----------------------------------------------------------------------------------------------------->
 
         <div class="EncabezadoSecciones">
             <h1> Nuestros DLC </h1>
         </div>
-        <section class="SeccionDLC">  
-            <article class="DivDLCSadako" data-aos="zoom-out"> <!----- DLC Sadako Rising ----->
-                <img src="./Media/DLC/Sadako Rising.jpg" alt="DLC Sadako Rising">
-                <div class="DivDLC">
-                    <div> <h2>Contiene:</h2> </div> <br>
-                    <div class="ContieneSadako">
-                        <div>
-                            <h4>Survivor:</h4>
-                            <p>- Yoichi Asakawa.</p>
+
+        <section class="dlc__seccion ">  
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true"> <!---------- Carousel ---------->
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+
+                <div class="carousel-inner wow animate__animated animate__fadeIn">
+                    <div class="carousel-item active">    <!---------- Carousel 1 ---------->
+                        <div class="cards-wrapper dlc__carousel">
+                            <div class="card dlc__card""> <!---------- Card Sadako Rising---------->
+                                <img src="./Media/DLC/Sadako Rising.jpg" class="card-img-top" alt="DLC Sadako Rising">
+                                <div class="dlc__card__body">
+                                    <div>
+                                        <h4>Killer:</h4>
+                                        <p>- Sadako Rising</p>
+                                        <h4>Survivor:</h4>
+                                        <p>- Yoichi Asakawa.</p>
+                                    </div>
+                                    <div>
+                                        <h4>Cosmetics:</h4>
+                                        <p>- Llavero universal exclusivo.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card dlc__card" > <!----- Card Resident Evil ----->
+                                <img src="./Media/DLC/Resident Evil.jpg" class="card-img-top" alt="DLC Sadako Rising">
+                                <div class="dlc__card__body">
+                                    <div>
+                                        <h4>Killer:</h4>
+                                        <p>- Nemesis.</p>
+                                        <h4>Survivor:</h4>
+                                        <p>- Jill Valentine y Leon S. Kennedy.</p>
+                                    </div>
+                                    <div>
+                                        <h4>Mapa:</h4>
+                                        <p>- Estacion de policia de Raccoon City.</p>
+                                        <h4>Cosmetics:</h4>
+                                        <p>- Llavero universal exclusivo.</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div>
-                            <h4>Cosmetics:</h4>
-                            <p>- Item exclusivo universal.</p>
+                    </div>
+
+                    <div class="carousel-item">   <!---------- Carousel 2 ---------->
+                        <div class="cards-wrapper dlc__carousel">
+                            <div class="card dlc__card"> <!---------- Card Portrait of a Murder ---------->
+                                <img src="./Media/DLC/Murder.png" class="card-img-top" alt="DLC Portrait of a Murder">
+                                <div class="dlc__card__body">
+                                    <div>
+                                        <h4>Killer:</h4>
+                                        <p>- La Artista.</p>
+                                        <h4>Survivor:</h4>
+                                        <p>- Jonah Vasquez.</p>
+                                    </div>
+                                    <div>
+                                        <h4>Mapa:</h4>
+                                        <p>- Nido de cuervos.</p>
+                                        <h4>Cosmetics:</h4>
+                                        <p>- Item exclusivo para Jonah.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card dlc__card"> <!---------- Card Saw ---------->
+                                <img src="./Media/DLC/Saw.jpg" class="card-img-top" alt="DLC Saw">
+                                <div class="dlc__card__body">
+                                    <div>
+                                        <h4>Killer:</h4>
+                                        <p>- La cerda.</p>
+                                        <h4>Survivor:</h4>
+                                        <p>- Detective Tapp.</p>
+                                    </div>
+                                    <div>
+                                        <h4>Mapa:</h4>
+                                        <p>- Planta procesadora de Carne Gideon.</p>
+                                        <h4>Cosmetics:</h4>
+                                        <p>- Item exclusivo para Detective Tapp.</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div>
-                            <h4>Killer:</h4>
-                            <p>- La Onryō.</p>
+                    </div>
+                    
+                    <div class="carousel-item">   <!---------- Carousel 3 ---------->
+                        <div class="cards-wrapper dlc__carousel">
+                            <div class="card dlc__card">   <!---------- Card A Nightmare on Elm Street  ---------->
+                                <img src="./Media/DLC/Freddy.jpg" class="card-img-top" alt="DLC A Nightmare on Elm Street">
+                                <div class="dlc__card__body">
+                                    <div>
+                                        <h4>Killer:</h4>
+                                        <p>- La Pesadilla.</p>
+                                        <h4>Survivor:</h4>
+                                        <p>- Quentin Smith.</p>
+                                    </div>
+                                    <div>
+                                        <h4>Mapa:</h4>
+                                        <p>- Springwood - Guarderia Badham.</p>
+                                        <h4>Cosmetics:</h4>
+                                        <p>- Item exclusivo para Quentin Smith.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card dlc__card">   <!---------- Card Halloween ---------->
+                                <img src="./Media/DLC/Halloween.jpg" class="card-img-top" alt="DLC Halloween">
+                                <div class="dlc__card__body">
+                                    <div>
+                                        <h4>Killer:</h4>
+                                        <p>- Michael Myers.</p>
+                                        <h4>Survivor:</h4>
+                                        <p>- Laurie Strode.</p>
+                                    </div>
+                                    <div>
+                                        <h4>Mapa:</h4>
+                                        <p>- Haddonfield - Calle Lampkin.</p>
+                                        <h4>Cosmetics:</h4>
+                                        <p>- Item exclusivo para Laurie Strode.</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </article>
-            
-            <article class="DivDLCResident" data-aos="zoom-out"> <!----- DLC Resident Evil ----->
-                <img src="./Media/DLC/Resident Evil.jpg" alt="DLC Resident Evil">
-                <div class="DivDLC">
-                    <div> <h2>Contiene:</h2> </div> <br>
-                    <div class="ContieneResident">
-                        <div>
-                            <h4>Survivor:</h4>
-                            <p> - Leon S. Kennedy.</p>
-                            <p> - Jill Valentine. </p>
-                        </div>
-                        <div>
-                            <h4>Cosmetic:</h4>
-                            <p> - Item exclusivo universal.</p>
-                        </div>
-                        <div>
-                            <h4>Killer:</h4>
-                            <p> - Némesis.</p>
-                        </div>
-                        <div>
-                            <h4>Map:</h4>
-                            <p> - Comisaría de Raccoon City.</p>
-                        </div>
-                    </div>
-                </div>
-            </article>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
         </section> 
         
-        <!--------------- SECCION 3 INICIO DE QUE LADO ESTAS? --------------->
+        <!--------------------------------------------------------------------------------------- SECCION 3 INICIO DE QUE LADO ESTAS? --------------------------------------------------------------------------------->
 
         <div class="EncabezadoSecciones">  
             <h1> ¿De que lado estas? </h1>
@@ -149,26 +237,104 @@
             </div>
         </div>
 
-        <section class="personajes">  
-            <div class="DivMikaela1" data-aos="zoom-in-right"> <!----- Sobreviviente Mikaela Reid ----->
-                <div class="DivMikaela2"> 
-                    <h2>Mikaela Reid</h2> <br>
-                    <p>A la deriva tras la muerte de su padre, Mikaela Reid encontró consuelo en las oscuras delicias del horror. Consumiendo ansiosamente cuentos de lo macabro, perfeccionó sus habilidades para contar historias y comenzó a practicar la brujería. Sin embargo, cuando cayó la oscuridad, se vio acosada por pesadillas de ganchos y figuras siniestras. Una noche, su compañera de cuarto incluso la vio levitar sobre su cama. Mikaela siempre había sospechado la existencia de reinos más allá del velo de la realidad. Pronto descubriría cuán delgado era realmente ese velo.</p>
+        <section class="personajes">   <!---------- Inicio personajes Carousel ---------->
+        <div id="carousel_inicio" class="carousel slide" data-bs-ride="true">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carousel_inicio" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carousel_inicio" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carousel_inicio" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="cards-wrapper personajes__carousel">
+                        <div class=" personajes__card">   <!----- Card Inicio Yun-Jin Lee ----->
+                            <div class="personajes__cont personajes__surv">
+                                <div>
+                                    <img src="./Media/Personajes/Yun.jpg" alt="Yun-Jin Lee">
+                                </div>
+                                <div class="personajes__surv__text">
+                                    <h5 class="card-title">Yun-Jin Lee</h5>
+                                    <p class="card-text">La primera tarea del ambicioso productor Yun-Jin Lee fue No Spin, una banda de chicos en quiebra. Cuando trajo al carismático Ji-Woon Hak a bordo, No Spin se elevó a nuevas alturas. La tragedia golpeó cuando el grupo, a excepción de Ji-Woon, pereció en un incendio. Con el caos llegó la oportunidad. Ji-Woon cambió su nombre a The Trickster y juntos se embarcaron en un torbellino de fama y creatividad. Sin embargo, comenzó a sospechar que su cliente estrella escondía un secreto inquietante, uno que arruinaría todo lo que ella trabajó tan duro para construir.</p>   
+                                </div>
+                            </div>
+                        </div>
+                        <div class="personajes__card">   <!----- Card Inicio The Trickster ----->
+                            <div class="personajes__cont">
+                                <div>
+                                    <img src="./Media/Personajes/Trickster.jpg" alt="Trickster">
+                                </div>
+                                <div class="personajes__kill__text">
+                                    <h5 class="card-title">Trickster</h5> 
+                                    <p class="card-text">Después de la trágica muerte de sus compañeros de No Spin, Ji-Woon Hak renació como The Trickster. Ya no retenido por colaboradores inferiores, rápidamente ganó audiencias en todo el mundo. Multitudes de adoradores corearon su nombre, pero no fue suficiente. Su deseo de ser inmortalizado solo podía ser saciado a través del derramamiento de sangre. Sus víctimas se convirtieron en instrumentos, tocados y arreglados para dar vida a su visión retorcida. Los sonidos de sus gritos de angustia y súplicas desesperadas eran música para sus oídos.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div>
-                    <img src="./Media/Personajes/Mikaela.jpg" alt="Mikaela">
+                <div class="carousel-item">
+                    <div class="cards-wrapper personajes__carousel">
+                        <div class=" personajes__card">   <!----- Card Inicio Élodie Rakoto ----->
+                            <div class="personajes__cont personajes__surv">
+                                <div>
+                                    <img src="./Media/Personajes/Elodie.jpg" alt="Élodie Rakoto">
+                                </div>
+                                <div class="personajes__surv__text">
+                                    <h5 class="card-title">Élodie Rakoto</h5> 
+                                    <p class="card-text">Élodie Rakoto estuvo obsesionada para siempre por esa noche en Dyer Island. Mientras sus padres manejaban unos, ella exploró las ruinas. Todavía recordaba las garras de obsidiana desgarrando el suelo, los gritos de su madre y su padre corriendo para protegerla. Le salvaron la vida, solo para desaparecer por completo. En busca de respuestas, Élodie se sumergió en una madriguera de conejo, recolectando artefactos ocultos a cambio de información. Su curiosidad no pasó desapercibida y las fuerzas oscuras convergieron para llevar su búsqueda a un final violento.</p>   
+                                </div>
+                            </div>
+                        </div>
+                        <div class="personajes__card">   <!----- Card Inicio The Twins ----->
+                            <div class="personajes__cont">
+                                <div>
+                                    <img src="./Media/Personajes/Twins.jpg" alt="Los gemelos">
+                                </div>
+                                <div class="personajes__kill__text">
+                                    <h5 class="card-title">Los gemelos</h5> 
+                                    <p class="card-text">La alegría y la bondad que había en los gemelos unidos Charlotte y Victor Deshayes murieron con su madre. Enjaulados y transportados a un antiguo templo de madera, fueron vendidos a un grupo secreto vestido con capas oscuras. Víctor reaccionó con la ferocidad de una bestia rabiosa a cualquiera que se acercara, arañando y mordiendo. El único consuelo que podía calmarlo era el abrazo de su hermana. Charlotte, amargada y odiosa para todos menos para su hermano, encontró un propósito en ser su protectora.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="cards-wrapper personajes__carousel">
+                        <div class=" personajes__card">   <!----- Card Inicio Nea Karlsson ----->
+                            <div class="personajes__cont personajes__surv">
+                                <div>
+                                    <img src="./Media/Personajes/Nea.jpg" alt="Nea Karlsson">
+                                </div>
+                                <div class="personajes__surv__text">
+                                    <h5 class="card-title">Nea Karlsson</h5> 
+                                    <p class="card-text">Nea creció en la pequeña ciudad de Hjo en Suecia, alejándose de la normalidad esperada. Su etiqueta, Mashtyx, decoró rápidamente su ciudad natal. Nea hizo un deporte de grafitear edificios gubernamentales, evitando a las autoridades con su gran agilidad. Es posible que haya ido demasiado lejos cuando sus amigos la desafiaron a grafitear el asilo Crotus Prenn abandonado, pero Nea nunca se retractó de ese desafío. Ella nunca regresó. Cuando llegó la policía, todo lo que encontraron fue su etiqueta sin terminar sobre la puerta.</p>   
+                                </div>
+                            </div>
+                        </div>
+                        <div class="personajes__card">   <!----- Card Inicio La Enfermera ----->
+                            <div class="personajes__cont">
+                                <div>
+                                    <img src="./Media/Personajes/Enfermera.jpg" alt="La Enfermera">
+                                </div>
+                                <div class="personajes__kill__text">
+                                    <h5 class="card-title">La Enfermera</h5> 
+                                    <p class="card-text">Con un esposo fallecido y sin medios para mantenerse, Sally Smithson se vio obligada a tomar el único trabajo que podía: enfermera en el Crotus Prenn Asylum. Después de dos décadas de presenciar los horrores internos, su mente llegó a sus límites. Ella buscó salvar a los que sufrían. La única forma de detener la propagación de la infección era limpiar las impurezas de los enfermos. El personal llegó una mañana de septiembre para encontrar más de cincuenta pacientes y cuatro miembros del personal asesinados, mientras Sally se mecía en silencio en un rincón.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            
-            <div class="DivTrickster1" data-aos="zoom-in-left"> <!----- Asesino The Trickster ----->
-                <div>
-                    <img src="./Media/Personajes/Trickster.jpg" alt="Trickster">
-                </div>
-                <div class="DivTrickster2">
-                    <h2>The Trickster</h2> <br>
-                    <p>Después de la trágica muerte de sus compañeros de No Spin, Ji-Woon Hak renació como The Trickster. Ya no retenido por colaboradores inferiores, rápidamente ganó audiencias en todo el mundo. Multitudes de adoradores corearon su nombre, pero no fue suficiente. Su deseo de ser inmortalizado solo podía ser saciado a través del derramamiento de sangre. Sus víctimas se convirtieron en instrumentos, tocados y arreglados para dar vida a su visión retorcida. Los sonidos de sus gritos de angustia y súplicas desesperadas eran música para sus oídos.</p>
-                </div>
-            </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carousel_inicio" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carousel_inicio" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
         </section>
 
         <!-------------- SECCION 4 INICIO NOTICIAS --------------->
@@ -177,7 +343,7 @@
             <h1 > Noticias </h1>
         </div>
         <section class="InicioNoticias"> 
-            <div class="InicioAniversario" data-aos="zoom-out"> <!----- Aniversario ----->
+            <div class="InicioAniversario wow animate__animated animate__fadeIn"> <!----- Aniversario ----->
                 <h2>¡Aniversario Nro. 6!</h2> <br> 
                 <p>El evento del sexto aniversario de Dead by Daylight ya está aquí, con una nueva oferta, ganchos y generadores con temas de eventos y lujosas recompensas cosméticas para Killers y Survivors. </p> <br>
                 <div class="InicioAniversarioMedia">
@@ -186,13 +352,13 @@
                 </div>
             </div>
 
-            <div class="InicioCapitulo24" data-aos="zoom-out"> <!----- Capitulo 24 -----> 
+            <div class="InicioCapitulo24 wow animate__animated animate__fadeIn"> <!----- Capitulo 24 -----> 
                 <h2> Capitulo 24: Roots of dread ya esta disponible.</h2> <br>
                 <img src="./Media/Noticias/Capitulo 24.jpg" alt="Capitulo 24"> <br> <br>
                 <p>Cuando el crepúsculo se vuelve completamente oscuro, llega. El capítulo Roots of Dread de Dead by Daylight ha llegado, con un nuevo Killer, The Dredge, y un nuevo Survivor, Haddie Kaur. Juntos, traen seis nuevas ventajas únicas a The Fog. Un nuevo mapa, el inquietante Garden of Joy, está disponible para todos los jugadores, al igual que una nueva ventaja general, Shattered Hope. La compra de este complemento en las tiendas de la plataforma también desbloquea un atuendo exclusivo para Haddie: The Pale Ribed Shirt.</p>
             </div> 
 
-            <div class="InicioTomo12" data-aos="zoom-out"> <!----- Tomo 12 -----> 
+            <div class="InicioTomo12 wow animate__animated animate__fadeIn"> <!----- Tomo 12 -----> 
                 <h2> Tomo 12: Discordance muy pronto.</h2> <br>
                 <img src="./Media/Noticias/Tomo 12.jpg" alt="Tomo12"> <br> <br>
                 <p>Cuando la realidad se desmorona, la locura nunca se queda atrás. La percepción se tuerce y la razón se desmorona en el Tomo 12: DISCORDANCE, que presenta nuevos recuerdos para The Blight, Jonah Vasquez y House of Arkham. Continúe con sus historias completando los desafíos que se encuentran en cada uno de los cuatro niveles del Tomo.</p>
@@ -231,7 +397,9 @@
     </footer>
     <br>
 
-    <script src="./js/wow.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+
+    <script src="../js/wow.min.js"></script>
     <script>
         new WOW().init();
     </script>

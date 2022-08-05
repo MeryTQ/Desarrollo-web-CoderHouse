@@ -14,7 +14,8 @@ body{
 .EncabezadoSecciones h1{
     color: #ffffff;
     padding: 15px;
-    font-size: 1.8rem;
+    margin: 0;
+    font-size: 1.5rem;
     border-top: solid #000000 1px;
     border-bottom: solid #000000 1px;
     text-align: center;
@@ -63,11 +64,13 @@ header{
 
 nav{
     width: 100%;
-    height: 66px;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     position: sticky; top:0;
-    background-color: black;
+    background-color: rgb(0, 0, 0);
     z-index: 1;
+}
+.menu{
+    margin: auto;
 }
 .menu, .menu ul{
     list-style: none;
@@ -80,8 +83,18 @@ nav{
     color: white;
     text-decoration: none;
     font-family: "archivo narrow";
-    padding: 20px 50px;
+    padding: 12px 30px 12px 30px;
     display: block;
+    animation-name: animacion_nav;
+    transition: 0.2s;
+}
+@keyframes animacion_nav{
+    0%{
+        background-color: black;
+    }
+    100%{
+        background-color: white;
+    }
 }
 .menu>li{
     float: left;
@@ -93,6 +106,7 @@ nav{
 .menu li ul{
     display: none;
     position: absolute;
+    padding: 0;
 }
 .menu li:hover ul{
     display: block;
@@ -103,13 +117,14 @@ nav{
     color: white;
     text-decoration: none;
     font-family: "archivo narrow";
-    padding: 20px 33px;
     position: absolute;
     display: flex;
+    padding: 10px 30px 10px 30px;
     left: 91%;
 }
 .descargar:hover{
     background-color: #a70000;
+    color: white;
 }
 
 .banner img{     /* ----- Banner ----- */
@@ -148,36 +163,33 @@ nav{
 
 .SeccionBienvenidos{ 
     background-image: url(../Media/Bienvenidos/Fondo\ bienvenidos.jpg);
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "intro intro plataformas"
+    "intro intro mobile";
     padding: 80px;
+    align-items: center;
 }
 
 .SobreElJuego{     /* ----- Sobre el Juego ----- */
 background-image: url(../Media/Bienvenidos/Background.png);
-padding: 50px;
-margin: 10px;
+background-size: cover;
+padding: 30px;
+width: 90%;
 box-shadow: black 3px 3px 6px 0px;
+grid-area: intro;
 }
 
-.plataformas1{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    justify-items: center;
-    padding-top: 30px;
-}
 .plataformas2{     /* ----- Plataformas ----- */
     background-image: url(../Media/Background.jpg);
-    width: 70%;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 3(1fr);
-    justify-content: center;
-    align-items: center;
     box-shadow: black 0px 0px 25px 10px;
-    margin-right: 30px;
+    padding: 40px;
     text-align: center;
     color: white;
+    grid-area: plataformas;
+    width: 500px;
+    margin-bottom: 50px;
 }
 .plataformas2 img{
     width: 60px;
@@ -190,33 +202,38 @@ box-shadow: black 3px 3px 6px 0px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     justify-items: center;
+    padding-top: 10px;
+    padding-bottom: 20px;
 }
 .PlataformasIconos2{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     justify-items: center;
+    padding-top: 20px;
 }
 
 .mobile{
-    width: 800px;
+    width: 500px;
     height: 100%;
     box-shadow: black 0px 0px 25px 10px;
+    grid-area: mobile;
 }
 
 @media screen and (max-width:480px){   /* ----- Media Queries Mobile SECCION 1 Inicio Bienvenidos----- */
     .SeccionBienvenidos{
         display: flex;
         flex-direction: column;
-        padding: 20px;
+        padding: 30px;
     }
     .SobreElJuego{
-        padding: 10px;
+        padding: 20px;
+        width: 100%;
     }
     .plataformas1{
         display: flex;
         flex-direction: column;
         padding: 0;
-        margin: 10px;
+        margin-top: 20px;
     }
     .plataformas2{
         width: 100%;
@@ -242,93 +259,56 @@ box-shadow: black 3px 3px 6px 0px;
 
 /*---------- INICIO NUESTROS DLC - SECCION 2 ----------*/
 
-.SeccionDLC{
+.dlc__seccion{
     background-image: url(../Media/DLC/DLC\ fondo.jpg);
+}
+.dlc__carousel{
     display: flex;
-    justify-content: space-around;
-    padding-top: 120px;
-    padding-bottom: 120px;
+    flex-direction: row;
+    justify-content: center;
 }
-.DivDLC{ 
-    background-image: url(../Media/Background.jpg);
-    background-size: cover;
-    color: #ffffff;
-    padding: 30px 0px 0px 40px;
-    border: 1px solid #7e7e7e;
-
-    height: 240px;
+.dlc__card{
+    margin: 7rem 6rem 7rem 6rem;
+    width: 35%;
+    background-color: #f5f5f5;
+    transition: 0.5s;
+    box-shadow: black 0px 0px 25px 10px;
 }
-
-.DivDLCSadako img{      /* ----- Inicio DLC Sadako Rising ----- */  
-    width: 700px;
+.dlc__card:hover{
+    transform: scale(1.1,1.1);
 }
-.ContieneSadako{      
+.dlc__card__body{
+    color: #777777;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    grid-row-gap: 30px;
-}
-.SeccionDLC>.DivDLCSadako{
-    transition: 0.5s;
-    box-shadow: black 0px 0px 25px 10px;
-}
-.SeccionDLC>.DivDLCSadako:hover{
-    transform: scale(1.1,1.1);
-}
-
-.DivDLCResident img{    /* ----- Inicio DLC Resident Evil ----- */
-    width: 700px;
-}
-.ContieneResident{     
-display: grid;
-grid-template-columns: 1fr 1fr;
-grid-template-rows: 1fr 1fr;
-grid-row-gap: 30px;
-}
-.SeccionDLC>.DivDLCResident{
-    transition: 0.5s;
-    box-shadow: black 0px 0px 25px 10px;
-}
-.SeccionDLC>.DivDLCResident:hover{
-    transform: scale(1.1,1.1);
+    align-items: center;
+    padding: 1.5rem;
 }
 
 @media screen and (max-width:480px){     /* ----- Media Queries Mobile SECCION 2 Inicio DLC ----- */
-
-    .SeccionDLC{
+    .dlc__carousel{
         display: flex;
         flex-direction: column;
-        padding: 10px;
         align-items: center;
+        margin: 2rem;
     }
-    .DivDLC{
-        padding: 10px;
-        height: auto;
-        width: 350px;
+    .dlc__card{
+    margin: 1rem;
+    width: 90%;
     }
-    .DivDLCSadako img{
-        width: 350px;
-    }
-    .DivDLCResident img{
-        width: 350px;
-        margin-top: 20px;
+    .dlc__card__body{
+        padding: 1rem;
     }
 }
-
 
 /*---------- INICIO DE QUE LADO ESTAS? - SECCION 3 ----------*/
-
 .personajes{
     background-image: url(../Media/Personajes/Personajes\ fondo.jpg);
-    display: flex;
-    justify-content: space-around;
-    padding-top: 100px;
-    padding-bottom: 100px;
 }
-.sobreviviente{
+.sobreviviente{   /* ----- Encabezado ----- */
     background-color: #b1bfd8;
     background-image: linear-gradient(315deg, #637aa3 0%, #152d70 74%);
-    border-right: solid 1px black;
+    border-right: solid 1px rgb(0, 0, 0);
     box-shadow: black 3px 3px 6px 0px;
 }
 .asesino{
@@ -340,6 +320,7 @@ grid-row-gap: 30px;
     border-bottom: 1px solid black;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    color: black;
 }
 .EncabezadoSeccion3 div h2{
     text-align: center;
@@ -347,98 +328,88 @@ grid-row-gap: 30px;
     padding-bottom: 20px;
 }
 
-.DivMikaela1{   /* --- Inicio Sobreviviente Mikaela Reid --- */
+.personajes__carousel{   /* ----- Inicio Personajes ----- */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-evenly;
+    margin-top: 6rem;
+    margin-bottom: 6rem;
+    margin-left: 8rem;
+    margin-right: 8rem;
+}
+.personajes__cont{
     display: flex;
     justify-content: center;
-}
-.DivMikaela1 img{
-    width: 400px;
-    border: 1px solid black;
-    box-shadow: black 3px 3px 6px 0px;
-}
-.DivMikaela2{ 
-    background-color: #000000;
-    background-image: linear-gradient(315deg, #637aa3 0%, #152d70 74%);
-    width: 300px; height: 582px;
-    padding: 40px;
-    margin-right: 10px;
-    border: 1px solid black;
-    box-shadow: black 3px 3px 6px 0px;
-}
-.personajes>.DivMikaela1{
     transition: 0.5s;
 }
-.personajes>.DivMikaela1:hover{
+.personajes__cont:hover{
     transform: scale(1.1,1.1);
 }
-
-.DivTrickster1{   /* --- Inicio Asesino The Trickster --- */
-    display: flex;
-    justify-content: center;
-
-}
-.DivTrickster1 img{
+.personajes__cont img{
     width: 400px;
-    border: 1px solid black;
-    box-shadow: black 3px 3px 6px 0px;
+    box-shadow: black 0px 0px 25px 10px;
 }
-.DivTrickster2{ 
+.personajes__surv{
+    display: flex;
+    flex-direction: row-reverse;
+}
+.personajes__surv__text{
+    background-color: #000000;
+    background-image: linear-gradient(315deg, #637aa3 0%, #152d70 74%);
+    color: #000000;
+    box-shadow: black 0px 0px 25px 10px;
+    font-family: "archivo narrow";
+    width: 300px;
+    height: auto;
+    padding: 40px;
+}
+.personajes__surv__text h5{
+    padding-bottom: 1rem;
+}
+.personajes__kill__text{
     background-color: #3f0d12;
     background-image: linear-gradient(315deg, #3f0d12 0%, #8a0c0c 74%);
-    width: 300px; height: 582px;
+    color: black;
+    box-shadow: black 0px 0px 25px 10px;
+    font-family: "archivo narrow";
+    width: 300px;
+    height: auto;
     padding: 40px;
-    margin-left: 10px;
-    border: 1px solid black;
-    box-shadow: black 3px 3px 6px 0px;
 }
-.asesino>.DivTrickster1{
-    transition: 0.5;
-}
-.personajes>.DivTrickster1:hover{
-    transform: scale(1.1,1.1);
+.personajes__kill__text h5{
+    padding-bottom: 1rem;
 }
 
 @media screen and (max-width:480px){     /* ----- Media Queries Mobile SECCION 3 Inicio De que lado estas?----- */
-    .EncabezadoSeccion3{
-        display: none;
+    .EncabezadoSeccion3>div>h2{
+        margin: 0;
     }
-    .personajes{
+    .personajes__carousel{
+        display: flex;
+        flex-direction: row;
+        margin: 0;
+        padding: 40px;
+    }
+    .personajes__carousel img{
+        width: 200px;
+        height: auto;
+    }
+    .personajes__cont{
         display: flex;
         flex-direction: column;
-        padding: 20px;
     }
-    .DivMikaela1{
-        display: flex;
-        flex-wrap: wrap-reverse;
-        padding: 0px;
-        margin: 0;
-        padding-top: 10px;
-    }
-    .DivMikaela1 img{
-        width: 330px;
-    }
-    .DivMikaela2{
-        margin: 0px;
-        margin-bottom: 25px;
+    .personajes__surv__text{
         padding: 10px;
-        height: auto;
-        width: auto;
+        width: 200px;
+        height: 22rem;
     }
-    .DivTrickster1{
-        display: flex;
-        flex-wrap: wrap;
-        padding: 0px;
-        margin: 0px;
-        padding-bottom: 10px;
-    }
-    .DivTrickster1 img{
-        width: 330px;
-    }
-    .DivTrickster2{
-        margin: 0px;
+    .personajes__kill__text{
         padding: 10px;
-        height: auto;
-        width: auto;
+        width: 200px;
+        height: 22rem;
+    }
+    .personajes__card{
+        padding: 10px;
     }
 }
 
@@ -626,80 +597,40 @@ background-size: cover;
 
 /* ---------- JUEGO PERSONAJES  - SECCION 1 ---------- */
 
-/* ----- Sobrevivientes -----*/
-
-.JuegoSobrevivientes{
-    color: #a7a7a7;
+.juego__carousel{
     display: flex;
-    justify-content: space-around;
+    flex-direction: row;
+    justify-content: center;
+    grid-column-gap: 6rem;
 }
-.JuegoSobrevivientes img{
-    width: 15vw;
-    border: 3px solid #a5af12;
+.juego__card{
+    width: 15%;
+    text-align: center;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    transition: 0.5s;
+    color: #777777;
+}
+.juego__card:hover{
+    transform: scale(1.1,1.1);
     box-shadow: black 0px 0px 25px 10px;
 }
-.JuegoSobrevivientes>div{
-    padding-top: 70px;
-    width: 15vw;
-    text-align: center;
-    transition: 0.5s;
+.juego__kill{
+    margin-bottom: 4rem;
 }
-.JuegoSobrevivientes>div:hover{
-    transform: scale(1.1,1.1);
-}
-
-/* ----- Asesinos ----- */
-
-.JuegoAsesinos{
-    color: #a7a7a7;
-display: flex;
-justify-content: space-around;
-    padding-top: 50px;
-}
-.JuegoAsesinos img{
-    width: 15vw;
-    border: 3px solid #3f0d12;
-    box-shadow: black 0px 0px 25px 10px;
-}
-.JuegoAsesinos>div{
-    width: 15vw;
-    text-align: center;
-    padding-bottom: 70px;
-    padding-top: 50px;
-    transition: 0.5s;
-}
-.JuegoAsesinos>div:hover{
-    transform: scale(1.1,1.1);
-}
-
 
 @media screen and (max-width:480px) { /* ---------- Media Queries Mobile Juego Personajes ----------*/ 
-    .JuegoSobrevivientes{ /* ----- Sobreviviente -----*/
-        padding-top: 10px;
-        padding-left: 10px;
-        padding-right: 10px;
-        display: grid;
-        grid-template-columns: 1fr;
+    .juego__carousel{
+        grid-column-gap: 1rem;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
     }
-    .JuegoSobrevivientes img{ 
-        width: 130px;
+    .juego__card{
+        width: 40vw;
     }
-    .JuegoSobrevivientes>div{
-        width: auto;
-    }
-    .JuegoAsesinos{ /* ----- Asesino -----*/
-        padding-bottom: 10px;
-        padding-top: 10px;
-        padding-left: 10px;
-        padding-right: 10px;
-        display: grid;
-        grid-template-columns: 1fr;
-    }
-    .JuegoAsesinos img{ 
-        width: 130px;
-    }
-    .JuegoAsesinos>div{
-        width: auto;
+    .card-body{
+        height: 26vh;
     }
 }
 
