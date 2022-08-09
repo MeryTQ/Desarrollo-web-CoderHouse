@@ -7,6 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="../Css/bootstrap.min.css">
     <link rel="stylesheet" href="../Css/estilo.css">
     <title>Contacto</title>
 </head>
@@ -44,50 +45,50 @@
             <h1>Contacto</h1>
         </div>
 
-        <div class="contacto"> <!----- Formulario ----->
-            <div class="formulario">
-                <form> 
-                    <div>
-                        <legend> Completa el formulario </legend></div>  <br>
-                    <div class="box">
-                        <label for="Nombre:">Nombre:</label> 
-                        <input type="text" name="Nombre:" required>  <br> <br>
-                    </div>
-                    <div class="box">
-                        <label for="Apellido:">Apellido:</label> 
-                        <input type="text" name="Apellido:" required> <br> <br>
-                    </div>
-                    <div class="box">
-                        <label for="Email:">Email:</label> 
-                        <input type="email" name="Email:" required> <br> <br>
-                    </div>
-                    
+        <!---------------------------------------------------------------------------------- FORMULARIO --------------------------------------------------------------------------------------------------------------->
+
+        <div class="contacto"> 
+            <div class="formulario wow animate__animated animate__fadeIn">
                 <div>
-                    <select name="asunto" id="asunto"> 
+                    <h2>Completa este formulario</h2>
+                </div>
+                <div class="form-floating">
+                    <input type="nombre" class="form-control" id="floatingPassword" placeholder="Nombre">
+                    <label for="floatingPassword">Nombre</label>
+                </div>
+                <div class="form-floating">
+                    <input type="apellido" class="form-control" id="floatingPassword" placeholder="Apellido">
+                    <label for="floatingPassword">Apellido</label>
+                </div>
+                <div class="form-floating">
+                    <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                    <label for="floatingInput">Email</label>
+                </div>
+                <div>
+                    <select class="form-select" aria-label="Default select example">
+                        <option selected>Seleccione un motivo</option>
                         <option value="Sugerencia">Sugerencia</option>
                         <option value="Soporte">Soporte</option>
                         <option value="Otro">Otro</option>
-                    </select> <br> <br>
+                    </select>
                 </div>
-
-                    <div class="novedades">
-                        <label for="Aceptar">¿Deseas recibir las últimas novedades?</label>
-                        <input type="checkbox" name="Aceptar"> <br> <br>
-
-                        <textarea name="Comentarios" id="Comentarios" cols="50" rows="10" placeholder="Deja un comentario"></textarea> <br> 
-
-                        <input type="submit" value="Enviar datos" class="enviar">
-                    </div>
-                </form> 
+                <div class="form-floating">
+                    <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+                    <label for="floatingTextarea2">Comentario...</label>
+                </div>
+                <div>
+                    <input type="checkbox" class="btn-check" id="btn-check" autocomplete="off">
+                    <label class="btn btn-primary" for="btn-check">Enviar</label>
+                </div>
             </div>
 
-            <div class="FormTexto">
+            <div class="FormTexto wow animate__animated animate__fadeIn">
                 <p> Si tienes alguna sugerencia, necesitas soporte con el juego u otro asunto, por favor completa el formulario y nos pondremos en contacto. </p>
             </div>
         </div>
     </main>
     
-    <footer> <!--------------- SECCION 5 INICIO FOOTER --------------->
+    <footer> <!---------------------------------------------------------------------------- CONTACTO FOOTER ----------------------------------------------------------------------------------------------------------->
         <div class="DivFooter">
             <div class="MenuFooter"> <!----- Menú Footer ----->
                 <ul>
@@ -116,5 +117,13 @@
             </div>
         </div>
     </footer>
+
+    <script src="../js/bootstrap.min.js"></script>
+
+    <script src="../js/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+
 </body>
 </html>

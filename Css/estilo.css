@@ -294,10 +294,17 @@ grid-area: intro;
     }
     .dlc__card{
     margin: 1rem;
-    width: 90%;
+    width: 85%;
     }
     .dlc__card__body{
         padding: 1rem;
+        align-items: flex-start;
+    }
+    .dlc__card__body h4{
+        font-size: 0.7rem;
+    }
+    .dlc__card__body p{
+        font-size: 0.7rem;
     }
 }
 
@@ -401,15 +408,18 @@ grid-area: intro;
     .personajes__surv__text{
         padding: 10px;
         width: 200px;
-        height: 22rem;
+        height: 19rem;
     }
     .personajes__kill__text{
         padding: 10px;
         width: 200px;
-        height: 22rem;
+        height: 19rem;
     }
     .personajes__card{
         padding: 10px;
+    }
+    .personajes__card p{
+        font-size: 0.7rem;
     }
 }
 
@@ -653,7 +663,7 @@ background-size: cover;
 }
 .ComunidadMedia img{
     width: 100%;
-    box-shadow: #727272 0px 0px 25px 0px;
+    box-shadow: #727272 0px 0px 25px 1px;
 }
 .ComunidadIconos img{
     width: 100px;
@@ -679,6 +689,7 @@ background-size: cover;
     box-shadow: white 0px 0px 5px 1px;
     border-radius: 100px;
 }
+
 /* ----- Redes ----- */
 
 .ComunidadRedes{
@@ -692,6 +703,7 @@ background-size: cover;
     text-align: center;
     padding-top: 40px;
     padding-bottom: 40px;
+    position: relative;
 }
 .ComunidadRedesIconos{
     display: grid;
@@ -717,12 +729,20 @@ background-size: cover;
     box-shadow: white 0px 0px 5px 1px;
     border-radius: 100px;
 }
-
-
+.comunidad__alerta{
+    position: absolute;
+    right: 81%;
+    bottom: 86%;
+    margin: 0;
+}
+.comunidad__alerta p{
+    margin: 0;
+}
 
 @media screen and (max-width:480px){ /* ---------- Media Queries Mobile Comunidad ----------*/
     .ComunidadIconos img, .ComunidadRedesIconos img{
         width: 30px;
+        padding-top: 30px;
     }
     .ComunidadIconos h2, .ComunidadRedesIconos h2{
         padding: 0;
@@ -734,7 +754,7 @@ background-size: cover;
         flex-direction: column;
         justify-content: space-evenly;
         height: 350px;
-        padding: 0px;
+        padding: 40px;
         margin: 0px;
     }
     .ComunidadMedia img{
@@ -746,12 +766,20 @@ background-size: cover;
         flex-direction: column-reverse;
         justify-content: space-evenly;
         height: 350px;
-        padding: 0px;
+        padding: 40px;
         margin: 0px;
     }
     .ComunidadRedesMedia{
         align-items: center;
         align-content: center;
+    }
+    .comunidad__alerta{
+        padding: 2px;
+        right: 33%;
+        bottom: 2%;
+    }
+    .comunidad__alerta p {
+        font-size: 0.5rem;
     }
 } 
 
@@ -759,8 +787,6 @@ background-size: cover;
 
 .noticias{ 
     color: white;
-    background-image: url(../Media/Background.jpg);
-    background-size: cover;
     text-align: center;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -768,12 +794,32 @@ background-size: cover;
     "aniversario capitulo24"
     "aniversario tomo12"
     "titan rock";
-    padding: 50px 20px 50px 20px;
+    padding: 0px 20px 50px 20px;
 }
 .noticias>div{
-    padding: 30px;
     margin: 20px;
     box-shadow: black 0px 0px 25px 10px;
+}
+.noticias__bg{
+    background-image: url(../Media/Background.jpg);
+    background-size: cover;
+}
+.noticias__recibir{
+    display: flex;
+    color: black;
+    font-family: "archivo narrow";
+    justify-content: center;
+    align-items: center;
+}
+.noticias__recibir div{
+    margin: 2rem;
+    padding: 0;
+}
+.noticias__recibir label{
+    margin: 0;
+}
+.noticias__recibir input{
+    width: 200px;
 }
 
 .aniversario{ /* ----- Aniversario -----*/
@@ -868,14 +914,24 @@ background-size: cover;
         flex-direction: column;
         padding: 0;
     }
-.noticias img{
-    width: 100%;
-}
+    .noticias div{
+        padding: 20px;
+    }
+    .noticias img{
+        width: 100%;
+    }
     .aniversario iframe{
         display: none;
     }
     .AniversarioMedia{
         padding: 0;
+    }
+    .noticias__recibir{
+        display: flex;
+        flex-direction: column;
+    }
+    .noticias__recibir div{
+        margin: 1rem;
     }
 }
 
@@ -887,71 +943,28 @@ background-size: cover;
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
-    padding: 30px;
 }
 .formulario{
-    display: flex;
-    justify-content: end;
-    opacity: 0.9;
-}
-form{
-    width: 25vw;
-    padding: 16px;
-    margin: 0;
-    border-radius: 5px;
-    color: #000000;
     background-color: #ffffff;
-    font-family: "roboto";
-    box-shadow: 0px 0px 6px 0px #ffffffcc;
+    display: grid;
+    padding: 1rem;
+    opacity: 0.9;
     transition: 0.5s;
+    box-shadow: 0px 0px 6px 0px #000000cc;
+    width: 25vw;
+    margin-left: 500px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    border-radius: 10px;
 }
-form:hover{
-    box-shadow: 0px 0px 6px 5px #ffffffcc;
-}
-.box{
-margin: 30px 50px 10px 20px;
-position: relative;
-}
-.box>input{
-    width: 100%;
-}
-legend{
+.formulario h2{
     text-align: center;
-    font-size: 1.5rem;
-    padding-top: 20px;
 }
-input{
-    padding: 10px 10px 10px 5px;
-    border: none;
-    border-bottom: 1px solid rgb(167, 167, 167);
-    font-family: "roboto";
+.formulario div{
+    margin: 1rem;
 }
-input:focus{
-    outline: none;
-    color: #929292;
-}
-select{
-    font-family: "roboto";
-    margin: 0px 0px 0px 20px;
-    padding: 5px;
-}
-label{
-    font-size: 0.9rem;
-}
-textarea{
-    width: 100%;
-    height: 100%;
-}
-.novedades{
-    width: 100%;
-    padding: 20px 50px 20px 10px;
-}
-.enviar{
-    width: 100%; height: 50px;
-    border: none;
-    margin-top: 10px;
-    background-color: #292929;
-    color: rgb(255, 255, 255);
+.formulario:hover{
+    box-shadow: 0px 0px 6px 5px #000000cc;
 }
 
 .FormTexto p{
@@ -985,35 +998,27 @@ textarea{
         flex-direction: column-reverse;
         padding: 0;
     }
+    .formulario{
+        margin: 0;
+        width: 90%;
+        margin-bottom: 50px;
+    }
+    .formulario div{
+        font-size: 0.7rem;
+    }
+    .formulario>div>select{
+        font-size: 0.7rem;
+    }
+    .formulario h2{
+        font-size: 1rem;
+    }
     .FormTexto{
-        padding: 30px;
+        padding: 40px;
         width: 100vw;
     }
     .FormTexto p{
         font-size: 0.9rem;
         text-align: center;
-    }
-    .formulario{
-        padding-bottom: 40px;
-        width: 75%;
-    }
-    form{
-        width: 90vw;
-    }
-    legend{
-        font-size: 1rem;
-    }
-    label{
-        font-size: 0.7rem;
-    }
-    textarea{
-        height: 70px;
-    }
-    .box{
-        margin: 0px 50px 0px 20px;
-    }
-    #asunto{
-        width: auto;
-        font-size: 0.6rem;
+        margin: 0;
     }
 }
