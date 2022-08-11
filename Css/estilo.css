@@ -6,6 +6,7 @@
 body{
     overflow-x: hidden ;
     background-image: url(../Media/Background.jpg);
+    background-size: cover;
 }
 .EncabezadoSecciones{
     background-color: #ffffff;
@@ -270,7 +271,7 @@ grid-area: intro;
 .dlc__card{
     margin: 7rem 6rem 7rem 6rem;
     width: 35%;
-    background-color: #f5f5f5;
+    background-image: url(../Media/DLC/Fondo\ Contiene.png);
     transition: 0.5s;
     box-shadow: black 0px 0px 25px 10px;
 }
@@ -278,7 +279,7 @@ grid-area: intro;
     transform: scale(1.1,1.1);
 }
 .dlc__card__body{
-    color: #777777;
+    color: #ffffff;
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
@@ -314,7 +315,7 @@ grid-area: intro;
 }
 .sobreviviente{   /* ----- Encabezado ----- */
     background-color: #b1bfd8;
-    background-image: linear-gradient(315deg, #637aa3 0%, #152d70 74%);
+    background-image: linear-gradient(315deg, #2f4c7e 0%, #437ed8 74%);
     border-right: solid 1px rgb(0, 0, 0);
     box-shadow: black 3px 3px 6px 0px;
 }
@@ -360,18 +361,31 @@ grid-area: intro;
     display: flex;
     flex-direction: row-reverse;
 }
+.personajes__surv img{
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
 .personajes__surv__text{
     background-color: #000000;
-    background-image: linear-gradient(315deg, #637aa3 0%, #152d70 74%);
+    background-image: linear-gradient(315deg, #2f4c7e 0%, #437ed8 74%);
     color: #000000;
     box-shadow: black 0px 0px 25px 10px;
     font-family: "archivo narrow";
     width: 300px;
     height: auto;
     padding: 40px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
 }
 .personajes__surv__text h5{
     padding-bottom: 1rem;
+}
+.personajes__surv__text p{
+    font-size: 17px;
+}
+.personajes__kill img{
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
 }
 .personajes__kill__text{
     background-color: #3f0d12;
@@ -382,9 +396,14 @@ grid-area: intro;
     width: 300px;
     height: auto;
     padding: 40px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
 .personajes__kill__text h5{
     padding-bottom: 1rem;
+}
+.personajes__kill__text p{
+    font-size: 17px;
 }
 
 @media screen and (max-width:480px){     /* ----- Media Queries Mobile SECCION 3 Inicio De que lado estas?----- */
@@ -405,15 +424,28 @@ grid-area: intro;
         display: flex;
         flex-direction: column;
     }
+    .personajes__surv img{
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 0;
+    }
     .personajes__surv__text{
         padding: 10px;
         width: 200px;
         height: 19rem;
+        border-top-left-radius: 0;
+        border-bottom-right-radius: 5px;
+    }
+    .personajes__kill img{
+        border-top-right-radius: 5px;
+        border-bottom-left-radius: 0;
     }
     .personajes__kill__text{
         padding: 10px;
         width: 200px;
         height: 19rem;
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 5px;
     }
     .personajes__card{
         padding: 10px;
@@ -503,7 +535,7 @@ grid-area: intro;
         display: flex;
         flex-direction: column;
         align-content: center;
-        padding: 0;
+        padding: 20px;
     }
     .InicioNoticias>div{
         padding: 20px;
@@ -602,7 +634,6 @@ footer{
 
 .JuegoBody{ /* ----- Body -----*/
 background-image: url(../Media/Background.jpg);
-background-size: cover;
 }
 
 /* ---------- JUEGO PERSONAJES  - SECCION 1 ---------- */
@@ -614,12 +645,23 @@ background-size: cover;
     grid-column-gap: 6rem;
 }
 .juego__card{
-    width: 15%;
-    text-align: center;
+    background-color: #1f1f1f;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    "img_as perks"
+    "img_as perks"
+    "habilidad habilidad";
+    width: 39%;
     margin-top: 4rem;
     margin-bottom: 4rem;
     transition: 0.5s;
-    color: #777777;
+    color: #ffffff;
+    box-shadow: #5c5c5c 0px 0px 25px 10px;
+}
+.juego__card img{
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
 .juego__card:hover{
     transform: scale(1.1,1.1);
@@ -628,19 +670,44 @@ background-size: cover;
 .juego__kill{
     margin-bottom: 4rem;
 }
+.juego__card__titulo{
+    text-align: center;
+}
+.juego__card__perk{
+    display: flex;
+    align-items: center;
+}
+.juego__card__body img{
+    width: 50px;
+    padding-right: 10px;
+}
+.juego__card__body p{
+    font-size: 0.8rem;
+    margin: 0;
+}
+.juego__card__body h3{
+    margin: 0;
+}
+
+
 
 @media screen and (max-width:480px) { /* ---------- Media Queries Mobile Juego Personajes ----------*/ 
     .juego__carousel{
-        grid-column-gap: 1rem;
         display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+        justify-items: center;
     }
     .juego__card{
-        width: 40vw;
+        display: flex;
+        flex-direction: column;
+        width: 70vw;
+        align-items: center;
+        padding-top: 20px;
     }
-    .card-body{
-        height: 26vh;
+    .juego__card>div>img{
+        width: 250px;
+        border: 1px solid #818181;
     }
 }
 
@@ -748,6 +815,11 @@ background-size: cover;
         padding: 0;
         margin: 0;
     }
+    .ComunidadRedesIconos>div>div>img:hover{
+        transform: scale(1.1,1.1);
+        box-shadow: white 0px 0px 0px 1px;
+        border-radius: 100px;
+    }
 
     .comunidad{ /* ----- Comunidad -----*/
         display: flex;
@@ -760,14 +832,22 @@ background-size: cover;
     .ComunidadMedia img{
         width: 90%;
     }
+    .ComunidadIconos img{
+        padding: 0;
+        margin-top: 20px;
+    }
 
     .ComunidadRedes{ /* ----- Comunidad Redes -----*/
         display: flex;
         flex-direction: column-reverse;
         justify-content: space-evenly;
         height: 350px;
-        padding: 40px;
+        padding: 30px;
         margin: 0px;
+    }
+    .ComunidadRedesIconos img{
+        padding: 0;
+        margin-top: 20px;
     }
     .ComunidadRedesMedia{
         align-items: center;
