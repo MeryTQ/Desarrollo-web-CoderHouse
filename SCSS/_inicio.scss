@@ -1,0 +1,434 @@
+
+/* ------------------------------------------------------------------------------------------ INICIO -----------------------------------------------------------------------------------------------------------------*/
+
+/* ---------- INICIO - BIENVENIDOS - SECCION 1 ---------- */
+.seccion__bienvenidos{
+    background-image: url("../Media/Bienvenidos/Fondo\ bienvenidos.jpg");
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "intro intro plataformas"
+    "intro intro mobile";
+    padding: 80px;
+    align-items: center;
+    .sobre__juego{
+        background-image: url("../Media/Bienvenidos/Background.png");
+        background-size: cover;
+        padding: 30px;
+        width: 90%;
+        box-shadow: black 3px 3px 6px 0px;
+        grid-area: intro;
+    }
+    .plataformas1{
+        .plataformas2{
+            background-image: url("../Media/Background.jpg");
+            box-shadow: black 0px 0px 25px 10px;
+            padding: 40px;
+            text-align: center;
+            color: white;
+            grid-area: plataformas;
+            width: 500px;
+            margin-bottom: 50px;
+            img{
+                width: 60px;
+                transition: 0.5s;        
+            }    
+            & img:hover{
+                transform: scale(1.6,1.6);
+            }
+            .plataformas__iconos1{
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                justify-items: center;
+                padding-top: 10px;
+                padding-bottom: 20px;        
+            }
+            .plataformas__iconos2{
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                justify-items: center;
+                padding-top: 20px;        
+            }
+        }
+        .mobile{
+            width: 500px;
+            height: 100%;
+            box-shadow: black 0px 0px 25px 10px;
+            grid-area: mobile;    
+        }
+    }
+}
+
+
+/* ----- Media Queries Mobile Inicio Bienvenidos ----- */
+
+@media screen and (max-width:480px){
+    .seccion__bienvenidos{
+        display: flex;
+        flex-direction: column;
+        padding: 30px;
+        h2{
+            font-size: 1rem;
+        }
+        h3,p{
+            font-size: 0.8rem;
+        }
+        .sobre__juego{
+            padding: 20px;
+            width: 100%;   
+        }
+        .plataformas1{
+            display: flex;
+            flex-direction: column;
+            padding: 0;
+            margin-top: 20px; 
+            .plataformas2{
+                width: 100%;
+                border: none;
+                padding: 20px;
+                align-items: center;
+                margin-bottom: 20px;  
+                img{
+                    width: 40px;
+                    margin-top: 20px;
+                    margin-bottom: 10px;
+                    transition: none;            
+                }  
+                & img:hover{
+                    width: 40px;
+                }    
+            }  
+            .mobile{
+                width: 100%;
+            } 
+        }
+    }
+}
+
+
+/* ---------- INICIO - DLC - SECCION 2 ---------- */
+.dlc__seccion{
+    background-image: url("../Media/DLC/DLC\ fondo.jpg");
+    .dlc__carousel{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;  
+        .dlc__card{
+            margin: 7rem 6rem 7rem 6rem;
+            width: 35%;
+            background-image: url("../Media/DLC/Fondo\ Contiene.png");
+            transition: 0.5s;
+            box-shadow: black 0px 0px 25px 10px; 
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            img{
+                border-top-left-radius: 10px;
+                border-top-right-radius: 10px;
+            }  
+            &:hover{
+                transform: scale(1.1,1.1);
+            }   
+            .dlc__card__body{
+                color: #ffffff;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                align-items: center;
+                padding: 1.5rem;            
+            }  
+        }  
+    }
+}
+
+/* ----- Media Queries Mobile Inicio DLC ----- */
+@media screen and (max-width:480px){ 
+    .dlc__seccion{
+        .dlc__carousel{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 2rem;  
+            .dlc__card{
+                margin: 1rem;
+                width: 85%;  
+                .dlc__card__body{
+                    padding: 1rem;
+                    align-items: flex-start;
+                    h3,p{
+                        font-size: 0.8rem;
+                    }            
+                }          
+            }  
+        }
+    }
+
+
+}
+
+/* ---------- INICIO - DE QUE LADO ESTAS? - SECCION 3 ---------- */
+.encabezado__seccion3{
+    border-bottom: 1px solid black;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    color: black;
+    h3{
+        text-align: center;
+        padding-top: 20px;
+        padding-bottom: 20px;  
+        margin: 0;  
+        font-weight: bold;
+    }
+    .sobreviviente{
+        background-color: #b1bfd8;
+        background-image: linear-gradient(315deg, #2f4c7e 0%, #437ed8 74%);
+        border-right: solid 1px rgb(0, 0, 0);
+        box-shadow: black 3px 3px 6px 0px;    
+    }
+    .asesino{
+        background-color: #3f0d12;
+        background-image: linear-gradient(315deg, #3f0d12 0%, #8a0c0c 74%);
+        box-shadow: black 3px 3px 6px 0px;    
+    }
+}
+.personajes{
+    background-image: url("../Media/Personajes/Personajes\ fondo.jpg");
+    .personajes__carousel{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-content: space-evenly;
+        margin: 6rem 8rem 6rem 8rem; 
+        .personajes__cont{
+            display: flex;
+            justify-content: center;
+            transition: 0.5s; 
+            img{
+                width: 400px;
+                box-shadow: black 0px 0px 25px 10px;            
+            }    
+            h4{
+                padding-bottom: 10px;
+                font-weight: bold;
+            }   
+            p{
+                font-family: "roboto";
+                font-size: 1rem;
+            }
+        }  
+        .personajes__cont:hover{
+            transform: scale(1.1,1.1);
+        }
+        .personajes__surv{
+            display: flex;
+            flex-direction: row-reverse;   
+            img{
+                border-top-right-radius: 5px;
+                border-bottom-right-radius: 5px;            
+            }     
+            .personajes__surv__text{
+                background-color: #000000;
+                background-image: linear-gradient(315deg, #2f4c7e 0%, #437ed8 74%);
+                color: #000000;
+                box-shadow: black 0px 0px 25px 10px;
+                font-family: "archivo narrow";
+                width: 250px;
+                height: auto;
+                padding: 30px;
+                border-top-left-radius: 5px;
+                border-bottom-left-radius: 5px;            
+            }
+        }
+        .personajes__kill{
+            img{
+                border-top-left-radius: 5px;
+                border-bottom-left-radius: 5px;            
+            }
+            .personajes__kill__text{
+                background-color: #3f0d12;
+                background-image: linear-gradient(315deg, #3f0d12 0%, #8a0c0c 74%);
+                color: black;
+                box-shadow: black 0px 0px 25px 10px;
+                font-family: "archivo narrow";
+                width: 250px;
+                height: auto;
+                padding: 30px;
+                border-top-right-radius: 5px;
+                border-bottom-right-radius: 5px;            
+            }
+        }
+    }
+}
+
+/* ----- Media Queries Mobile Inicio De que lado estas?----- */
+@media screen and (max-width:480px){     
+    .encabezado__seccion3{
+        h3{
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+    }
+    .personajes{
+        .personajes__carousel{
+            display: flex;
+            flex-direction: row;
+            margin: 0;
+            padding: 40px;  
+            .personajes__card{
+                padding: 10px;
+                .personajes__cont{
+                    display: flex;
+                    flex-direction: column;  
+                    img{
+                        width: 200px;
+                        height: auto;                
+                    }  
+                    h4{
+                        font-size: 1rem;
+                    }    
+                    p{
+                        font-size: 0.7rem;
+                    }    
+                }
+                .personajes__surv{
+                    img{
+                        border-top-left-radius: 5px;
+                        border-top-right-radius: 5px;
+                        border-bottom-right-radius: 0;                
+                    }
+                    .personajes__surv__text{
+                        padding: 10px;
+                        width: 200px;
+                        height: 250px;
+                        border-top-left-radius: 0;
+                        border-bottom-right-radius: 5px;                
+                    }
+                }
+                .personajes__kill{
+                    img{
+                        border-top-right-radius: 5px;
+                        border-bottom-left-radius: 0;                
+                    }
+                    .personajes__kill__text{
+                        padding: 10px;
+                        width: 200px;
+                        height: 250px;
+                        border-top-right-radius: 0;
+                        border-bottom-left-radius: 5px;                
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* ---------- INICIO - NOTICIAS - SECCION 3 ---------- */
+.inicio__noticias{
+    background-image: url("../Media/Noticias/Noticias\ fondo\ 2.jpg");
+    color: white;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    "InicioAniversario InicioCapitulo24"
+    "InicioAniversario InicioTomo12";
+    div{
+        padding: 25px;
+        margin: 15px;
+        img{
+            border: 1px solid #7c0000;
+            box-shadow: black 0px 0px 25px 10px;  
+            transition: 0.5s;
+        }
+        img:hover{
+            transform: scale(1.1,1.1);
+            border: 2px solid #7c0000; 
+        }
+        iframe{
+            width: 550px;
+            height: 300px;
+            margin-bottom: 60px;
+            border: 1px solid #7c0000;
+            box-shadow: black 0px 0px 25px 10px;            
+        }
+    }
+    .inicio__aniversario{
+        background-image: url("../Media/Background.jpg");
+        background-size: cover;
+        box-shadow: black 0px 0px 25px 10px;
+        grid-area: InicioAniversario;   
+        width: 80%; 
+        .inicio__aniversario__media{
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-row-gap: 100px;
+            justify-items: center;
+            align-items: center;
+        }  
+    }
+    .inicio__cap24{
+        background-image: url("../Media/Background.jpg");
+        background-size: cover;
+        box-shadow: black 0px 0px 25px 10px;
+        grid-area: InicioCapitulo24;
+        justify-items: center; 
+        width: 80%;   
+        img{
+            width: 400px;
+        }
+    }
+    .inicio__tomo12{
+        background-image: url("../Media/Background.jpg");
+        background-size: cover;
+        box-shadow: black 0px 0px 25px 10px;
+        grid-area: InicioTomo12;  
+        width: 80%; 
+        img{
+            width: 400px;
+        } 
+    }
+}
+
+/* ----- Media Queries Mobile Inicio Noticias ----- */
+@media screen and (max-width:480px){     
+    .inicio__noticias{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        div{
+            padding: 20px;
+            margin: 10px;
+            iframe{
+                display: none;
+            }
+            p{
+                font-size: 0.8rem;
+            }
+        }
+        .inicio__aniversario{
+            width: 90%;
+            img{
+                width: 300px;
+            }
+        }
+        .inicio__cap24{
+            width: 90%;
+            img{
+                width: 300px;
+            }
+        }
+        .inicio__tomo12{
+            width: 90%;
+            img{
+                width: 300px;
+            }
+        }
+    }
+
+}
+
+

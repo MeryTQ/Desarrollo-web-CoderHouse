@@ -1,1104 +1,517 @@
-*{
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-}
-body{
-    overflow-x: hidden ;
-    background-image: url(../Media/Background.jpg);
-    background-size: cover;
-}
-.EncabezadoSecciones{
-    background-color: #ffffff;
-    background-image: linear-gradient(315deg, #000000 0%, #7c0000 74%);
-}
-.EncabezadoSecciones h1{
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box; }
+
+/* -------------------------------------------------------------------------------------------------LAYOUT -----------------------------------------------------------------------------------------------------------*/
+body {
+  overflow-x: hidden;
+  background-image: url(../Media/Background.jpg);
+  background-size: cover; }
+
+h2 {
+  font-size: 1.5rem;
+  font-family: "roboto"; }
+
+h3 {
+  font-size: 1rem;
+  font-family: "roboto"; }
+
+h4 {
+  font-size: 1.3rem;
+  font-family: "archivo narrow"; }
+
+p {
+  font-size: 1rem;
+  font-family: "archivo narrow"; }
+
+.encabezado__secciones {
+  background-color: #ffffff;
+  background-image: linear-gradient(315deg, #000000 0%, #7c0000 74%); }
+  .encabezado__secciones h2 {
     color: #ffffff;
     padding: 15px;
     margin: 0;
-    font-size: 1.5rem;
     border-top: solid #000000 1px;
     border-bottom: solid #000000 1px;
-    text-align: center;
-    font-family: 'roboto'
-}
-h2{
-    font-family: 'roboto';
-    font-size: 1.5rem;
-}
-h3,h4{
-    font-family: 'roboto';
+    text-align: center; }
+
+/* ----- Media Queries Mobile Encabezados ----- */
+@media screen and (max-width: 480px) {
+  .encabezado__secciones h2 {
     font-size: 1rem;
-}
-p{
-    font-family: 'archivo narrow';
-    font-size: 1rem;
-}
+    padding: 5px; } }
 
-@media screen and (max-width:480px){     /* ----- Media Queries Mobile Encabezados ----- */
-    .EncabezadoSecciones h1{
-        font-size: 13px;
-        padding: 5px;
-    }
-    h2,h3,h4,p{
-        font-size: 12px;
-    }
-}
+/* ---------- HEADER ----------*/
+header {
+  background-color: #000000;
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center; }
+  header .icono {
+    width: 170px; }
 
-/*-------------------------------------------------------------------------------------------------- PAGE INICIO -----------------------------------------------------------------------------------------------------*/
+/* ---------- NAV ---------- */
+nav {
+  width: 100%;
+  font-size: 1.1rem;
+  position: sticky;
+  top: 0;
+  background-color: black;
+  z-index: 1; }
+  nav .menu {
+    margin: auto; }
+    nav .menu, nav .menu ul {
+      list-style: none;
+      display: flex;
+      flex-direction: row;
+      justify-content: center; }
+    nav .menu li a {
+      background-color: black;
+      color: white;
+      text-decoration: none;
+      font-family: "archivo narrow";
+      padding: 12px 30px 12px 30px;
+      display: block;
+      animation-name: animacion_nav;
+      transition: 0.2s; }
+    nav .menu > li {
+      float: left; }
+    nav .menu li a:hover {
+      background-color: white;
+      color: black; }
+    nav .menu li ul {
+      display: none;
+      position: absolute;
+      padding: 0; }
+    nav .menu li:hover ul {
+      display: block; }
+    nav .menu .descargar {
+      font-size: 1.2rem;
+      background-color: #7c0000;
+      color: white;
+      text-decoration: none;
+      font-family: "archivo narrow";
+      position: absolute;
+      display: flex;
+      padding: 10px 30px 10px 30px;
+      left: 91%; }
+    nav .menu .descargar:hover {
+      background-color: #a70000;
+      color: white; }
 
-/* ---------- INICIO HEADER ---------- */
+@keyframes animacion_nav {
+  0% {
+    background-color: black; }
+  100% {
+    background-color: white; } }
 
-.icono{     /* ----- Logo ----- */
-    width: 170px;
-}
-header{
-    background-color: #000000;
-    height: 60px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
+/* ---------- BANNER ---------- */
+.banner {
+  background-color: #000000;
+  display: flex;
+  justify-content: center; }
+  .banner img {
+    width: 1900px; }
 
-/* ---------- INICIO NAV ---------- */
-
-nav{
+/* ----- Media Queries Mobile Header ----- */
+@media screen and (max-width: 480px) {
+  .icono {
+    width: 110px; }
+  nav {
+    height: auto; }
+    nav .menu li a {
+      font-size: 12px;
+      padding: 5px 20px;
+      margin: 0; }
+    nav .menu .descargar {
+      font-size: 12px;
+      margin: 0;
+      padding: 5px 20px;
+      left: 77%;
+      bottom: 200%; }
+  .banner img {
     width: 100%;
-    font-size: 1.1rem;
-    position: sticky; top:0;
-    background-color: rgb(0, 0, 0);
-    z-index: 1;
-}
-.menu{
-    margin: auto;
-}
-.menu, .menu ul{
-    list-style: none;
+    max-width: 320px; } }
+
+/* ---------- FOOTER ---------- */
+footer .seccion__footer {
+  background-image: url("../Media/Footer/Fondo Footer.png");
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  padding: 50px;
+  border-top: 5px solid #929292; }
+  footer .seccion__footer .menu__footer ul {
+    list-style: none; }
+  footer .seccion__footer .menu__footer a {
+    font-family: "archivo narrow";
+    color: white;
+    text-decoration: none; }
+  footer .seccion__footer .unete {
+    display: none; }
+  footer .seccion__footer .icono__redes {
     display: flex;
     flex-direction: row;
-    justify-content: center;
-}
-.menu li a{
-    background-color: black;
-    color: white;
-    text-decoration: none;
-    font-family: "archivo narrow";
-    padding: 12px 30px 12px 30px;
-    display: block;
-    animation-name: animacion_nav;
-    transition: 0.2s;
-}
-@keyframes animacion_nav{
-    0%{
-        background-color: black;
-    }
-    100%{
-        background-color: white;
-    }
-}
-.menu>li{
-    float: left;
-}
-.menu li a:hover{
-    background-color: white;
-    color: black;
-}
-.menu li ul{
-    display: none;
-    position: absolute;
-    padding: 0;
-}
-.menu li:hover ul{
-    display: block;
-}
-.descargar{
-    font-size: 1.2rem;
-    background-color: #7c0000;
-    color: white;
-    text-decoration: none;
-    font-family: "archivo narrow";
-    position: absolute;
+    justify-content: space-around; }
+    footer .seccion__footer .icono__redes img {
+      width: 40px; }
+  footer .seccion__footer .icono__footer {
     display: flex;
-    padding: 10px 30px 10px 30px;
-    left: 91%;
-}
-.descargar:hover{
-    background-color: #a70000;
-    color: white;
-}
+    flex-direction: row-reverse; }
+    footer .seccion__footer .icono__footer img {
+      width: 300px; }
 
-.banner img{     /* ----- Banner ----- */
-    width: 1900px;
-}
-.banner{
-    background-color: #000000;
+/* ----- Media Queries Mobile Footer ----- */
+@media screen and (max-width: 480px) {
+  footer .seccion__footer {
     display: flex;
-    justify-content: center;
-}
+    flex-direction: column;
+    padding: 40px;
+    text-align: center; }
+    footer .seccion__footer .menu__footer {
+      padding-bottom: 40px; }
+    footer .seccion__footer .unete {
+      padding-bottom: 40px; }
+    footer .seccion__footer .icono__redes {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      width: 320px;
+      padding-bottom: 40px; }
+      footer .seccion__footer .icono__redes img {
+        width: 30px; }
+    footer .seccion__footer .icono__footer img {
+      width: 200px; } }
 
-@media screen and (max-width:480px) {     /* ----- Media Queries Mobile Header ----- */
-    nav{
-        height: auto;
-    }
-    .menu li a{
-        font-size: 12px;
-        padding: 5px 20px;
-        margin: 0;
-    }
-
-    .banner img{
-        width: 100%;
-        max-width: 320px;
-    }
-    .icono{
-        width: 110px;
-    }
-    .descargar{
-        display: none;
-    }
-}
-
-
-/* ---------- INICIO BIENVENIDOS - SECCION 1----------*/
-
-.SeccionBienvenidos{ 
-    background-image: url(../Media/Bienvenidos/Fondo\ bienvenidos.jpg);
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-areas: 
-    "intro intro plataformas"
-    "intro intro mobile";
-    padding: 80px;
-    align-items: center;
-}
-
-.SobreElJuego{     /* ----- Sobre el Juego ----- */
-background-image: url(../Media/Bienvenidos/Background.png);
-background-size: cover;
-padding: 30px;
-width: 90%;
-box-shadow: black 3px 3px 6px 0px;
-grid-area: intro;
-}
-
-.plataformas2{     /* ----- Plataformas ----- */
-    background-image: url(../Media/Background.jpg);
+/* Fuente - Body - Encabezador - Header - Nav - Banner - Footer */
+/* ------------------------------------------------------------------------------------------ INICIO -----------------------------------------------------------------------------------------------------------------*/
+/* ---------- INICIO - BIENVENIDOS - SECCION 1 ---------- */
+.seccion__bienvenidos {
+  background-image: url("../Media/Bienvenidos/Fondo bienvenidos.jpg");
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: "intro intro plataformas" "intro intro mobile";
+  padding: 80px;
+  align-items: center; }
+  .seccion__bienvenidos .sobre__juego {
+    background-image: url("../Media/Bienvenidos/Background.png");
+    background-size: cover;
+    padding: 30px;
+    width: 90%;
+    box-shadow: black 3px 3px 6px 0px;
+    grid-area: intro; }
+  .seccion__bienvenidos .plataformas1 .plataformas2 {
+    background-image: url("../Media/Background.jpg");
     box-shadow: black 0px 0px 25px 10px;
     padding: 40px;
     text-align: center;
     color: white;
     grid-area: plataformas;
     width: 500px;
-    margin-bottom: 50px;
-}
-.plataformas2 img{
-    width: 60px;
-    transition: 0.5s;
-}
-.plataformas2 img:hover{
-    transform: scale(1.6,1.6);
-}
-.PlataformasIconos1{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    justify-items: center;
-    padding-top: 10px;
-    padding-bottom: 20px;
-}
-.PlataformasIconos2{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    justify-items: center;
-    padding-top: 20px;
-}
-
-.mobile{
+    margin-bottom: 50px; }
+    .seccion__bienvenidos .plataformas1 .plataformas2 img {
+      width: 60px;
+      transition: 0.5s; }
+    .seccion__bienvenidos .plataformas1 .plataformas2 img:hover {
+      transform: scale(1.6, 1.6); }
+    .seccion__bienvenidos .plataformas1 .plataformas2 .plataformas__iconos1 {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      justify-items: center;
+      padding-top: 10px;
+      padding-bottom: 20px; }
+    .seccion__bienvenidos .plataformas1 .plataformas2 .plataformas__iconos2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      justify-items: center;
+      padding-top: 20px; }
+  .seccion__bienvenidos .plataformas1 .mobile {
     width: 500px;
     height: 100%;
     box-shadow: black 0px 0px 25px 10px;
-    grid-area: mobile;
-}
+    grid-area: mobile; }
 
-@media screen and (max-width:480px){   /* ----- Media Queries Mobile SECCION 1 Inicio Bienvenidos----- */
-    .SeccionBienvenidos{
-        display: flex;
-        flex-direction: column;
-        padding: 30px;
-    }
-    .SobreElJuego{
-        padding: 20px;
-        width: 100%;
-    }
-    .plataformas1{
-        display: flex;
-        flex-direction: column;
-        padding: 0;
-        margin-top: 20px;
-    }
-    .plataformas2{
+/* ----- Media Queries Mobile Inicio Bienvenidos ----- */
+@media screen and (max-width: 480px) {
+  .seccion__bienvenidos {
+    display: flex;
+    flex-direction: column;
+    padding: 30px; }
+    .seccion__bienvenidos h2 {
+      font-size: 1rem; }
+    .seccion__bienvenidos h3, .seccion__bienvenidos p {
+      font-size: 0.8rem; }
+    .seccion__bienvenidos .sobre__juego {
+      padding: 20px;
+      width: 100%; }
+    .seccion__bienvenidos .plataformas1 {
+      display: flex;
+      flex-direction: column;
+      padding: 0;
+      margin-top: 20px; }
+      .seccion__bienvenidos .plataformas1 .plataformas2 {
         width: 100%;
         border: none;
         padding: 20px;
         align-items: center;
-        margin-bottom: 20px;
-    }
-    .plataformas2 img{
-        width: 40px;
-        margin-top: 20px;
-        margin-bottom: 10px;
-        transition: none;
-    }
-    .plataformas2 img:hover{
-        width: 40px;
-    }
-    .mobile{
-        width: 100%;
-    }
-}
+        margin-bottom: 20px; }
+        .seccion__bienvenidos .plataformas1 .plataformas2 img {
+          width: 40px;
+          margin-top: 20px;
+          margin-bottom: 10px;
+          transition: none; }
+        .seccion__bienvenidos .plataformas1 .plataformas2 img:hover {
+          width: 40px; }
+      .seccion__bienvenidos .plataformas1 .mobile {
+        width: 100%; } }
 
-
-/*---------- INICIO NUESTROS DLC - SECCION 2 ----------*/
-
-.dlc__seccion{
-    background-image: url(../Media/DLC/DLC\ fondo.jpg);
-}
-.dlc__carousel{
+/* ---------- INICIO - DLC - SECCION 2 ---------- */
+.dlc__seccion {
+  background-image: url("../Media/DLC/DLC fondo.jpg"); }
+  .dlc__seccion .dlc__carousel {
     display: flex;
     flex-direction: row;
-    justify-content: center;
-}
-.dlc__card{
-    margin: 7rem 6rem 7rem 6rem;
-    width: 35%;
-    background-image: url(../Media/DLC/Fondo\ Contiene.png);
-    transition: 0.5s;
-    box-shadow: black 0px 0px 25px 10px;
-}
-.dlc__card:hover{
-    transform: scale(1.1,1.1);
-}
-.dlc__card__body{
-    color: #ffffff;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    padding: 1.5rem;
-}
-
-@media screen and (max-width:480px){     /* ----- Media Queries Mobile SECCION 2 Inicio DLC ----- */
-    .dlc__carousel{
-        display: flex;
-        flex-direction: column;
+    justify-content: center; }
+    .dlc__seccion .dlc__carousel .dlc__card {
+      margin: 7rem 6rem 7rem 6rem;
+      width: 35%;
+      background-image: url("../Media/DLC/Fondo Contiene.png");
+      transition: 0.5s;
+      box-shadow: black 0px 0px 25px 10px;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px; }
+      .dlc__seccion .dlc__carousel .dlc__card img {
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px; }
+      .dlc__seccion .dlc__carousel .dlc__card:hover {
+        transform: scale(1.1, 1.1); }
+      .dlc__seccion .dlc__carousel .dlc__card .dlc__card__body {
+        color: #ffffff;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
         align-items: center;
-        margin: 2rem;
-    }
-    .dlc__card{
-    margin: 1rem;
-    width: 85%;
-    }
-    .dlc__card__body{
-        padding: 1rem;
-        align-items: flex-start;
-    }
-    .dlc__card__body h4{
-        font-size: 0.7rem;
-    }
-    .dlc__card__body p{
-        font-size: 0.7rem;
-    }
-}
+        padding: 1.5rem; }
 
-/*---------- INICIO DE QUE LADO ESTAS? - SECCION 3 ----------*/
-.personajes{
-    background-image: url(../Media/Personajes/Personajes\ fondo.jpg);
-}
-.sobreviviente{   /* ----- Encabezado ----- */
-    background-color: #b1bfd8;
-    background-image: linear-gradient(315deg, #2f4c7e 0%, #437ed8 74%);
-    border-right: solid 1px rgb(0, 0, 0);
-    box-shadow: black 3px 3px 6px 0px;
-}
-.asesino{
-    background-color: #3f0d12;
-    background-image: linear-gradient(315deg, #3f0d12 0%, #8a0c0c 74%);
-    box-shadow: black 3px 3px 6px 0px;
-}
-.EncabezadoSeccion3{
-    border-bottom: 1px solid black;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    color: black;
-}
-.EncabezadoSeccion3 div h2{
+/* ----- Media Queries Mobile Inicio DLC ----- */
+@media screen and (max-width: 480px) {
+  .dlc__seccion .dlc__carousel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem; }
+    .dlc__seccion .dlc__carousel .dlc__card {
+      margin: 1rem;
+      width: 85%; }
+      .dlc__seccion .dlc__carousel .dlc__card .dlc__card__body {
+        padding: 1rem;
+        align-items: flex-start; }
+        .dlc__seccion .dlc__carousel .dlc__card .dlc__card__body h3, .dlc__seccion .dlc__carousel .dlc__card .dlc__card__body p {
+          font-size: 0.8rem; } }
+
+/* ---------- INICIO - DE QUE LADO ESTAS? - SECCION 3 ---------- */
+.encabezado__seccion3 {
+  border-bottom: 1px solid black;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  color: black; }
+  .encabezado__seccion3 h3 {
     text-align: center;
     padding-top: 20px;
     padding-bottom: 20px;
-}
+    margin: 0;
+    font-weight: bold; }
+  .encabezado__seccion3 .sobreviviente {
+    background-color: #b1bfd8;
+    background-image: linear-gradient(315deg, #2f4c7e 0%, #437ed8 74%);
+    border-right: solid 1px black;
+    box-shadow: black 3px 3px 6px 0px; }
+  .encabezado__seccion3 .asesino {
+    background-color: #3f0d12;
+    background-image: linear-gradient(315deg, #3f0d12 0%, #8a0c0c 74%);
+    box-shadow: black 3px 3px 6px 0px; }
 
-.personajes__carousel{   /* ----- Inicio Personajes ----- */
+.personajes {
+  background-image: url("../Media/Personajes/Personajes fondo.jpg"); }
+  .personajes .personajes__carousel {
     display: grid;
     grid-template-columns: 1fr 1fr;
     justify-content: space-evenly;
-    margin-top: 6rem;
-    margin-bottom: 6rem;
-    margin-left: 8rem;
-    margin-right: 8rem;
-}
-.personajes__cont{
-    display: flex;
-    justify-content: center;
-    transition: 0.5s;
-}
-.personajes__cont:hover{
-    transform: scale(1.1,1.1);
-}
-.personajes__cont img{
-    width: 400px;
-    box-shadow: black 0px 0px 25px 10px;
-}
-.personajes__surv{
-    display: flex;
-    flex-direction: row-reverse;
-}
-.personajes__surv img{
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
-}
-.personajes__surv__text{
-    background-color: #000000;
-    background-image: linear-gradient(315deg, #2f4c7e 0%, #437ed8 74%);
-    color: #000000;
-    box-shadow: black 0px 0px 25px 10px;
-    font-family: "archivo narrow";
-    width: 300px;
-    height: auto;
-    padding: 40px;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
-}
-.personajes__surv__text h5{
-    padding-bottom: 1rem;
-}
-.personajes__surv__text p{
-    font-size: 17px;
-}
-.personajes__kill img{
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
-}
-.personajes__kill__text{
-    background-color: #3f0d12;
-    background-image: linear-gradient(315deg, #3f0d12 0%, #8a0c0c 74%);
-    color: black;
-    box-shadow: black 0px 0px 25px 10px;
-    font-family: "archivo narrow";
-    width: 300px;
-    height: auto;
-    padding: 40px;
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
-}
-.personajes__kill__text h5{
-    padding-bottom: 1rem;
-}
-.personajes__kill__text p{
-    font-size: 17px;
-}
-
-@media screen and (max-width:480px){     /* ----- Media Queries Mobile SECCION 3 Inicio De que lado estas?----- */
-    .EncabezadoSeccion3>div>h2{
-        margin: 0;
-    }
-    .personajes__carousel{
-        display: flex;
-        flex-direction: row;
-        margin: 0;
-        padding: 40px;
-    }
-    .personajes__carousel img{
-        width: 200px;
+    margin: 6rem 8rem 6rem 8rem; }
+    .personajes .personajes__carousel .personajes__cont {
+      display: flex;
+      justify-content: center;
+      transition: 0.5s; }
+      .personajes .personajes__carousel .personajes__cont img {
+        width: 400px;
+        box-shadow: black 0px 0px 25px 10px; }
+      .personajes .personajes__carousel .personajes__cont h4 {
+        padding-bottom: 10px;
+        font-weight: bold; }
+      .personajes .personajes__carousel .personajes__cont p {
+        font-family: "roboto";
+        font-size: 1rem; }
+    .personajes .personajes__carousel .personajes__cont:hover {
+      transform: scale(1.1, 1.1); }
+    .personajes .personajes__carousel .personajes__surv {
+      display: flex;
+      flex-direction: row-reverse; }
+      .personajes .personajes__carousel .personajes__surv img {
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px; }
+      .personajes .personajes__carousel .personajes__surv .personajes__surv__text {
+        background-color: #000000;
+        background-image: linear-gradient(315deg, #2f4c7e 0%, #437ed8 74%);
+        color: #000000;
+        box-shadow: black 0px 0px 25px 10px;
+        font-family: "archivo narrow";
+        width: 250px;
         height: auto;
-    }
-    .personajes__cont{
+        padding: 30px;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px; }
+    .personajes .personajes__carousel .personajes__kill img {
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px; }
+    .personajes .personajes__carousel .personajes__kill .personajes__kill__text {
+      background-color: #3f0d12;
+      background-image: linear-gradient(315deg, #3f0d12 0%, #8a0c0c 74%);
+      color: black;
+      box-shadow: black 0px 0px 25px 10px;
+      font-family: "archivo narrow";
+      width: 250px;
+      height: auto;
+      padding: 30px;
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px; }
+
+/* ----- Media Queries Mobile Inicio De que lado estas?----- */
+@media screen and (max-width: 480px) {
+  .encabezado__seccion3 h3 {
+    padding-top: 10px;
+    padding-bottom: 10px; }
+  .personajes .personajes__carousel {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    padding: 40px; }
+    .personajes .personajes__carousel .personajes__card {
+      padding: 10px; }
+      .personajes .personajes__carousel .personajes__card .personajes__cont {
         display: flex;
-        flex-direction: column;
-    }
-    .personajes__surv img{
+        flex-direction: column; }
+        .personajes .personajes__carousel .personajes__card .personajes__cont img {
+          width: 200px;
+          height: auto; }
+        .personajes .personajes__carousel .personajes__card .personajes__cont h4 {
+          font-size: 1rem; }
+        .personajes .personajes__carousel .personajes__card .personajes__cont p {
+          font-size: 0.7rem; }
+      .personajes .personajes__carousel .personajes__card .personajes__surv img {
         border-top-left-radius: 5px;
         border-top-right-radius: 5px;
-        border-bottom-right-radius: 0;
-    }
-    .personajes__surv__text{
+        border-bottom-right-radius: 0; }
+      .personajes .personajes__carousel .personajes__card .personajes__surv .personajes__surv__text {
         padding: 10px;
         width: 200px;
-        height: 19rem;
+        height: 250px;
         border-top-left-radius: 0;
-        border-bottom-right-radius: 5px;
-    }
-    .personajes__kill img{
+        border-bottom-right-radius: 5px; }
+      .personajes .personajes__carousel .personajes__card .personajes__kill img {
         border-top-right-radius: 5px;
-        border-bottom-left-radius: 0;
-    }
-    .personajes__kill__text{
+        border-bottom-left-radius: 0; }
+      .personajes .personajes__carousel .personajes__card .personajes__kill .personajes__kill__text {
         padding: 10px;
         width: 200px;
-        height: 19rem;
+        height: 250px;
         border-top-right-radius: 0;
-        border-bottom-left-radius: 5px;
-    }
-    .personajes__card{
-        padding: 10px;
-    }
-    .personajes__card p{
-        font-size: 0.7rem;
-    }
-}
+        border-bottom-left-radius: 5px; } }
 
-
-/*---------- INICIO NOTICIAS - SECCION 4 ----------*/
-
-.InicioNoticias{
-    background-image: url(../Media/Noticias/Noticias\ fondo\ 2.jpg);
-    color: white;
-    text-align: center;
-    padding: 50px 20px 50px 20px;
-    display: grid;
-    justify-items: center;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas: 
-    "InicioAniversario InicioCapitulo24"
-    "InicioAniversario InicioTomo12";
-}
-.InicioNoticias>div{
-    padding: 40px;
-    margin: 20px;
-}
-.InicioNoticias img{
-    transition: 0.5s;
-}
-.InicioNoticias img:hover{
-    transform: scale(1.1,1.1);
-    border: 2px solid #7c0000;
-}
-.InicioAniversario{   /* --- Noticias Aniversario --- */
-    background-image: url(../Media/Background.jpg);
+/* ---------- INICIO - NOTICIAS - SECCION 3 ---------- */
+.inicio__noticias {
+  background-image: url("../Media/Noticias/Noticias fondo 2.jpg");
+  color: white;
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  display: grid;
+  justify-items: center;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "InicioAniversario InicioCapitulo24" "InicioAniversario InicioTomo12"; }
+  .inicio__noticias div {
+    padding: 25px;
+    margin: 15px; }
+    .inicio__noticias div img {
+      border: 1px solid #7c0000;
+      box-shadow: black 0px 0px 25px 10px;
+      transition: 0.5s; }
+    .inicio__noticias div img:hover {
+      transform: scale(1.1, 1.1);
+      border: 2px solid #7c0000; }
+    .inicio__noticias div iframe {
+      width: 550px;
+      height: 300px;
+      margin-bottom: 60px;
+      border: 1px solid #7c0000;
+      box-shadow: black 0px 0px 25px 10px; }
+  .inicio__noticias .inicio__aniversario {
+    background-image: url("../Media/Background.jpg");
     background-size: cover;
     box-shadow: black 0px 0px 25px 10px;
     grid-area: InicioAniversario;
-}
-.InicioAniversarioMedia{
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-row-gap: 100px;
-    padding-top: 50px;
-    justify-items: center;
-    align-items: center
-}
-.InicioAniversarioMedia iframe{
-    width: 600px;
-    height: 300px;
-    border: 1px solid #7c0000;
-    box-shadow: black 0px 0px 25px 10px;
-}
-.InicioAniversarioMedia img{
-    border: 1px solid #7c0000;
-    box-shadow: black 0px 0px 25px 10px;
-}
-
-.InicioCapitulo24{   /* --- Noticias Capitulo 24 --- */
-    background-image: url(../Media/Background.jpg);
+    width: 80%; }
+    .inicio__noticias .inicio__aniversario .inicio__aniversario__media {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-row-gap: 100px;
+      justify-items: center;
+      align-items: center; }
+  .inicio__noticias .inicio__cap24 {
+    background-image: url("../Media/Background.jpg");
+    background-size: cover;
     box-shadow: black 0px 0px 25px 10px;
     grid-area: InicioCapitulo24;
     justify-items: center;
-    
-}
-.InicioCapitulo24 img{
-    width: 480px;
-    border: 1px solid #7c0000;
-    box-shadow: black 0px 0px 25px 10px;
-}
-
-.InicioTomo12{   /* --- Noticias Tomo 12 --- */
-    background-image: url(../Media/Background.jpg);
+    width: 80%; }
+    .inicio__noticias .inicio__cap24 img {
+      width: 400px; }
+  .inicio__noticias .inicio__tomo12 {
+    background-image: url("../Media/Background.jpg");
+    background-size: cover;
     box-shadow: black 0px 0px 25px 10px;
     grid-area: InicioTomo12;
-}
-.InicioTomo12 img{
-    width: 480px;
-    border: 1px solid #7c0000;
-    box-shadow: black 0px 0px 25px 10px;
-}
+    width: 80%; }
+    .inicio__noticias .inicio__tomo12 img {
+      width: 400px; }
 
-@media screen and (max-width:480px){     /* ----- Media Queries Mobile SECCION 4 Inicio Noticias ----- */
-    .InicioNoticias{
-        display: flex;
-        flex-direction: column;
-        align-content: center;
-        padding: 20px;
-    }
-    .InicioNoticias>div{
-        padding: 20px;
-        margin: 10px;
-    }
-    .InicioAniversarioMedia{ 
-        padding: 0;
-    }
-    .InicioAniversarioMedia img{
-        width: 230px;
-        height: 115px;
-    }
-    .InicioAniversarioMedia iframe{
-        display: none;
-    }
-    .InicioCapitulo24 img{
-        width: 230px;
-    }
-    .InicioTomo12 img{
-        width: 230px;
-    }
-}
-
-
-/*---------- INICIO FOOTER - SECCION 5  ---------- */
-
-footer{
-    color: white;
-}
-.MenuFooter li a{  /* ----- Menu Footer -----*/
-    font-family: "archivo narrow";
-    color: white;
-}
-.MenuFooter ul{
-    list-style: none;
-}
-.DivFooter{
-    background-image: url(../Media/Footer/Fondo\ Footer.png);
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    align-items: center;
-    padding: 50px;
-    border-top: 5px solid #929292;
-}
-.IconoRedes{ /* ----- Redes Footer -----*/
+/* ----- Media Queries Mobile Inicio Noticias ----- */
+@media screen and (max-width: 480px) {
+  .inicio__noticias {
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-}
-.IconoRedes div img{
-    width: 40px;
-}
-.unete{
-    display: flex;
-    justify-content: center;
-    padding-bottom: 50px;
-}
-.IconoFooter{ /* ----- Icono Footer -----*/
-    display: flex;
-    flex-direction: row-reverse;
-}
-.IconoFooter img{
-    width: 300px;
-}
-
-@media screen and (max-width:480px){     /* ----- Media Queries Mobile Inicio Footer ----- */
-    .DivFooter{
-        display: flex;
-        flex-direction: column;
-        padding: 10px;
-        height: 450px;
-        justify-content: space-around;
-        text-align: center;
-    }
-    .MenuFooter ul li a{
-        font-size: 14px;
-    }
-    .unete{
-        padding-bottom: 30px;
-    }
-    .IconoRedes{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-        width: 320px;
-    }
-    .IconoRedes div img{
-        width: 30px;
-    }
-    .IconoFooter img{
-        width: 200px;
-    }
-}
-
-/*-------------------------------------------------------------------------------------------------- PAGE JUEGO ------------------------------------------------------------------------------------------------------*/
-
-.JuegoBody{ /* ----- Body -----*/
-background-image: url(../Media/Background.jpg);
-}
-
-/* ---------- JUEGO PERSONAJES  - SECCION 1 ---------- */
-
-.juego__carousel{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    grid-column-gap: 6rem;
-}
-.juego__card{
-    background-color: #1f1f1f;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas: 
-    "img_as perks"
-    "img_as perks"
-    "habilidad habilidad";
-    width: 39%;
-    margin-top: 4rem;
-    margin-bottom: 4rem;
-    transition: 0.5s;
-    color: #ffffff;
-    box-shadow: #5c5c5c 0px 0px 25px 10px;
-}
-.juego__card img{
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
-}
-.juego__card:hover{
-    transform: scale(1.1,1.1);
-    box-shadow: black 0px 0px 25px 10px;
-}
-.juego__kill{
-    margin-bottom: 4rem;
-}
-.juego__card__titulo{
-    text-align: center;
-}
-.juego__card__perk{
-    display: flex;
+    flex-direction: column;
     align-items: center;
-}
-.juego__card__body img{
-    width: 50px;
-    padding-right: 10px;
-}
-.juego__card__body p{
-    font-size: 0.8rem;
-    margin: 0;
-}
-.juego__card__body h3{
-    margin: 0;
-}
-
-
-
-@media screen and (max-width:480px) { /* ---------- Media Queries Mobile Juego Personajes ----------*/ 
-    .juego__carousel{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-items: center;
-    }
-    .juego__card{
-        display: flex;
-        flex-direction: column;
-        width: 70vw;
-        align-items: center;
-        padding-top: 20px;
-    }
-    .juego__card>div>img{
-        width: 250px;
-        border: 1px solid #818181;
-    }
-}
-
-/* --------------------------------------------------------------------------------------- PAGE COMUNIDAD ------------------------------------------------------------------------------------------------------------*/
-
-/* ----- Comunidad -----*/
-
-.comunidad{
-    color: white;
-    background-color: #000000;
-    background-image: linear-gradient(315deg, black 0%, #0e0e0e 74%);
-    background-size: cover;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    justify-items: center;
-    align-items: center;
-    padding-top: 40px;
-    padding-bottom: 40px;
-    text-align: center;
-}
-.ComunidadMedia img{
-    width: 100%;
-    box-shadow: #727272 0px 0px 25px 1px;
-}
-.ComunidadIconos img{
-    width: 100px;
-    border-radius: 100px;
-}
-.ComunidadIconos h2{
-    padding: 20px;
-    font-family: "archivo narrow"; 
-}
-.ComunidadIconos{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
-    justify-items: center;
-    align-items: center;
-    width: 100%;
-}
-.ComunidadIconos>div>div>img{
-    transition: 0.5s;
-}
-.ComunidadIconos>div>div>img:hover{
-    transform: scale(1.1,1.1);
-    box-shadow: white 0px 0px 5px 1px;
-    border-radius: 100px;
-}
-
-/* ----- Redes ----- */
-
-.ComunidadRedes{
-    color: white;
-    background-color: #000000;
-    background-image: linear-gradient(315deg, black 0%, #0e0e0e 74%);
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    justify-items: center;
-    align-items: center;
-    text-align: center;
-    padding-top: 40px;
-    padding-bottom: 40px;
-    position: relative;
-}
-.ComunidadRedesIconos{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
-    justify-items: center;
-    align-self: center;
-    width: 100%;
-}
-.ComunidadRedesIconos img{
-    width: 100px;
-    border-radius: 100px;
-}
-.ComunidadRedesIconos h2{
-    padding: 20px;
-    font-family: "archivo narrow";
-}
-.ComunidadRedesIconos>div>div>img{
-    transition: 0.5s;
-}
-.ComunidadRedesIconos>div>div>img:hover{
-    transform: scale(1.1,1.1);
-    box-shadow: white 0px 0px 5px 1px;
-    border-radius: 100px;
-}
-.comunidad__alerta{
-    position: absolute;
-    right: 81%;
-    bottom: 86%;
-    margin: 0;
-}
-.comunidad__alerta p{
-    margin: 0;
-}
-
-@media screen and (max-width:480px){ /* ---------- Media Queries Mobile Comunidad ----------*/
-    .ComunidadIconos img, .ComunidadRedesIconos img{
-        width: 30px;
-        padding-top: 30px;
-    }
-    .ComunidadIconos h2, .ComunidadRedesIconos h2{
-        padding: 0;
-        margin: 0;
-    }
-    .ComunidadRedesIconos>div>div>img:hover{
-        transform: scale(1.1,1.1);
-        box-shadow: white 0px 0px 0px 1px;
-        border-radius: 100px;
-    }
-
-    .comunidad{ /* ----- Comunidad -----*/
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        height: 350px;
-        padding: 40px;
-        margin: 0px;
-    }
-    .ComunidadMedia img{
-        width: 90%;
-    }
-    .ComunidadIconos img{
-        padding: 0;
-        margin-top: 20px;
-    }
-
-    .ComunidadRedes{ /* ----- Comunidad Redes -----*/
-        display: flex;
-        flex-direction: column-reverse;
-        justify-content: space-evenly;
-        height: 350px;
-        padding: 30px;
-        margin: 0px;
-    }
-    .ComunidadRedesIconos img{
-        padding: 0;
-        margin-top: 20px;
-    }
-    .ComunidadRedesMedia{
-        align-items: center;
-        align-content: center;
-    }
-    .comunidad__alerta{
-        padding: 2px;
-        right: 33%;
-        bottom: 2%;
-    }
-    .comunidad__alerta p {
-        font-size: 0.5rem;
-    }
-} 
-
-/*--------------------------------------------------------------------------------------- PAGE NOTICIAS --------------------------------------------------------------------------------------------------------------*/
-
-.noticias{ 
-    color: white;
-    text-align: center;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas:
-    "aniversario capitulo24"
-    "aniversario tomo12"
-    "titan rock";
-    padding: 0px 20px 50px 20px;
-}
-.noticias>div{
-    margin: 20px;
-    box-shadow: black 0px 0px 25px 10px;
-}
-.noticias__bg{
-    background-image: url(../Media/Background.jpg);
-    background-size: cover;
-}
-.noticias__recibir{
-    display: flex;
-    color: black;
-    font-family: "archivo narrow";
-    justify-content: center;
-    align-items: center;
-}
-.noticias__recibir div{
-    margin: 2rem;
-    padding: 0;
-}
-.noticias__recibir label{
-    margin: 0;
-}
-.noticias__recibir input{
-    width: 200px;
-}
-
-.aniversario{ /* ----- Aniversario -----*/
-    background-image: url(../Media/Noticias/Noticias\ fondo.png);
-    grid-area: aniversario;
-}
-.aniversario iframe{ 
-    width: 600px;
-    height: 300px;
-    border: 1px solid #7c0000;
-    box-shadow: black 0px 0px 25px 10px;
-}
-.AniversarioMedia{
-    display: grid;
-    grid-row-gap: 60px;
-    justify-content: center;
-    padding-top: 30px;
-}
-.aniversario img{
-    border: 1px solid #7c0000;
-    box-shadow: black 0px 0px 25px 10px;
-    transition: 0.5s;
-}
-.aniversario img:hover{
-    transform: scale(1.1,1.1);
-    border: 2px solid #7c0000;
-}
-
-.capitulo24 img{ /* ----- Capitulo 24 ----- */
-    width: 480px;
-    border: 1px solid #7c0000;
-    box-shadow: black 0px 0px 25px 10px;
-    transition: 0.5s;
-}
-.capitulo24 img:hover{
-    transform: scale(1.1,1.1);
-    border: 2px solid #7c0000;
-}
-.capitulo24{
-    background-image: url(../Media/Noticias/Noticias\ fondo.png);
-    grid-area: capitulo24;
-}
-
-.tomo12 img{ /* ----- Tomo 12 ----- */
-    width: 480px;
-    border: 1px solid #7c0000;
-    box-shadow: black 0px 0px 25px 10px;
-    transition: 0.5s;
-}
-.tomo12 img:hover{
-    transform: scale(1.1,1.1);
-    border: 2px solid #7c0000;
-}
-.tomo12{
-    background-image: url(../Media/Noticias/Noticias\ fondo.png);
-    grid-area: tomo12;
-}
-
-.titan img{ /* ----- Attack of Titan ----- */
-    width: 480px;
-    border: 1px solid #7c0000;
-    box-shadow: black 0px 0px 25px 10px;
-    transition: 0.5s;
-}
-.titan img:hover{
-    transform: scale(1.1,1.1);
-    border: 2px solid #7c0000;
-}
-.titan{
-    background-image: url(../Media/Noticias/Noticias\ fondo.png);
-    grid-area: titan;
-}
-
-.rock img{ /* ----- Rock a Bolly ----- */
-    width: 480px;
-    border: 1px solid #7c0000;
-    box-shadow: black 0px 0px 25px 10px;
-    transition: 0.5s;
-}
-.rock img:hover{
-    transform: scale(1.1,1.1);
-    border: 2px solid #7c0000;
-}
-.rock{
-    background-image: url(../Media/Noticias/Noticias\ fondo.png);
-    grid-area: rock;
-}
-
-@media screen and (max-width:480px){
-    .noticias{
-        display: flex;
-        flex-direction: column;
-        padding: 0;
-    }
-    .noticias div{
-        padding: 20px;
-    }
-    .noticias img{
-        width: 100%;
-    }
-    .aniversario iframe{
-        display: none;
-    }
-    .AniversarioMedia{
-        padding: 0;
-    }
-    .noticias__recibir{
-        display: flex;
-        flex-direction: column;
-    }
-    .noticias__recibir div{
-        margin: 1rem;
-    }
-}
-
-/* --------------------------------------------------------------------------------------------------- PAGE CONTACTO ------------------------------------------------------------------------------------------------ */
-
-.contacto{
-    background-image: url(../Media/Background.jpg);
-    background-size: cover;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-}
-.formulario{
-    background-color: #ffffff;
-    display: grid;
-    padding: 1rem;
-    opacity: 0.9;
-    transition: 0.5s;
-    box-shadow: 0px 0px 6px 0px #000000cc;
-    width: 25vw;
-    margin-left: 500px;
-    margin-top: 100px;
-    margin-bottom: 100px;
-    border-radius: 10px;
-}
-.formulario h2{
-    text-align: center;
-}
-.formulario div{
-    margin: 1rem;
-}
-.formulario:hover{
-    box-shadow: 0px 0px 6px 5px #000000cc;
-}
-
-.FormTexto p{
-    font-size: 2rem;
-    color: white;
-    animation: contacto_animacion;
-    animation-duration: 5s;
-    transition: 0.5s ease-in-out;
-    animation-iteration-count: infinite;
-    position: relative;
-}
-.FormTexto{
-    width: 25vw;
-    padding-left: 90px;
-}
-@keyframes contacto_animacion{
-    0%{
-        transform: translateY(0px);
-    }
-    50%{
-        transform: translateY(-20px);
-    }
-    100%{
-        transform: translateY(0px);
-    }
-}
-
-@media screen and (max-width:480px){
-    .contacto{
-        display: flex;
-        flex-direction: column-reverse;
-        padding: 0;
-    }
-    .formulario{
-        margin: 0;
-        width: 90%;
-        margin-bottom: 50px;
-    }
-    .formulario div{
-        font-size: 0.7rem;
-    }
-    .formulario>div>select{
-        font-size: 0.7rem;
-    }
-    .formulario h2{
-        font-size: 1rem;
-    }
-    .FormTexto{
-        padding: 40px;
-        width: 100vw;
-    }
-    .FormTexto p{
-        font-size: 0.9rem;
-        text-align: center;
-        margin: 0;
-    }
-}
+    padding-top: 20px;
+    padding-bottom: 20px; }
+    .inicio__noticias div {
+      padding: 20px;
+      margin: 10px; }
+      .inicio__noticias div iframe {
+        display: none; }
+      .inicio__noticias div p {
+        font-size: 0.8rem; }
+    .inicio__noticias .inicio__aniversario {
+      width: 90%; }
+      .inicio__noticias .inicio__aniversario img {
+        width: 300px; }
+    .inicio__noticias .inicio__cap24 {
+      width: 90%; }
+      .inicio__noticias .inicio__cap24 img {
+        width: 300px; }
+    .inicio__noticias .inicio__tomo12 {
+      width: 90%; }
+      .inicio__noticias .inicio__tomo12 img {
+        width: 300px; } }
