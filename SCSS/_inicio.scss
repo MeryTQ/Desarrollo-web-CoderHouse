@@ -134,6 +134,16 @@
             border-top-left-radius: 5px;
             border-top-right-radius: 5px;
         }
+        @mixin border-surv {
+            border-top: 2px solid #132138;
+            border-left: 2px solid #132138;
+            border-right: 2px solid #132138;
+        }
+        @mixin border-kill {
+            border-top: 2px solid #1f0507;
+            border-left: 2px solid #1f0507;
+            border-right: 2px solid #1f0507;
+        }
         @mixin estilo-text {
             color: #000000;
             box-shadow: black 0px 0px 25px 10px;
@@ -147,12 +157,7 @@
             display: flex;
             flex-direction: column-reverse;
             justify-content: center;
-            transition: 0.5s; 
-            img{
-                width: 400px;
-                box-shadow: black 0px 0px 25px 10px;    
-                @include border-top;        
-            }    
+            transition: 0.5s;    
             h4{
                 font-weight: bold;
                 margin: 0;
@@ -174,8 +179,16 @@
                 position: relative;
                 width: 400px;
                 img{
+                    box-shadow: black 0px 0px 25px 10px;    
+                    @include border-top;  
                     display: block;
                     width: 100%;
+                }
+                .img__surv{
+                    @include border-surv;
+                }
+                .img__kill{
+                    @include border-kill;
                 }
                 .inicio__img__overlay{
                     position: absolute;
@@ -206,6 +219,7 @@
         }  
     }
 }
+
 
 
 /* ---------- INICIO - NOTICIAS - SECCION 3 ---------- */
