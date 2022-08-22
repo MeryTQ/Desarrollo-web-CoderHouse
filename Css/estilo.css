@@ -5,9 +5,7 @@
 
 /* -------------------------------------------------------------------------------------------------LAYOUT -----------------------------------------------------------------------------------------------------------*/
 body {
-  overflow-x: hidden;
-  background-image: url(../Media/Background.jpg);
-  background-size: cover; }
+  overflow-x: hidden; }
 
 h2 {
   font-size: 1.5rem;
@@ -217,56 +215,20 @@ footer .seccion__footer {
       transition: 0.5s; }
     .seccion__bienvenidos .plataformas1 .plataformas2 img:hover {
       transform: scale(1.6, 1.6); }
-    .seccion__bienvenidos .plataformas1 .plataformas2 .plataformas__iconos1 {
+    .seccion__bienvenidos .plataformas1 .plataformas2 .plataformas__iconos1, .seccion__bienvenidos .plataformas1 .plataformas2 .plataformas__iconos2 {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
       justify-items: center;
-      padding-top: 10px;
+      padding-top: 20px;
       padding-bottom: 20px; }
     .seccion__bienvenidos .plataformas1 .plataformas2 .plataformas__iconos2 {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      justify-items: center;
-      padding-top: 20px; }
+      /* -------- EXTEND -----------*/
+      margin-top: 20px; }
   .seccion__bienvenidos .plataformas1 .mobile {
     width: 500px;
     height: 100%;
     box-shadow: black 0px 0px 25px 10px;
     grid-area: mobile; }
-
-/* ----- Media Queries Mobile Inicio Bienvenidos ----- */
-@media screen and (max-width: 480px) {
-  .seccion__bienvenidos {
-    display: flex;
-    flex-direction: column;
-    padding: 30px; }
-    .seccion__bienvenidos h2 {
-      font-size: 1rem; }
-    .seccion__bienvenidos h3, .seccion__bienvenidos p {
-      font-size: 0.8rem; }
-    .seccion__bienvenidos .sobre__juego {
-      padding: 20px;
-      width: 100%; }
-    .seccion__bienvenidos .plataformas1 {
-      display: flex;
-      flex-direction: column;
-      padding: 0;
-      margin-top: 20px; }
-      .seccion__bienvenidos .plataformas1 .plataformas2 {
-        width: 100%;
-        border: none;
-        padding: 20px;
-        align-items: center;
-        margin-bottom: 20px; }
-        .seccion__bienvenidos .plataformas1 .plataformas2 img {
-          width: 40px;
-          margin-top: 20px;
-          margin-bottom: 10px;
-          transition: none; }
-        .seccion__bienvenidos .plataformas1 .plataformas2 img:hover {
-          width: 40px; }
-      .seccion__bienvenidos .plataformas1 .mobile {
-        width: 100%; } }
 
 /* ---------- INICIO - DLC - SECCION 2 ---------- */
 .dlc__seccion {
@@ -296,22 +258,6 @@ footer .seccion__footer {
         grid-template-columns: 1fr 1fr;
         align-items: center;
         padding: 1.5rem; }
-
-/* ----- Media Queries Mobile Inicio DLC ----- */
-@media screen and (max-width: 480px) {
-  .dlc__seccion .dlc__carousel {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 2rem; }
-    .dlc__seccion .dlc__carousel .dlc__card {
-      margin: 1rem;
-      width: 85%; }
-      .dlc__seccion .dlc__carousel .dlc__card .dlc__card__body {
-        padding: 1rem;
-        align-items: flex-start; }
-        .dlc__seccion .dlc__carousel .dlc__card .dlc__card__body h3, .dlc__seccion .dlc__carousel .dlc__card .dlc__card__body p {
-          font-size: 0.8rem; } }
 
 /* ---------- INICIO - DE QUE LADO ESTAS? - SECCION 3 ---------- */
 .encabezado__seccion3 {
@@ -361,75 +307,35 @@ footer .seccion__footer {
       display: flex;
       flex-direction: row-reverse; }
       .personajes .personajes__carousel .personajes__surv img {
+        /* ------------------ MIXINS -----------------*/
         border-top-right-radius: 5px;
         border-bottom-right-radius: 5px; }
       .personajes .personajes__carousel .personajes__surv .personajes__surv__text {
         background-color: #000000;
         background-image: linear-gradient(315deg, #2f4c7e 0%, #437ed8 74%);
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
         color: #000000;
         box-shadow: black 0px 0px 25px 10px;
         font-family: "archivo narrow";
         width: 250px;
         height: auto;
-        padding: 30px;
-        border-top-left-radius: 5px;
-        border-bottom-left-radius: 5px; }
+        padding: 30px; }
     .personajes .personajes__carousel .personajes__kill img {
       border-top-left-radius: 5px;
       border-bottom-left-radius: 5px; }
     .personajes .personajes__carousel .personajes__kill .personajes__kill__text {
       background-color: #3f0d12;
       background-image: linear-gradient(315deg, #3f0d12 0%, #8a0c0c 74%);
-      color: black;
+      /* ------------------ MIXINS -----------------*/
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+      color: #000000;
       box-shadow: black 0px 0px 25px 10px;
       font-family: "archivo narrow";
       width: 250px;
       height: auto;
-      padding: 30px;
-      border-top-right-radius: 5px;
-      border-bottom-right-radius: 5px; }
-
-/* ----- Media Queries Mobile Inicio De que lado estas?----- */
-@media screen and (max-width: 480px) {
-  .encabezado__seccion3 h3 {
-    padding-top: 10px;
-    padding-bottom: 10px; }
-  .personajes .personajes__carousel {
-    display: flex;
-    flex-direction: row;
-    margin: 0;
-    padding: 40px; }
-    .personajes .personajes__carousel .personajes__card {
-      padding: 10px; }
-      .personajes .personajes__carousel .personajes__card .personajes__cont {
-        display: flex;
-        flex-direction: column; }
-        .personajes .personajes__carousel .personajes__card .personajes__cont img {
-          width: 200px;
-          height: auto; }
-        .personajes .personajes__carousel .personajes__card .personajes__cont h4 {
-          font-size: 1rem; }
-        .personajes .personajes__carousel .personajes__card .personajes__cont p {
-          font-size: 0.7rem; }
-      .personajes .personajes__carousel .personajes__card .personajes__surv img {
-        border-top-left-radius: 5px;
-        border-top-right-radius: 5px;
-        border-bottom-right-radius: 0; }
-      .personajes .personajes__carousel .personajes__card .personajes__surv .personajes__surv__text {
-        padding: 10px;
-        width: 200px;
-        height: 250px;
-        border-top-left-radius: 0;
-        border-bottom-right-radius: 5px; }
-      .personajes .personajes__carousel .personajes__card .personajes__kill img {
-        border-top-right-radius: 5px;
-        border-bottom-left-radius: 0; }
-      .personajes .personajes__carousel .personajes__card .personajes__kill .personajes__kill__text {
-        padding: 10px;
-        width: 200px;
-        height: 250px;
-        border-top-right-radius: 0;
-        border-bottom-left-radius: 5px; } }
+      padding: 30px; }
 
 /* ---------- INICIO - NOTICIAS - SECCION 3 ---------- */
 .inicio__noticias {
@@ -488,6 +394,151 @@ footer .seccion__footer {
     .inicio__noticias .inicio__tomo12 img {
       width: 400px; }
 
+/* ------------------------------------------------------------------------------------------------- JUEGO -----------------------------------------------------------------------------------------------------------*/
+.juego__carousel {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  grid-column-gap: 6rem; }
+  .juego__carousel .juego__card {
+    background-color: #2e352d;
+    background-size: cover;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 36%;
+    margin-top: 7rem;
+    margin-bottom: 7rem;
+    transition: 0.5s;
+    color: #ffffff;
+    box-shadow: #000000 0px 0px 25px 10px;
+    border: 0; }
+    .juego__carousel .juego__card img {
+      border-bottom-left-radius: 5px;
+      border-top-right-radius: 0; }
+    .juego__carousel .juego__card:hover {
+      transform: scale(1.1, 1.1);
+      box-shadow: black 0px 0px 25px 10px; }
+    .juego__carousel .juego__card .juego__card__body {
+      padding: 0;
+      margin: 0; }
+      .juego__carousel .juego__card .juego__card__body img {
+        width: 50px;
+        padding-right: 10px; }
+      .juego__carousel .juego__card .juego__card__body p, .juego__carousel .juego__card .juego__card__body h3 {
+        font-size: 0.9rem;
+        margin: 0; }
+      .juego__carousel .juego__card .juego__card__body .juego__card__titulo {
+        text-align: center;
+        padding-top: 15px; }
+      .juego__carousel .juego__card .juego__card__body .accordion-button {
+        background-color: transparent;
+        color: white;
+        border-radius: 0px; }
+
+.surv__bg {
+  background-image: url(../Media/Sobrevivientes/surv_bg.jpg);
+  background-size: cover; }
+
+.killer__bg {
+  background-image: url(../Media/Asesinos/killer_bg.jpg);
+  background-size: cover; }
+
+/* --------------------------------------------------------------------------------------------------- INICIO --------------------------------------------------------------------------------------------------------*/
+/* ----- Media Queries Mobile Inicio Bienvenidos ----- */
+@media screen and (max-width: 480px) {
+  .seccion__bienvenidos {
+    display: flex;
+    flex-direction: column;
+    padding: 30px; }
+    .seccion__bienvenidos h2 {
+      font-size: 1rem; }
+    .seccion__bienvenidos h3, .seccion__bienvenidos p {
+      font-size: 0.8rem; }
+    .seccion__bienvenidos .sobre__juego {
+      padding: 20px;
+      width: 100%; }
+    .seccion__bienvenidos .plataformas1 {
+      display: flex;
+      flex-direction: column;
+      padding: 0;
+      margin-top: 20px; }
+      .seccion__bienvenidos .plataformas1 .plataformas2 {
+        width: 100%;
+        border: none;
+        padding: 20px;
+        align-items: center;
+        margin-bottom: 20px; }
+        .seccion__bienvenidos .plataformas1 .plataformas2 img {
+          width: 40px;
+          margin-bottom: 10px;
+          transition: none; }
+        .seccion__bienvenidos .plataformas1 .plataformas2 img:hover {
+          width: 40px; }
+      .seccion__bienvenidos .plataformas1 .mobile {
+        width: 100%; } }
+
+/* ----- Media Queries Mobile Inicio DLC ----- */
+@media screen and (max-width: 480px) {
+  .dlc__seccion .dlc__carousel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem; }
+    .dlc__seccion .dlc__carousel .dlc__card {
+      margin: 1rem;
+      width: 85%; }
+      .dlc__seccion .dlc__carousel .dlc__card .dlc__card__body {
+        padding: 0px 15px 15px 15px;
+        margin: 0;
+        align-items: flex-start; }
+        .dlc__seccion .dlc__carousel .dlc__card .dlc__card__body p, .dlc__seccion .dlc__carousel .dlc__card .dlc__card__body h3 {
+          font-size: 0.7rem;
+          margin: 0; }
+        .dlc__seccion .dlc__carousel .dlc__card .dlc__card__body h3 {
+          padding-top: 15px; } }
+
+/* ----- Media Queries Mobile Inicio De que lado estas?----- */
+@media screen and (max-width: 480px) {
+  .encabezado__seccion3 h3 {
+    padding-top: 10px;
+    padding-bottom: 10px; }
+  .personajes .personajes__carousel {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    padding: 40px; }
+    .personajes .personajes__carousel .personajes__card {
+      padding: 10px; }
+      .personajes .personajes__carousel .personajes__card .personajes__cont {
+        display: flex;
+        flex-direction: column; }
+        .personajes .personajes__carousel .personajes__card .personajes__cont img {
+          width: 170px;
+          height: auto; }
+        .personajes .personajes__carousel .personajes__card .personajes__cont h4 {
+          font-size: 1rem;
+          text-align: center;
+          padding: 0; }
+        .personajes .personajes__carousel .personajes__card .personajes__cont p {
+          display: none; }
+      .personajes .personajes__carousel .personajes__card .personajes__surv img {
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 0; }
+      .personajes .personajes__carousel .personajes__card .personajes__surv .personajes__surv__text {
+        padding: 10px;
+        width: auto;
+        border-top-left-radius: 0;
+        border-bottom-right-radius: 5px; }
+      .personajes .personajes__carousel .personajes__card .personajes__kill img {
+        border-top-right-radius: 5px;
+        border-bottom-left-radius: 0; }
+      .personajes .personajes__carousel .personajes__card .personajes__kill .personajes__kill__text {
+        padding: 10px;
+        width: auto;
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 5px; } }
+
 /* ----- Media Queries Mobile Inicio Noticias ----- */
 @media screen and (max-width: 480px) {
   .inicio__noticias {
@@ -515,3 +566,29 @@ footer .seccion__footer {
       width: 90%; }
       .inicio__noticias .inicio__tomo12 img {
         width: 300px; } }
+
+/* ------------------------------------------------------------------------------------------------- JUEGO -----------------------------------------------------------------------------------------------------------*/
+/* ----- Media Queries Mobile Juego ----- */
+@media screen and (max-width: 480px) {
+  .juego__carousel {
+    display: flex;
+    flex-direction: row;
+    grid-column-gap: 0.5rem;
+    align-items: center;
+    padding-top: 50px;
+    padding-bottom: 70px; }
+    .juego__carousel .juego__card {
+      display: grid;
+      grid-template-columns: 1fr;
+      width: 50%;
+      margin: 20px; }
+      .juego__carousel .juego__card img {
+        border-top-right-radius: 5px; }
+      .juego__carousel .juego__card:hover {
+        transform: none; }
+      .juego__carousel .juego__card .juego__card__body p, .juego__carousel .juego__card .juego__card__body h3 {
+        font-size: 0.7rem; }
+      .juego__carousel .juego__card .juego__card__body h2 {
+        font-size: 0.8rem; }
+      .juego__carousel .juego__card .juego__card__body .accordion-button {
+        padding: 10px; } }

@@ -1,0 +1,65 @@
+
+/* ------------------------------------------------------------------------------------------------- JUEGO -----------------------------------------------------------------------------------------------------------*/
+.juego__carousel{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    grid-column-gap: 6rem;
+    .juego__card{
+        background-color: #2e352d;
+        background-size: cover;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        width: 36%;
+        margin-top: 7rem;
+        margin-bottom: 7rem;
+        transition: 0.5s;
+        color: #ffffff;
+        box-shadow: #000000 0px 0px 25px 10px;
+        border: 0;
+        img{
+            border-bottom-left-radius: 5px;      
+            border-top-right-radius: 0; 
+        }
+        &:hover{
+            transform: scale(1.1,1.1);
+            box-shadow: black 0px 0px 25px 10px;        
+        }
+        .juego__card__body{
+            padding: 0;
+             margin: 0;
+            img{
+                width: 50px;
+                padding-right: 10px;            
+            }
+            p, h3{
+                font-size: 0.9rem;
+                margin: 0;            
+            }
+            .juego__card__titulo{
+                text-align: center;
+                padding-top: 15px;
+            }
+            .accordion-button{
+                background-color: transparent;
+                color: rgb(255, 255, 255);
+                    border-radius: 0px;
+            }
+        }
+    }
+} 
+
+.surv__bg{
+    background-image: url(../Media/Sobrevivientes/surv_bg.jpg);
+    background-size: cover;
+}
+.killer__bg{
+    background-image: url(../Media/Asesinos/killer_bg.jpg);
+    background-size: cover;
+}
+
+
+
+
+
+

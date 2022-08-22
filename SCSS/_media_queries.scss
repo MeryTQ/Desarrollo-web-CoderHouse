@@ -1,0 +1,214 @@
+
+/* --------------------------------------------------------------------------------------------------- INICIO --------------------------------------------------------------------------------------------------------*/
+/* ----- Media Queries Mobile Inicio Bienvenidos ----- */
+@media screen and (max-width:480px){
+    .seccion__bienvenidos{
+        display: flex;
+        flex-direction: column;
+        padding: 30px;
+        h2{
+            font-size: 1rem;
+        }
+        h3,p{
+            font-size: 0.8rem;
+        }
+        .sobre__juego{
+            padding: 20px;
+            width: 100%;   
+        }
+        .plataformas1{
+            display: flex;
+            flex-direction: column;
+            padding: 0;
+            margin-top: 20px; 
+            .plataformas2{
+                width: 100%;
+                border: none;
+                padding: 20px;
+                align-items: center;
+                margin-bottom: 20px;  
+                img{
+                    width: 40px;
+                    margin-bottom: 10px;
+                    transition: none;            
+                }  
+                & img:hover{
+                    width: 40px;
+                }    
+            }  
+            .mobile{
+                width: 100%;
+            } 
+        }
+    }
+}
+
+/* ----- Media Queries Mobile Inicio DLC ----- */
+@media screen and (max-width:480px){ 
+    .dlc__seccion{
+        .dlc__carousel{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 2rem;  
+            .dlc__card{
+                margin: 1rem;
+                width: 85%;  
+                .dlc__card__body{
+                    padding: 0px 15px 15px 15px;
+                    margin: 0;
+                    align-items: flex-start;          
+                    p,h3{
+                        font-size: 0.7rem;
+                        margin: 0;
+                    }
+                    h3{
+                        padding-top: 15px;
+                    }
+                }          
+            }  
+        }
+    }
+}
+
+
+/* ----- Media Queries Mobile Inicio De que lado estas?----- */
+@media screen and (max-width:480px){     
+    .encabezado__seccion3{
+        h3{
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+    }
+    .personajes{
+        .personajes__carousel{
+            display: flex;
+            flex-direction: row;
+            margin: 0;
+            padding: 40px;  
+            .personajes__card{
+                padding: 10px;
+                .personajes__cont{
+                    display: flex;
+                    flex-direction: column;  
+                    img{
+                        width: 170px;
+                        height: auto;                
+                    }  
+                    h4{
+                        font-size: 1rem;
+                        text-align: center;
+                        padding: 0;
+                    }    
+                    p{
+                        display: none;
+                    }    
+                }
+                .personajes__surv{
+                    img{
+                        border-top-left-radius: 5px;
+                        border-top-right-radius: 5px;
+                        border-bottom-right-radius: 0;                
+                    }
+                    .personajes__surv__text{
+                        padding: 10px;
+                        width: auto;
+                        border-top-left-radius: 0;
+                        border-bottom-right-radius: 5px;                
+                    }
+                }
+                .personajes__kill{
+                    img{
+                        border-top-right-radius: 5px;
+                        border-bottom-left-radius: 0;                
+                    }
+                    .personajes__kill__text{
+                        padding: 10px;
+                        width: auto;
+                        border-top-right-radius: 0;
+                        border-bottom-left-radius: 5px;                
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/* ----- Media Queries Mobile Inicio Noticias ----- */
+@media screen and (max-width:480px){     
+    .inicio__noticias{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        div{
+            padding: 20px;
+            margin: 10px;
+            iframe{
+                display: none;
+            }
+            p{
+                font-size: 0.8rem;
+            }
+        }
+        .inicio__aniversario{
+            width: 90%;
+            img{
+                width: 300px;
+            }
+        }
+        .inicio__cap24{
+            width: 90%;
+            img{
+                width: 300px;
+            }
+        }
+        .inicio__tomo12{
+            width: 90%;
+            img{
+                width: 300px;
+            }
+        }
+    }
+
+}
+
+/* ------------------------------------------------------------------------------------------------- JUEGO -----------------------------------------------------------------------------------------------------------*/
+
+/* ----- Media Queries Mobile Juego ----- */
+@media screen and (max-width: 480px) {
+    .juego__carousel{
+        display: flex;
+        flex-direction: row;
+        grid-column-gap: 0.5rem;
+        align-items: center;
+        padding-top: 50px;
+        padding-bottom: 70px;
+        .juego__card{
+            display: grid;
+            grid-template-columns: 1fr;
+            width: 50%;
+            margin: 20px;
+            img{
+                border-top-right-radius: 5px;
+            }
+            &:hover{
+                transform: none;
+            }
+            .juego__card__body{
+                p, h3{
+                    font-size: 0.7rem;
+                }
+                h2{
+                    font-size: 0.8rem;
+                }
+                .accordion-button{
+                    padding: 10px;
+                }
+
+            }
+        }
+    }
+}

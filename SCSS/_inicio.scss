@@ -40,14 +40,12 @@
                 display: grid;
                 grid-template-columns: 1fr 1fr 1fr;
                 justify-items: center;
-                padding-top: 10px;
+                padding-top: 20px;
                 padding-bottom: 20px;        
             }
             .plataformas__iconos2{
-                display: grid;
-                grid-template-columns: 1fr 1fr 1fr;
-                justify-items: center;
-                padding-top: 20px;        
+                @extend .plataformas__iconos1;   /* -------- EXTEND -----------*/
+                margin-top: 20px;
             }
         }
         .mobile{
@@ -55,52 +53,6 @@
             height: 100%;
             box-shadow: black 0px 0px 25px 10px;
             grid-area: mobile;    
-        }
-    }
-}
-
-
-/* ----- Media Queries Mobile Inicio Bienvenidos ----- */
-
-@media screen and (max-width:480px){
-    .seccion__bienvenidos{
-        display: flex;
-        flex-direction: column;
-        padding: 30px;
-        h2{
-            font-size: 1rem;
-        }
-        h3,p{
-            font-size: 0.8rem;
-        }
-        .sobre__juego{
-            padding: 20px;
-            width: 100%;   
-        }
-        .plataformas1{
-            display: flex;
-            flex-direction: column;
-            padding: 0;
-            margin-top: 20px; 
-            .plataformas2{
-                width: 100%;
-                border: none;
-                padding: 20px;
-                align-items: center;
-                margin-bottom: 20px;  
-                img{
-                    width: 40px;
-                    margin-top: 20px;
-                    margin-bottom: 10px;
-                    transition: none;            
-                }  
-                & img:hover{
-                    width: 40px;
-                }    
-            }  
-            .mobile{
-                width: 100%;
-            } 
         }
     }
 }
@@ -141,30 +93,6 @@
     }
 }
 
-/* ----- Media Queries Mobile Inicio DLC ----- */
-@media screen and (max-width:480px){ 
-    .dlc__seccion{
-        .dlc__carousel{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin: 2rem;  
-            .dlc__card{
-                margin: 1rem;
-                width: 85%;  
-                .dlc__card__body{
-                    padding: 1rem;
-                    align-items: flex-start;
-                    h3,p{
-                        font-size: 0.8rem;
-                    }            
-                }          
-            }  
-        }
-    }
-
-
-}
 
 /* ---------- INICIO - DE QUE LADO ESTAS? - SECCION 3 ---------- */
 .encabezado__seccion3{
@@ -198,6 +126,22 @@
         grid-template-columns: 1fr 1fr;
         justify-content: space-evenly;
         margin: 6rem 8rem 6rem 8rem; 
+        @mixin border-right {     /* ------------------ MIXINS -----------------*/
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+        }
+        @mixin border-left {
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+        }
+        @mixin estilo-text {
+            color: #000000;
+            box-shadow: black 0px 0px 25px 10px;
+            font-family: "archivo narrow";
+            width: 250px;
+            height: auto;
+            padding: 30px;
+        }
         .personajes__cont{
             display: flex;
             justify-content: center;
@@ -222,104 +166,29 @@
             display: flex;
             flex-direction: row-reverse;   
             img{
-                border-top-right-radius: 5px;
-                border-bottom-right-radius: 5px;            
+                @include border-right
             }     
             .personajes__surv__text{
                 background-color: #000000;
                 background-image: linear-gradient(315deg, #2f4c7e 0%, #437ed8 74%);
-                color: #000000;
-                box-shadow: black 0px 0px 25px 10px;
-                font-family: "archivo narrow";
-                width: 250px;
-                height: auto;
-                padding: 30px;
-                border-top-left-radius: 5px;
-                border-bottom-left-radius: 5px;            
+                @include border-left;
+                @include estilo-text
             }
         }
         .personajes__kill{
             img{
-                border-top-left-radius: 5px;
-                border-bottom-left-radius: 5px;            
+                @include border-left
             }
             .personajes__kill__text{
                 background-color: #3f0d12;
                 background-image: linear-gradient(315deg, #3f0d12 0%, #8a0c0c 74%);
-                color: black;
-                box-shadow: black 0px 0px 25px 10px;
-                font-family: "archivo narrow";
-                width: 250px;
-                height: auto;
-                padding: 30px;
-                border-top-right-radius: 5px;
-                border-bottom-right-radius: 5px;            
+                @include border-right;
+                @include estilo-text
             }
         }
     }
 }
 
-/* ----- Media Queries Mobile Inicio De que lado estas?----- */
-@media screen and (max-width:480px){     
-    .encabezado__seccion3{
-        h3{
-            padding-top: 10px;
-            padding-bottom: 10px;
-        }
-    }
-    .personajes{
-        .personajes__carousel{
-            display: flex;
-            flex-direction: row;
-            margin: 0;
-            padding: 40px;  
-            .personajes__card{
-                padding: 10px;
-                .personajes__cont{
-                    display: flex;
-                    flex-direction: column;  
-                    img{
-                        width: 200px;
-                        height: auto;                
-                    }  
-                    h4{
-                        font-size: 1rem;
-                    }    
-                    p{
-                        font-size: 0.7rem;
-                    }    
-                }
-                .personajes__surv{
-                    img{
-                        border-top-left-radius: 5px;
-                        border-top-right-radius: 5px;
-                        border-bottom-right-radius: 0;                
-                    }
-                    .personajes__surv__text{
-                        padding: 10px;
-                        width: 200px;
-                        height: 250px;
-                        border-top-left-radius: 0;
-                        border-bottom-right-radius: 5px;                
-                    }
-                }
-                .personajes__kill{
-                    img{
-                        border-top-right-radius: 5px;
-                        border-bottom-left-radius: 0;                
-                    }
-                    .personajes__kill__text{
-                        padding: 10px;
-                        width: 200px;
-                        height: 250px;
-                        border-top-right-radius: 0;
-                        border-bottom-left-radius: 5px;                
-                    }
-                }
-            }
-        }
-    }
-}
 
 /* ---------- INICIO - NOTICIAS - SECCION 3 ---------- */
 .inicio__noticias{
@@ -391,44 +260,5 @@
     }
 }
 
-/* ----- Media Queries Mobile Inicio Noticias ----- */
-@media screen and (max-width:480px){     
-    .inicio__noticias{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding-top: 20px;
-        padding-bottom: 20px;
-        div{
-            padding: 20px;
-            margin: 10px;
-            iframe{
-                display: none;
-            }
-            p{
-                font-size: 0.8rem;
-            }
-        }
-        .inicio__aniversario{
-            width: 90%;
-            img{
-                width: 300px;
-            }
-        }
-        .inicio__cap24{
-            width: 90%;
-            img{
-                width: 300px;
-            }
-        }
-        .inicio__tomo12{
-            width: 90%;
-            img{
-                width: 300px;
-            }
-        }
-    }
-
-}
 
 

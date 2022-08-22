@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="../Css/estilo.css">
     <title>Juego</title>
 </head>
-<body class="JuegoBody">
+<body>
     <header> <!----- Inicio Logo ----->
         <div>
         <img src="../Media/Icono.png" alt="icono" class="icono"> 
@@ -43,13 +43,12 @@
 
         <!--------------------------------------------------------------------- SECCION 1 JUEGO PERSONAJES ------------------------------------------------------------------------------------------------------------>
 
-        <div class="EncabezadoSecciones">
-            <h1> Personajes </h1>
+        <div class="encabezado__secciones">
+            <h2> Supervivientes </h2>
         </div> 
 
         <!--------------- SOBREVIVIENTES --------------->
-
-        <section>   
+        <section class="surv__bg">   
             <div id="carousel_juego_surv" class="carousel slide" data-bs-ride="true">
                 <div class="carousel-indicators">
                     <button type="button" data-bs-target="#carousel_juego_surv" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -57,8 +56,8 @@
                     <button type="button" data-bs-target="#carousel_juego_surv" data-bs-slide-to="2" aria-label="Slide 3"></button>
                 </div>
 
-                <div class="carousel-inner juego__contenedor">
-                    <div class="carousel-item active wow animate__animated animate__fadeIn juego__surv">   <!---------- Juego Carousel Sobrevivientes 1 ---------->
+                <div class="carousel-inner">
+                    <div class="carousel-item active wow animate__animated animate__fadeIn">   <!---------- Juego Carousel Sobrevivientes 1 ---------->
                         <div class="cards-wrapper juego__carousel">
                             <div class="card juego__card">   <!---------- Juego Card Cheryl Mason ---------->
                                 <div>
@@ -69,27 +68,41 @@
                                         <h2>Cheryl Mason</h2>
                                         <h3>Sobreviviente</h3>
                                     </div> <hr>
-                                    <div>
-                                        <div class="juego__card__perk">
-                                            <div><img src="../Media/Sobrevivientes/Cheryl perk 1.png" alt=""></div>
-                                            <div><h3>Salvaguarda de Alma</h3></div>
+                                    <div class="accordion accordion-flush" id="accordionFlushExample">
+                                        <div>
+                                          <h3 class="accordion-header" id="flush-headingOne">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cheryl1" aria-expanded="false" aria-controls="cheryl1">
+                                                <img src="../Media/Sobrevivientes/Cheryl perk 1.png" alt="cheryl perk">
+                                              <h3>Salvaguarda de Alma</h3>
+                                            </button>
+                                          </h3>
+                                          <div id="cheryl1" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                                            <p class="accordion-body">Después de curarse o recuperarse del estado moribundo, gane resistencia brevemente para recibir un golpe de manera segura. Si te maldice un tótem, puedes recuperarte completamente del estado moribundo.</p>
+                                          </div>
                                         </div>
-                                        <p>Después de curarse o recuperarse del estado moribundo, gane resistencia brevemente para recibir un golpe de manera segura. Si te maldice un tótem, puedes recuperarte completamente del estado moribundo.</p>
-                                    </div> <hr>
-                                    <div>
-                                        <div class="juego__card__perk">
-                                            <div><img src="../Media/Sobrevivientes/Cheryl perk 2.png" alt=""></div>
-                                            <div><h3>Pacto de sangre</h3></div>
+                                        <div>
+                                          <h3 class="accordion-header" id="flush-headingTwo">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cheryl2" aria-expanded="false" aria-controls="cheryl2">
+                                                <img src="../Media/Sobrevivientes/Cheryl perk 2.png" alt="cheryl perk">
+                                              <h3>Pacto de sangre</h3>
+                                            </button>
+                                          </h3>
+                                          <div id="cheryl2" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                                            <p class="accordion-body">Cuando usted o la obsesión estén heridos, vean las auras de los demás. Después de curar o ser curado por la obsesión, muévanse a mayor velocidad mientras estén cerca de los demás.</p>
+                                          </div>
                                         </div>
-                                        <p>Cuando usted o la obsesión estén heridos, vean las auras de los demás. Después de curar o ser curado por la obsesión, muévanse a mayor velocidad mientras estén cerca de los demás.</p>
-                                    </div> <hr>
-                                    <div>
-                                        <div class="juego__card__perk">
-                                            <div><img src="../Media/Sobrevivientes/Cheryl perk 3.png" alt=""></div>
-                                            <div><h3>Supresión de Alianza</h3></div>
+                                        <div>
+                                          <h3 class="accordion-header" id="flush-headingThree">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cheryl3" aria-expanded="false" aria-controls="cheryl3">
+                                                <img src="../Media/Sobrevivientes/Cheryl perk 3.png" alt="cheryl perk">
+                                              <h3>Supresión de Alianza</h3>
+                                            </button>
+                                          </h3>
+                                          <div id="cheryl3" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                                            <p class="accordion-body">Después de reparar los generadores durante un período prolongado, puedes llamar a la Entidad para bloquear el generador en el que está trabajando, evitando que el Killer que se acerque y retroceda en su progreso.</p>
+                                          </div>
                                         </div>
-                                        <p>Después de reparar los generadores durante un período prolongado, puedes llamar a la Entidad para bloquear el generador en el que está trabajando, evitando que el Killer que se acerque y retroceda en su progreso.</p>
-                                    </div>
+                                      </div>
                                 </div>                    
                             </div>
                             <div class="card juego__card">   <!---------- Juego Card Jonah Vasques ---------->
@@ -101,26 +114,40 @@
                                         <h2>Jonah Vasques</h2>
                                         <h3>Sobreviviente</h3>
                                     </div> <hr>
-                                    <div>
-                                        <div class="juego__card__perk">
-                                            <div><img src="../Media/Sobrevivientes/Jonah perk 1.png" alt=""></div>
-                                            <div><h3>Superar</h3></div>
+                                    <div class="accordion accordion-flush" id="accordionFlushExample">
+                                        <div>
+                                          <h3 class="accordion-header" id="flush-headingOne">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#jonah1" aria-expanded="false" aria-controls="jonah1">
+                                                <img src="../Media/Sobrevivientes/Jonah perk 1.png" alt="Jonah perk">
+                                              <h3>Superar</h3>
+                                            </button>
+                                          </h3>
+                                          <div id="jonah1" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                                            <p class="accordion-body">Siempre que esté herido, retenga el impulso de velocidad de movimiento durante un período prolongado, lo que facilitará su escape. Estará en estado de Agotado después de usarlo, Superar no puede utilizarse mientras se está Agotado.</p>
+                                          </div>
                                         </div>
-                                        <p>Siempre que esté herido, retenga el impulso de velocidad de movimiento durante un período prolongado, lo que facilitará su escape. Estará en estado de Agotado después de usarlo, Superar no puede utilizarse mientras se está Agotado.</p>
-                                    </div> <hr>
-                                    <div>
-                                        <div class="juego__card__perk">
-                                            <div><img src="../Media/Sobrevivientes/Jonah perk 2.png" alt=""></div>
-                                            <div><h3>Acción correctiva</h3></div>
+                                        <div>
+                                          <h3 class="accordion-header" id="flush-headingTwo">
+                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#jonah2" aria-expanded="false" aria-controls="jonah2">
+                                                <img src="../Media/Sobrevivientes/Jonah perk 2.png" alt="Jonah perk">
+                                              <h3>Acción Correctiva</h3>
+                                                </button>
+                                          </h3>
+                                          <div id="jonah2" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                                                <p class="accordion-body">Comience una prueba con hasta 3 tokens. Cuando reparas un generador en forma cooperativa, tus tokens transforman sus pruebas de habilidad fallidas en buenas pruebas de habilidad.</p>
+                                            </div>
                                         </div>
-                                        <p>Comience una prueba con hasta 3 tokens. Cuando reparas un generador en forma cooperativa, tus tokens transforman sus pruebas de habilidad fallidas en buenas pruebas de habilidad.</p>
-                                    </div> <hr>
-                                    <div>
-                                        <div class="juego__card__perk">
-                                            <div><img src="../Media/Sobrevivientes/Jonah perk 3.png" alt=""></div>
-                                            <div><h3>Bendición: Exponencial</h3></div>
+                                        <div>
+                                            <h3 class="accordion-header" id="flush-headingThree">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#jonah3" aria-expanded="false" aria-controls="jonah3">
+                                                <img src="../Media/Sobrevivientes/Jonah perk 3.png" alt="Jonah perk">
+                                              <h3>Bendición: Exponencial</h3>
+                                            </button>
+                                          </h3>
+                                          <div id="jonah3" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                                            <p class="accordion-body">En lugar de limpiar un tótem, puedes bendecirlo para crear un Boon Totem. Los sobrevivientes dentro del alcance del Boon Totem se recuperan a un ritmo más rápido y pueden recuperarse completamente del estado de muerte sin ayuda.</p>
+                                          </div>
                                         </div>
-                                        <p>En lugar de limpiar un tótem, puedes bendecirlo para crear un Boon Totem. Los sobrevivientes dentro del alcance del Boon Totem se recuperan a un ritmo más rápido y pueden recuperarse completamente del estado de muerte sin ayuda.</p>
                                     </div>
                                 </div>
                             </div>
@@ -138,26 +165,40 @@
                                         <h2>Cloudette Morel</h2>
                                         <h3>Sobreviviente</h3>
                                     </div> <hr>
-                                    <div>
-                                        <div class="juego__card__perk">
-                                            <div><img src="../Media/Sobrevivientes/Cloudette perk 1.png" alt=""></div>
-                                            <div><h3>Empatía</h3></div>
+                                    <div class="accordion accordion-flush" id="accordionFlushExample">
+                                        <div>
+                                          <h3 class="accordion-header" id="flush-headingOne">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cloudette1" aria-expanded="false" aria-controls="cloudette1">
+                                                <img src="../Media/Sobrevivientes/Cloudette perk 1.png" alt="Cloudette perk">
+                                              <h3>Empatía</h3>
+                                            </button>
+                                          </h3>
+                                          <div id="cloudette1" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                                            <p class="accordion-body">Revela las auras de todos los sobrevivientes heridos y moribundos en tu vecindad, permitiéndote curar de manera eficiente a los compañeros de equipo que lo necesiten.</p>
+                                          </div>
                                         </div>
-                                        <p>Revela las auras de todos los sobrevivientes heridos y moribundos en tu vecindad, permitiéndote curar de manera eficiente a los compañeros de equipo que lo necesiten.</p>
-                                    </div> <hr>
-                                    <div>
-                                        <div class="juego__card__perk">
-                                            <div><img src="../Media/Sobrevivientes/Cloudette perk 2.png" alt=""></div>
-                                            <div><h3>Conocimientos de Botánica</h3></div>
+                                        <div>
+                                          <h3 class="accordion-header" id="flush-headingTwo">
+                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cloudette2" aria-expanded="false" aria-controls="cloudette2">
+                                                <img src="../Media/Sobrevivientes/Cloudette perk 2.png" alt="Cloudette perk">
+                                              <h3>Conocimientos de Botánica</h3>
+                                                </button>
+                                          </h3>
+                                          <div id="cloudette2" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                                                <p class="accordion-body">Aumente la velocidad de curación y la eficiencia de los elementos de curación, ahorrando un tiempo precioso.</p>
+                                            </div>
                                         </div>
-                                        <p>Aumente la velocidad de curación y la eficiencia de los elementos de curación, ahorrando un tiempo precioso.</p>
-                                    </div> <hr>
-                                    <div>
-                                        <div class="juego__card__perk">
-                                            <div><img src="../Media/Sobrevivientes/Cloudette perk 3.png" alt=""></div>
-                                            <div><h3>Autocuración</h3></div>
+                                        <div>
+                                            <h3 class="accordion-header" id="flush-headingThree">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cloudette3" aria-expanded="false" aria-controls="cloudette3">
+                                                <img src="../Media/Sobrevivientes/Cloudette perk 3.png" alt="Cloudette 3">
+                                              <h3>Autocuración</h3>
+                                            </button>
+                                          </h3>
+                                          <div id="cloudette3" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                                            <p class="accordion-body">Desbloquea la capacidad de autocuración sin un elemento de curación, aunque a una velocidad reducida. Aumenta la eficiencia de los elementos curativos mientras se cura a sí mismo.</p>
+                                          </div>
                                         </div>
-                                        <p>Desbloquea la capacidad de autocuración sin un elemento de curación, aunque a una velocidad reducida. Aumenta la eficiencia de los elementos curativos mientras se cura a sí mismo.</p>
                                     </div>
                                 </div>
                             </div>
@@ -170,26 +211,40 @@
                                         <h2>Felix Richter</h2>
                                         <h3>Sobreviviente</h3>
                                     </div> <hr>
-                                    <div>
-                                        <div class="juego__card__perk">
-                                            <div><img src="../Media/Sobrevivientes/Felix perk 1.png" alt=""></div>
-                                            <div><h3>Visión del Futuro</h3></div>
+                                    <div class="accordion accordion-flush" id="accordionFlushExample">
+                                        <div>
+                                          <h3 class="accordion-header" id="flush-headingOne">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#felix1" aria-expanded="false" aria-controls="felix1">
+                                                <img src="../Media/Sobrevivientes/Felix perk 1.png" alt="Felix perk">
+                                              <h3>Visión del Futuro</h3>
+                                            </button>
+                                          </h3>
+                                          <div id="felix1" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                                            <p class="accordion-body">Estás notablemente concentrado en tus medios de escape. Revela las auras de todos los generadores en tu zona.</p>
+                                          </div>
                                         </div>
-                                        <p>Estás notablemente concentrado en tus medios de escape. Revela las auras de todos los generadores en tu zona.</p>
-                                    </div> <hr>
-                                    <div>
-                                        <div class="juego__card__perk">
-                                            <div><img src="../Media/Sobrevivientes/Felix perk 2.png" alt=""></div>
-                                            <div><h3>Medidas Desesperadas</h3></div>
+                                        <div>
+                                          <h3 class="accordion-header" id="flush-headingTwo">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#felix2" aria-expanded="false" aria-controls="felix2">
+                                                <img src="../Media/Sobrevivientes/Felix perk 2.png" alt="Felix perk">
+                                              <h3>>Medidas Desesperadas</h3>
+                                            </button>
+                                          </h3>
+                                          <div id="felix2" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                                                <p class="accordion-body">Cada Superviviente herido, moribundo o enganchado otorga un aumento en sus velocidades de acción de desenganche y curación.</p>
+                                            </div>
                                         </div>
-                                        <p>Cada Superviviente herido, moribundo o enganchado otorga un aumento en sus velocidades de acción de desenganche y curación.</p>
-                                    </div> <hr>
-                                    <div>
-                                        <div class="juego__card__perk">
-                                            <div><img src="../Media/Sobrevivientes/Felix perk 3.png" alt=""></div>
-                                            <div><h3>Construcción Duradera</h3></div>
+                                        <div>
+                                            <h3 class="accordion-header" id="flush-headingThree">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#felix3" aria-expanded="false" aria-controls="felix3">
+                                                <img src="../Media/Sobrevivientes/Felix perk 3.png" alt="Felix perk">
+                                              <h3>Construcción duradera</h3>
+                                            </button>
+                                          </h3>
+                                          <div id="felix3" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                                            <p class="accordion-body">Esconderse en un casillero por un breve período repondrá casi toda la carga de su artículo agotado. El porcentaje de carga recuperada se reduce con cada uso.</p>
+                                          </div>
                                         </div>
-                                        <p>Esconderse en un casillero por un breve período repondrá casi toda la carga de su artículo agotado. El porcentaje de carga recuperada se reduce con cada uso.</p>
                                     </div>
                                 </div>
                             </div>
@@ -207,26 +262,40 @@
                                         <h2>Mikaela Reid</h2>
                                         <h3>Sobreviviente</h3>
                                     </div> <hr>
-                                    <div>
-                                        <div class="juego__card__perk">
-                                            <div><img src="../Media/Sobrevivientes/Mikaela perk 1.png" alt=""></div>
-                                            <div><h3>Clarividencia</h3></div>
+                                    <div class="accordion accordion-flush" id="accordionFlushExample">
+                                        <div>
+                                          <h3 class="accordion-header" id="flush-headingOne">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#mikaela1" aria-expanded="false" aria-controls="mikaela1">
+                                                <img src="../Media/Sobrevivientes/Mikaela perk 1.png" alt="mikaela perk">
+                                              <h3>Clarividencia</h3>
+                                            </button>
+                                          </h3>
+                                          <div id="mikaela1" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                                            <p class="accordion-body">Después de limpiar un tótem, si no tienes un objeto en la mano, puedes revelar brevemente el aura de los interruptores de las puertas de salida, generadores, ganchos, cofres y la escotilla dentro de una amplia rango.</p>
+                                          </div>
                                         </div>
-                                        <p>Después de limpiar un tótem, si no tienes un objeto en la mano, puedes revelar brevemente el aura de los interruptores de las puertas de salida, generadores, ganchos, cofres y la escotilla dentro de una amplia rango.</p>
-                                    </div> <hr>
-                                    <div>
-                                        <div class="juego__card__perk">
-                                            <div><img src="../Media/Sobrevivientes/Mikaela perk 2.png" alt=""></div>
-                                            <div><h3>Bendición: Círculo de sanación</h3></div>
+                                        <div>
+                                          <h3 class="accordion-header" id="flush-headingTwo">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#mikaela2" aria-expanded="false" aria-controls="mikaela2">
+                                                <img src="../Media/Sobrevivientes/Mikaela perk 2.png" alt="Mikaela perk">
+                                              <h3>Bendición: Circulo de sanación</h3>
+                                            </button>
+                                          </h3>
+                                          <div id="mikaela2" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                                                <p class="accordion-body">En lugar de limpiar un tótem, puedes bendecirlo para crear un tótem Boon. Los sobrevivientes dentro del alcance se benefician de una mayor velocidad de curación, además de obtener la capacidad de curarse a sí mismos sin un botiquín.</p>
+                                            </div>
                                         </div>
-                                        <p>En lugar de limpiar un tótem, puedes bendecirlo para crear un tótem Boon. Los sobrevivientes dentro del alcance se benefician de una mayor velocidad de curación, además de obtener la capacidad de curarse a sí mismos sin un botiquín.</p>
-                                    </div> <hr>
-                                    <div>
-                                        <div class="juego__card__perk">
-                                            <div><img src="../Media/Sobrevivientes/Mikaela perk 3.png" alt=""></div>
-                                            <div><h3>Bendición: Reparadora espiritual</h3></div>
+                                        <div>
+                                            <h3 class="accordion-header" id="flush-headingThree">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#mikaela3" aria-expanded="false" aria-controls="mikaela3">
+                                                <img src="../Media/Sobrevivientes/Mikaela perk 3.png" alt="Mikaela perk">
+                                              <h3>Bendición: Reparadora</h3>
+                                            </button>
+                                          </h3>
+                                          <div id="mikaela3" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                                            <p class="accordion-body">En lugar de limpiar un tótem, puedes bendecirlo para crear un tótem Boon. Cuando estén dentro del alcance, los Supervivientes no dejarán marcas de arañazos, ni el Asesino podrá revelar su aura.</p>
+                                          </div>
                                         </div>
-                                        <p>En lugar de limpiar un tótem, puedes bendecirlo para crear un tótem Boon. Cuando estén dentro del alcance, los Supervivientes no dejarán marcas de arañazos, ni el Asesino podrá revelar su aura.</p>
                                     </div>
                                 </div>
                             </div>
@@ -239,26 +308,40 @@
                                         <h2>Detective David Tapp</h2>
                                         <h3>Sobreviviente</h3>
                                     </div> <hr>
-                                    <div>
-                                        <div class="juego__card__perk">
-                                            <div><img src="../Media/Sobrevivientes/Tapp perk 1.png" alt=""></div>
-                                            <div><h3>Tenacidad</h3></div>
+                                    <div class="accordion accordion-flush" id="accordionFlushExample">
+                                        <div>
+                                          <h3 class="accordion-header" id="flush-headingOne">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#tapp1" aria-expanded="false" aria-controls="tapp1">
+                                                <img src="../Media/Sobrevivientes/Tapp perk 1.png" alt="Tapp perk">
+                                              <h3>Tenacidad</h3>
+                                            </button>
+                                          </h3>
+                                          <div id="tapp1" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                                            <p class="accordion-body">No hay nada que te detenga. Cuando te derriban, te arrastras más rápido mientras te recuperas al mismo tiempo.</p>
+                                          </div>
                                         </div>
-                                        <p>No hay nada que te detenga. Cuando te derriban, te arrastras más rápido mientras te recuperas al mismo tiempo.</p>
-                                    </div> <hr>
-                                    <div>
-                                        <div class="juego__card__perk">
-                                            <div><img src="../Media/Sobrevivientes/Tapp perk 2.png" alt=""></div>
-                                            <div><h3>Corazonada</h3></div>
+                                        <div>
+                                          <h3 class="accordion-header" id="flush-headingTwo">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#tapp2" aria-expanded="false" aria-controls="tapp2">
+                                                <img src="../Media/Sobrevivientes/Tapp perk 2.png" alt="Tapp perk">
+                                              <h3>Corazonada</h3>
+                                            </button>
+                                          </h3>
+                                          <div id="tapp2" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                                                <p class="accordion-body">Cada vez que se completa un generador, revela las auras de los generadores, tótems y cofres en tu zona por un breve período.</p>
+                                            </div>
                                         </div>
-                                        <p>Cada vez que se completa un generador, revela las auras de los generadores, tótems y cofres en tu zona por un breve período.</p>
-                                    </div> <hr>
-                                    <div>
-                                        <div class="juego__card__perk">
-                                            <div><img src="../Media/Sobrevivientes/Tapp perk 3.png" alt=""></div>
-                                            <div><h3>Bajo vigilancia</h3></div>
+                                        <div>
+                                            <h3 class="accordion-header" id="flush-headingThree">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#tapp3" aria-expanded="false" aria-controls="tapp3">
+                                                <img src="../Media/Sobrevivientes/Tapp perk 3.png" alt="Tapp perk">
+                                              <h3>Bajo vigilancia</h3>
+                                            </button>
+                                          </h3>
+                                          <div id="tapp3" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                                            <p class="accordion-body">Por cada 15 segundos que pase dentro del radio de terror del asesino mientras no esté en una persecución, gana un token hasta un máximo de 4. Cada token convierte una buena prueba de habilidad en una gran prueba de habilidad.</p>
+                                          </div>
                                         </div>
-                                        <p>Por cada 15 segundos que pase dentro del radio de terror del asesino mientras no esté en una persecución, gane un token hasta un máximo de 4. Cada token convierte una buena prueba de habilidad en una gran prueba de habilidad, además de otorgar una pequeña bonificación al progreso de reparación del generador.</p>
                                     </div>
                                 </div>
                             </div>
@@ -277,8 +360,11 @@
         </section>
 
         <!-------------------- ASESINOS -------------------->
+        <div class="encabezado__secciones">
+            <h2> Asesinos </h2>
+        </div>
 
-        <section>   
+        <section class="killer__bg">   
             <div id="carousel_juego_kill" class="carousel slide" data-bs-ride="true">
                 <div class="carousel-indicators">
                     <button type="button" data-bs-target="#carousel_juego_kill" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -504,10 +590,10 @@
             </div>
         </section>
     </main>
-
-    <footer> <!------------------------------------------------------------------------------------ JUEGO FOOTER ------------------------------------------------------------------------------------------------------>
-        <div class="DivFooter">
-            <div class="MenuFooter"> <!----- Menú Footer ----->
+<!------------------------------------------------------------------------------------ JUEGO FOOTER ------------------------------------------------------------------------------------------------------>
+    <footer> 
+        <div class="seccion__footer">
+            <div class="menu__footer"> <!----- Menú Footer ----->
                 <ul>
                     <li><a href="../index.html">Inicio</a></li>
                     <li><a href="../Pages/juego.html">Juego</a></li>
@@ -521,7 +607,7 @@
                 <div class="unete">
                     <h2>Únete a la comunidad!</h2>
                 </div>
-                <div class="IconoRedes">
+                <div class="icono__redes">
                     <div><img src="../Media/Redes/Instagram.png" alt="Instagram" width="40px"></div>
                     <div><img src="../Media/Redes/Tiktok.png" alt=" Tik Tok" width="40px"></div>
                     <div><img src="../Media/Redes/Youtube.png" alt="Youtube" width="40px"></div>
@@ -529,7 +615,7 @@
                     <div><img src="../Media/Redes/Facebook.png" alt="Facebook" width="40px"></div>
                 </div>
             </div>
-            <div class="IconoFooter"> <!----- Icono Footer ----->
+            <div class="icono__footer"> <!----- Icono Footer ----->
                 <img src="../Media/Icono.png" alt="Icono Logo" width="300px">
             </div>
         </div>
