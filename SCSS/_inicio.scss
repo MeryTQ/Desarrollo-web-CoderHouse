@@ -122,70 +122,88 @@
 .personajes{
     background-image: url("../Media/Personajes/Personajes\ fondo.jpg");
     .personajes__carousel{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
+        display: flex;
+        flex-direction: row;
         justify-content: space-evenly;
         margin: 6rem 8rem 6rem 8rem; 
-        @mixin border-right {     /* ------------------ MIXINS -----------------*/
-            border-top-right-radius: 5px;
+        @mixin border-bottom {     /* ------------------ MIXINS -----------------*/
             border-bottom-right-radius: 5px;
-        }
-        @mixin border-left {
-            border-top-left-radius: 5px;
             border-bottom-left-radius: 5px;
+        }
+        @mixin border-top {
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
         }
         @mixin estilo-text {
             color: #000000;
             box-shadow: black 0px 0px 25px 10px;
             font-family: "archivo narrow";
-            width: 250px;
+            width: 400px;
             height: auto;
-            padding: 30px;
+            padding: 20px;
+            margin: 0;
         }
         .personajes__cont{
             display: flex;
+            flex-direction: column-reverse;
             justify-content: center;
             transition: 0.5s; 
             img{
                 width: 400px;
-                box-shadow: black 0px 0px 25px 10px;            
+                box-shadow: black 0px 0px 25px 10px;    
+                @include border-top;        
             }    
             h4{
-                padding-bottom: 10px;
                 font-weight: bold;
+                margin: 0;
+                text-align: center;
             }   
-            p{
-                font-family: "roboto";
-                font-size: 1rem;
-            }
-        }  
-        .personajes__cont:hover{
-            transform: scale(1.1,1.1);
-        }
-        .personajes__surv{
-            display: flex;
-            flex-direction: row-reverse;   
-            img{
-                @include border-right
-            }     
-            .personajes__surv__text{
+            .personajes__surv__title{
                 background-color: #000000;
                 background-image: linear-gradient(315deg, #2f4c7e 0%, #437ed8 74%);
-                @include border-left;
-                @include estilo-text
+                @include estilo-text;
+                @include border-bottom;
             }
-        }
-        .personajes__kill{
-            img{
-                @include border-left
-            }
-            .personajes__kill__text{
+            .personajes__kill__title{
                 background-color: #3f0d12;
                 background-image: linear-gradient(315deg, #3f0d12 0%, #8a0c0c 74%);
-                @include border-right;
-                @include estilo-text
+                @include estilo-text;
+                @include border-bottom;
             }
-        }
+            .inicio__img__hover{
+                position: relative;
+                width: 400px;
+                img{
+                    display: block;
+                    width: 100%;
+                }
+                .inicio__img__overlay{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-color: rgba(0, 0, 0, 0.6);
+                    color: white;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    opacity: 0;
+                    transition: opacity 0.30s;
+                    padding: 20px;
+                    &:hover{
+                        opacity: 1;
+                    }
+                    p{
+                        font-size: 1rem;
+                        padding: 30px;
+                    }
+                }
+            }
+            &:hover{
+                transform: scale(1.1,1.1);
+            }
+        }  
     }
 }
 

@@ -284,58 +284,77 @@ footer .seccion__footer {
 .personajes {
   background-image: url("../Media/Personajes/Personajes fondo.jpg"); }
   .personajes .personajes__carousel {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-direction: row;
     justify-content: space-evenly;
     margin: 6rem 8rem 6rem 8rem; }
     .personajes .personajes__carousel .personajes__cont {
       display: flex;
+      flex-direction: column-reverse;
       justify-content: center;
       transition: 0.5s; }
       .personajes .personajes__carousel .personajes__cont img {
         width: 400px;
-        box-shadow: black 0px 0px 25px 10px; }
+        box-shadow: black 0px 0px 25px 10px;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px; }
       .personajes .personajes__carousel .personajes__cont h4 {
-        padding-bottom: 10px;
-        font-weight: bold; }
-      .personajes .personajes__carousel .personajes__cont p {
-        font-family: "roboto";
-        font-size: 1rem; }
-    .personajes .personajes__carousel .personajes__cont:hover {
-      transform: scale(1.1, 1.1); }
-    .personajes .personajes__carousel .personajes__surv {
-      display: flex;
-      flex-direction: row-reverse; }
-      .personajes .personajes__carousel .personajes__surv img {
-        /* ------------------ MIXINS -----------------*/
-        border-top-right-radius: 5px;
-        border-bottom-right-radius: 5px; }
-      .personajes .personajes__carousel .personajes__surv .personajes__surv__text {
+        font-weight: bold;
+        margin: 0;
+        text-align: center; }
+      .personajes .personajes__carousel .personajes__cont .personajes__surv__title {
         background-color: #000000;
         background-image: linear-gradient(315deg, #2f4c7e 0%, #437ed8 74%);
-        border-top-left-radius: 5px;
-        border-bottom-left-radius: 5px;
         color: #000000;
         box-shadow: black 0px 0px 25px 10px;
         font-family: "archivo narrow";
-        width: 250px;
+        width: 400px;
         height: auto;
-        padding: 30px; }
-    .personajes .personajes__carousel .personajes__kill img {
-      border-top-left-radius: 5px;
-      border-bottom-left-radius: 5px; }
-    .personajes .personajes__carousel .personajes__kill .personajes__kill__text {
-      background-color: #3f0d12;
-      background-image: linear-gradient(315deg, #3f0d12 0%, #8a0c0c 74%);
-      /* ------------------ MIXINS -----------------*/
-      border-top-right-radius: 5px;
-      border-bottom-right-radius: 5px;
-      color: #000000;
-      box-shadow: black 0px 0px 25px 10px;
-      font-family: "archivo narrow";
-      width: 250px;
-      height: auto;
-      padding: 30px; }
+        padding: 20px;
+        margin: 0;
+        /* ------------------ MIXINS -----------------*/
+        border-bottom-right-radius: 5px;
+        border-bottom-left-radius: 5px; }
+      .personajes .personajes__carousel .personajes__cont .personajes__kill__title {
+        background-color: #3f0d12;
+        background-image: linear-gradient(315deg, #3f0d12 0%, #8a0c0c 74%);
+        color: #000000;
+        box-shadow: black 0px 0px 25px 10px;
+        font-family: "archivo narrow";
+        width: 400px;
+        height: auto;
+        padding: 20px;
+        margin: 0;
+        /* ------------------ MIXINS -----------------*/
+        border-bottom-right-radius: 5px;
+        border-bottom-left-radius: 5px; }
+      .personajes .personajes__carousel .personajes__cont .inicio__img__hover {
+        position: relative;
+        width: 400px; }
+        .personajes .personajes__carousel .personajes__cont .inicio__img__hover img {
+          display: block;
+          width: 100%; }
+        .personajes .personajes__carousel .personajes__cont .inicio__img__hover .inicio__img__overlay {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(0, 0, 0, 0.6);
+          color: white;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          opacity: 0;
+          transition: opacity 0.30s;
+          padding: 20px; }
+          .personajes .personajes__carousel .personajes__cont .inicio__img__hover .inicio__img__overlay:hover {
+            opacity: 1; }
+          .personajes .personajes__carousel .personajes__cont .inicio__img__hover .inicio__img__overlay p {
+            font-size: 1rem;
+            padding: 30px; }
+      .personajes .personajes__carousel .personajes__cont:hover {
+        transform: scale(1.1, 1.1); }
 
 /* ---------- INICIO - NOTICIAS - SECCION 3 ---------- */
 .inicio__noticias {
