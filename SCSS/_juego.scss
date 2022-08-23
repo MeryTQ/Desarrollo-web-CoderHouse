@@ -3,8 +3,13 @@
 .juego__carousel{
     display: flex;
     justify-content: space-evenly;
+    .juego__card__surv{
+        background-color: #604417;
+    }
+    .juego__card__kill{
+        background-color: #3f0d12;
+    }
     .juego__card{
-        background-color: #2e352d;
         background-size: cover;
         display: flex;
         flex-direction: column;
@@ -14,11 +19,6 @@
         transition: 0.5s;
         color: #ffffff;
         box-shadow: #000000 0px 0px 25px 10px;
-        border: 0;
-        img{
-            border-bottom-left-radius: 5px;      
-            border-top-right-radius: 0; 
-        }
         &:hover{
             transform: scale(1.1,1.1);
             box-shadow: black 0px 0px 25px 10px;        
@@ -27,6 +27,8 @@
             position: relative;
             img{
                 display: block;
+                border-top-right-radius: 5px;
+                border-bottom-left-radius: 0px;
             }
             .juego__img__overlay{
                 position: absolute;
@@ -52,6 +54,17 @@
         h2{
             text-align: center;
             margin: 0;
+        }
+        .juego__kill__title{
+            background-image: linear-gradient(315deg, #3f0d12 0%, #8a0c0c 74%);
+            box-shadow: black 0px 0px 25px 10px;
+            border-bottom-left-radius: 5px;
+        }
+        .juego__surv__title{
+            background-image: linear-gradient(315deg, #604417 0%, #b6a536 74%);
+            box-shadow: black 0px 0px 25px 10px;
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
         }
         
     }

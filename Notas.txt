@@ -2,4 +2,6 @@ Agregue un “Extend” en la sección 1 de “Inicio” en el .plataformas__ico
 
 Agregue un “Mixin” en la sección 3 de “Inicio” en .personajes__carousel que se los aplique a .personajes__surv__title, .personajes__kill__title, .img__surv e .img__kill
 
+Agrege "keywords" y "description" a "inicio".
+
 Modifique la seccion "De que lado estas?", el texto ahora aparece cuando se le hace hover a la imagen, tambien se lo agrege al html "Juego".
