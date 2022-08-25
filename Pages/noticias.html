@@ -6,10 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow&display=swap" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="../favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon_io//favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon_io//favicon-16x16.png">
+    <link rel="manifest" href="../favicon_io//site.webmanifest">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" href="../Css/bootstrap.min.css">
     <link rel="stylesheet" href="../Css/estilo.css">
-    <title>Noticias</title>
+    <meta name="description" content="Enterate de todas las novedades y actualizaciones de Dead By Daylight">
+    <meta name="keywords" content="dead by daylight, dbd, juego, gamer, game, horror, terror, aniversario, capitulo, 24, roots, dread, tomo, 12, discordance, atack, titan, cosmeticos, cosmetics, rock, billy">
+    <title>Dead By Daylight | Noticias</title>
 </head>
 <body>
     <header> <!----- Inicio Logo ----->
@@ -18,22 +24,22 @@
         </div>
     </header>
     
-    <nav> <!----- Inicio Menu Nav ----->
-        <ul class="menu"> 
-            <li><a href="../index.html">Inicio</a>
-                <ul>
-                    <li><a href="">Submenu1</a></li>
-                    <li><a href="">Submenu2</a></li>
-                    <li><a href="">Submenu3</a></li>
-                </ul>
-            </li>
-            <li><a href="../Pages/juego.html">Juego</a></li>
-            <li><a href="../Pages/comunidad.html">Comunidad</a></li>
-            <li><a href="../Pages/noticias.html">Noticias</a></li>
-            <li><a href="../Pages/contacto.html">Contacto</a></li>
-            <a class="descargar" href="./Pages/descargar.html">DESCARGAR</a>
-        </ul>
-    </nav>
+    <nav class="navbar navbar-expand-lg"> <!----- Noticias menu nav ----->
+        <div class="container-fluid barra">
+          <button class="navbar-toggler navbar-dark" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse barra__items" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-link" aria-current="page" href="../index.html">Inicio</a>
+              <a class="nav-link" href="../Pages/juego.html">Juego</a>
+              <a class="nav-link" href="../Pages/comunidad.html">Comunidad</a>
+              <a class="nav-link" href="../Pages/noticias.html">Noticias</a>
+              <a class="nav-link" href="../Pages/contacto.html">Contacto</a>
+            </div>
+          </div>
+        </div>
+      </nav>
 
     <main>
         <!--------------- Banner principal --------------->
@@ -41,56 +47,43 @@
         <img src="../Media/Banner.jpg" alt="Foto principal" width="1750px" class="wow animate__animated animate__fadeIn">
     </section> 
 
-    <div class="EncabezadoSecciones">
-        <h1> Noticias </h1>
+    <div class="encabezado__secciones">
+        <h2> Noticias </h2>
     </div>
 
         <!------------------------------------------------------------------------------------- NOTICIAS -------------------------------------------------------------------------------------------------------------->
 
     <section class="noticias__bg">
-        <div class="noticias__recibir">
-            <div>
-                <label for="exampleInputEmail1" class="form-label">¿Quieres recibir las últimas noticias en tu email?</label>
-            </div>
-            <div class="form-floating">
-                <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-                <label for="floatingInput">Email</label>
-            </div>
-            <div>
-                <input type="checkbox" class="btn-check" id="btn-check" autocomplete="off">
-                <label class="btn btn-primary" for="btn-check">Suscribirse</label>
-            </div>
-        </div>
         <div class="noticias">
             <div class="aniversario wow animate__animated animate__fadeIn"> <!----- Aniversario ----->
-                <h2>¡Aniversario Nro. 6!</h2> <br> 
+                <h3>¡Aniversario Nro. 6!</h3> <br> 
                 <p>El evento del sexto aniversario de Dead by Daylight ya está aquí, con una nueva oferta, ganchos y generadores con temas de eventos y lujosas recompensas cosméticas para Killers y Survivors. </p> <br>
-                <div class="AniversarioMedia">
+                <div class="aniversario__media">
                     <iframe src="https://www.youtube.com/embed/Dc51tuQccnE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     <img src="../Media/Noticias/Aniversario Cosmetics.jpg" alt="Aniversario Cosmeticos" width="600px">
                 </div>
             </div>
 
             <div class="capitulo24 wow animate__animated animate__fadeIn"> <!----- Capitulo 24 -----> 
-                <h2> Capitulo 24: Roots of dread ya esta disponible.</h2> <br>
+                <h3> Capitulo 24: Roots of dread ya esta disponible.</h3> <br>
                 <img src="../Media/Noticias/Capitulo 24.jpg" alt="Capitulo 24"> <br> <br>
                 <p>Cuando el crepúsculo se vuelve completamente oscuro, llega. El capítulo Roots of Dread de Dead by Daylight ha llegado, con un nuevo Killer, The Dredge, y un nuevo Survivor, Haddie Kaur. Juntos, traen seis nuevas ventajas únicas a The Fog. Un nuevo mapa, el inquietante Garden of Joy, está disponible para todos los jugadores, al igual que una nueva ventaja general, Shattered Hope. La compra de este complemento en las tiendas de la plataforma también desbloquea un atuendo exclusivo para Haddie: The Pale Ribed Shirt.</p>
             </div>
 
             <div class="tomo12 wow animate__animated animate__fadeIn"> <!----- Tomo 12 -----> 
-                <h2> Tomo 12: Discordance muy pronto.</h2> <br>
+                <h3> Tomo 12: Discordance muy pronto.</h3> <br>
                 <img src="../Media/Noticias/Tomo 12.jpg" alt="Tomo12"> <br> <br>
                 <p>Cuando la realidad se desmorona, la locura nunca se queda atrás. La percepción se tuerce y la razón se desmorona en el Tomo 12: DISCORDANCE, que presenta nuevos recuerdos para The Blight, Jonah Vasquez y House of Arkham. Continúe con sus historias completando los desafíos que se encuentran en cada uno de los cuatro niveles del Tomo.</p>
             </div>
 
             <div class="titan wow animate__animated animate__fadeIn"> <!----- Attack on Titan ----->
-                <h2> Attack on Titan: Colección de cosmeticos</h2> <br>
+                <h3> Attack on Titan: Colección de cosmeticos</h3> <br>
                 <img src="../Media/Noticias/Titan.jpg" alt="Attack on Titan"> <br> <br>
                 <p>Eren, Mikasa, Armin, Armored Titan, War Hammer Titan, ellos, y muchos más, forman la base de esta colosal colección, que vuelve a imaginar a Survivors y Killers como personajes de Attack on Titan.</p>
             </div>
 
             <div class="rock wow animate__animated animate__fadeIn"><!----- Rock a Billy-->
-                <h2> Rock a Billy: Colección de cosmeticos</h2> <br>
+                <h3> Rock a Billy: Colección de cosmeticos</h3> <br>
                 <img src="../Media/Noticias/Rock.jpg" alt="Rock a Billy"> <br> <br>
                 <p>No importa cuántas veces te sacrifiquen, el rockabilly nunca morirá.
                 Al menos, eso es lo que siguen diciendo estos tres Supervivientes. Puede que no les creas, pero tienes que admirar el valor. Después de todo, la nostalgia es una herramienta crucial para mantener la humanidad, y nostalgia tendremos, gracias a estos nuevos y elegantes estilos.</p>
@@ -101,8 +94,8 @@
     </main>
 
     <footer> <!--------------------------------------------------------------------------------- NOTICIAS FOOTER ------------------------------------------------------------------------------------------------------>
-        <div class="DivFooter">
-            <div class="MenuFooter"> <!----- Menú Footer ----->
+        <div class="seccion__footer">
+            <div class="menu__footer"> <!----- Menú Footer ----->
                 <ul>
                     <li><a href="../index.html">Inicio</a></li>
                     <li><a href="../Pages/juego.html">Juego</a></li>
@@ -113,18 +106,25 @@
                 </ul>
             </div>
             <div> <!----- Redes Footer ----->
-                <div class="unete">
-                    <h2>Únete a la comunidad!</h2>
-                </div>
-                <div class="IconoRedes">
-                    <div><img src="../Media/Redes/Instagram.png" alt="Instagram" width="40px"></div>
-                    <div><img src="../Media/Redes/Tiktok.png" alt=" Tik Tok" width="40px"></div>
-                    <div><img src="../Media/Redes/Youtube.png" alt="Youtube" width="40px"></div>
-                    <div><img src="../Media/Redes/Twitter.png" alt="Twitter" width="40px"></div>
-                    <div><img src="../Media/Redes/Facebook.png" alt="Facebook" width="40px"></div>
+                <div class="icono__redes">
+                    <div>
+                        <a href="https://www.instagram.com/deadbydaylight/?hl=es" target="_blank"><img src="../Media/Redes/Instagram.png" alt="Instagram"></a>
+                    </div>
+                    <div>
+                        <a href="https://www.tiktok.com" target="_blank"><img src="../Media/Redes/Tiktok.png" alt=" Tik Tok"></a>
+                    </div>
+                    <div>
+                        <a href="https://www.youtube.com/c/DeadbyDaylightBHVR" target="_blank"><img src="../Media/Redes/Youtube.png" alt="Youtube"></a>
+                    </div>
+                    <div>
+                        <a href="https://twitter.com/DeadByBHVR" target="_blank"><img src="../Media/Redes/Twitter.png" alt="Twitter"></a>
+                    </div>
+                    <div>
+                        <a href="https://www.facebook.com/DeadByDaylight/" target="_blank"><img src="../Media/Redes/Facebook.png" alt="Facebook"></a>
+                    </div>
                 </div>
             </div>
-            <div class="IconoFooter"> <!----- Icono Footer ----->
+            <div class="icono__footer"> <!----- Icono Footer ----->
                 <img src="../Media/Icono.png" alt="Icono Logo" width="300px">
             </div>
         </div>

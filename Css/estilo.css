@@ -8,7 +8,7 @@ body {
   overflow-x: hidden; }
 
 h2 {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-family: "roboto"; }
 
 h3 {
@@ -16,11 +16,11 @@ h3 {
   font-family: "roboto"; }
 
 h4 {
-  font-size: 1.3rem;
+  font-size: 1rem;
   font-family: "archivo narrow"; }
 
 p {
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-family: "archivo narrow"; }
 
 .encabezado__secciones {
@@ -37,7 +37,7 @@ p {
 /* ----- Media Queries Mobile Encabezados ----- */
 @media screen and (max-width: 480px) {
   .encabezado__secciones h2 {
-    font-size: 1rem;
+    font-size: 0.8rem;
     padding: 5px; } }
 
 /* ---------- HEADER ----------*/
@@ -53,58 +53,23 @@ header {
 
 /* ---------- NAV ---------- */
 nav {
-  width: 100%;
-  font-size: 1.1rem;
-  position: sticky;
-  top: 0;
-  background-color: black;
-  z-index: 1; }
-  nav .menu {
-    margin: auto; }
-    nav .menu, nav .menu ul {
-      list-style: none;
-      display: flex;
-      flex-direction: row;
+  background-color: black; }
+  nav .barra {
+    background-color: #000000; }
+    nav .barra .barra__items {
       justify-content: center; }
-    nav .menu li a {
-      background-color: black;
-      color: white;
-      text-decoration: none;
-      font-family: "archivo narrow";
-      padding: 12px 30px 12px 30px;
-      display: block;
-      animation-name: animacion_nav;
-      transition: 0.2s; }
-    nav .menu > li {
-      float: left; }
-    nav .menu li a:hover {
-      background-color: white;
-      color: black; }
-    nav .menu li ul {
-      display: none;
-      position: absolute;
-      padding: 0; }
-    nav .menu li:hover ul {
-      display: block; }
-    nav .menu .descargar {
-      font-size: 1.2rem;
-      background-color: #7c0000;
-      color: white;
-      text-decoration: none;
-      font-family: "archivo narrow";
-      position: absolute;
-      display: flex;
-      padding: 10px 30px 10px 30px;
-      left: 91%; }
-    nav .menu .descargar:hover {
-      background-color: #a70000;
-      color: white; }
+      nav .barra .barra__items a {
+        color: white;
+        font-family: "archivo narrow";
+        margin-left: 20px;
+        transition: 0.4s; }
+        nav .barra .barra__items a:hover {
+          color: #7c0000; }
 
-@keyframes animacion_nav {
-  0% {
-    background-color: black; }
-  100% {
-    background-color: white; } }
+/* ----- Media Queries Mobile Nav ----- */
+@media screen and (max-width: 480px) {
+  nav .barra button {
+    padding: 2px; } }
 
 /* ---------- BANNER ---------- */
 .banner {
@@ -112,7 +77,7 @@ nav {
   display: flex;
   justify-content: center; }
   .banner img {
-    width: 1900px; }
+    width: 1700px; }
 
 /* ----- Media Queries Mobile Header ----- */
 @media screen and (max-width: 480px) {
@@ -140,27 +105,27 @@ footer .seccion__footer {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
-  padding: 50px;
-  border-top: 5px solid #929292; }
+  border-top: 5px solid #929292;
+  padding: 30px; }
   footer .seccion__footer .menu__footer ul {
-    list-style: none; }
+    list-style: none;
+    margin: 0;
+    padding: 0; }
   footer .seccion__footer .menu__footer a {
     font-family: "archivo narrow";
     color: white;
     text-decoration: none; }
-  footer .seccion__footer .unete {
-    display: none; }
   footer .seccion__footer .icono__redes {
     display: flex;
     flex-direction: row;
     justify-content: space-around; }
     footer .seccion__footer .icono__redes img {
-      width: 40px; }
+      width: 30px; }
   footer .seccion__footer .icono__footer {
     display: flex;
-    flex-direction: row-reverse; }
+    justify-content: flex-end; }
     footer .seccion__footer .icono__footer img {
-      width: 300px; }
+      width: 35%; }
 
 /* ----- Media Queries Mobile Footer ----- */
 @media screen and (max-width: 480px) {
@@ -171,8 +136,8 @@ footer .seccion__footer {
     text-align: center; }
     footer .seccion__footer .menu__footer {
       padding-bottom: 40px; }
-    footer .seccion__footer .unete {
-      padding-bottom: 40px; }
+      footer .seccion__footer .menu__footer a {
+        font-size: 0.8rem; }
     footer .seccion__footer .icono__redes {
       display: flex;
       flex-direction: row;
@@ -180,55 +145,50 @@ footer .seccion__footer {
       width: 320px;
       padding-bottom: 40px; }
       footer .seccion__footer .icono__redes img {
-        width: 30px; }
+        width: 20px; }
     footer .seccion__footer .icono__footer img {
-      width: 200px; } }
+      width: 150px; } }
 
+/* ---------- Border ----------*/
+/* ---------- img Noticias ---------- */
 /* Fuente - Body - Encabezador - Header - Nav - Banner - Footer */
 /* ------------------------------------------------------------------------------------------ INICIO -----------------------------------------------------------------------------------------------------------------*/
 /* ---------- INICIO - BIENVENIDOS - SECCION 1 ---------- */
 .seccion__bienvenidos {
   background-image: url("../Media/Bienvenidos/Fondo bienvenidos.jpg");
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-areas: "intro intro plataformas" "intro intro mobile";
-  padding: 80px;
-  align-items: center; }
+  display: flex;
+  flex-direction: row;
+  justify-items: center;
+  align-items: center;
+  padding: 90px 50px 90px 50px; }
   .seccion__bienvenidos .sobre__juego {
     background-image: url("../Media/Bienvenidos/Background.png");
     background-size: cover;
-    padding: 30px;
-    width: 90%;
     box-shadow: black 3px 3px 6px 0px;
-    grid-area: intro; }
-  .seccion__bienvenidos .plataformas1 .plataformas2 {
-    background-image: url("../Media/Background.jpg");
-    box-shadow: black 0px 0px 25px 10px;
     padding: 40px;
-    text-align: center;
-    color: white;
-    grid-area: plataformas;
-    width: 500px;
-    margin-bottom: 50px; }
-    .seccion__bienvenidos .plataformas1 .plataformas2 img {
-      width: 60px;
-      transition: 0.5s; }
-    .seccion__bienvenidos .plataformas1 .plataformas2 img:hover {
-      transform: scale(1.6, 1.6); }
-    .seccion__bienvenidos .plataformas1 .plataformas2 .plataformas__iconos1, .seccion__bienvenidos .plataformas1 .plataformas2 .plataformas__iconos2 {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      justify-items: center;
-      padding-top: 20px;
-      padding-bottom: 20px; }
-    .seccion__bienvenidos .plataformas1 .plataformas2 .plataformas__iconos2 {
-      /* -------- EXTEND -----------*/
-      margin-top: 20px; }
-  .seccion__bienvenidos .plataformas1 .mobile {
-    width: 500px;
-    height: 100%;
-    box-shadow: black 0px 0px 25px 10px;
-    grid-area: mobile; }
+    width: 100%; }
+  .seccion__bienvenidos .plataformas1 {
+    width: 50%;
+    margin-left: 30px; }
+    .seccion__bienvenidos .plataformas1 .plataformas2 {
+      background-image: url("../Media/Background.jpg");
+      box-shadow: black 0px 0px 25px 10px;
+      text-align: center;
+      color: white;
+      padding: 40px;
+      height: 430px; }
+      .seccion__bienvenidos .plataformas1 .plataformas2 img {
+        width: 45px;
+        transition: 0.5s; }
+      .seccion__bienvenidos .plataformas1 .plataformas2 img:hover {
+        transform: scale(1.6, 1.6); }
+      .seccion__bienvenidos .plataformas1 .plataformas2 .plataformas__iconos {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-row-gap: 7rem;
+        justify-items: center;
+        padding-top: 30px; }
 
 /* ---------- INICIO - DLC - SECCION 2 ---------- */
 .dlc__seccion {
@@ -239,7 +199,6 @@ footer .seccion__footer {
     justify-content: center; }
     .dlc__seccion .dlc__carousel .dlc__card {
       margin: 7rem 6rem 7rem 6rem;
-      width: 35%;
       background-image: url("../Media/DLC/Fondo Contiene.png");
       transition: 0.5s;
       box-shadow: black 0px 0px 25px 10px;
@@ -247,17 +206,42 @@ footer .seccion__footer {
       border-top-right-radius: 10px;
       border-bottom-left-radius: 10px;
       border-bottom-right-radius: 10px; }
-      .dlc__seccion .dlc__carousel .dlc__card img {
-        border-top-left-radius: 10px;
-        border-top-right-radius: 10px; }
       .dlc__seccion .dlc__carousel .dlc__card:hover {
         transform: scale(1.1, 1.1); }
-      .dlc__seccion .dlc__carousel .dlc__card .dlc__card__body {
-        color: #ffffff;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        align-items: center;
-        padding: 1.5rem; }
+      .dlc__seccion .dlc__carousel .dlc__card .inicio__dlc__hover {
+        position: relative;
+        width: 600px; }
+        .dlc__seccion .dlc__carousel .dlc__card .inicio__dlc__hover img {
+          width: 600px;
+          display: block;
+          border-top-left-radius: 5px;
+          border-top-right-radius: 5px;
+          border-top: 1px solid #333333;
+          border-left: 1px solid #333333;
+          border-right: 1px solid #333333; }
+        .dlc__seccion .dlc__carousel .dlc__card .inicio__dlc__hover .inicio__dlc__overlay {
+          background-color: rgba(0, 0, 0, 0.9);
+          color: white;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          opacity: 0;
+          transition: opacity 0.30s; }
+          .dlc__seccion .dlc__carousel .dlc__card .inicio__dlc__hover .inicio__dlc__overlay:hover {
+            opacity: 1; }
+          .dlc__seccion .dlc__carousel .dlc__card .inicio__dlc__hover .inicio__dlc__overlay ul {
+            font-family: "archivo narrow";
+            font-size: 0.9rem; }
+      .dlc__seccion .dlc__carousel .dlc__card h3 {
+        color: white;
+        text-align: center;
+        padding: 20px;
+        margin: 0; }
 
 /* ---------- INICIO - DE QUE LADO ESTAS? - SECCION 3 ---------- */
 .encabezado__seccion3 {
@@ -303,11 +287,10 @@ footer .seccion__footer {
         color: #000000;
         box-shadow: black 0px 0px 25px 10px;
         font-family: "archivo narrow";
-        width: 400px;
+        width: 90%;
         height: auto;
         padding: 20px;
         margin: 0;
-        /* ------------------ MIXINS -----------------*/
         border-bottom-right-radius: 5px;
         border-bottom-left-radius: 5px; }
       .personajes .personajes__carousel .personajes__cont .personajes__kill__title {
@@ -316,11 +299,10 @@ footer .seccion__footer {
         color: #000000;
         box-shadow: black 0px 0px 25px 10px;
         font-family: "archivo narrow";
-        width: 400px;
+        width: 90%;
         height: auto;
         padding: 20px;
         margin: 0;
-        /* ------------------ MIXINS -----------------*/
         border-bottom-right-radius: 5px;
         border-bottom-left-radius: 5px; }
       .personajes .personajes__carousel .personajes__cont .inicio__img__hover {
@@ -331,7 +313,7 @@ footer .seccion__footer {
           border-top-left-radius: 5px;
           border-top-right-radius: 5px;
           display: block;
-          width: 100%; }
+          width: 90%; }
         .personajes .personajes__carousel .personajes__cont .inicio__img__hover .img__surv {
           border-top: 2px solid #132138;
           border-left: 2px solid #132138;
@@ -344,7 +326,7 @@ footer .seccion__footer {
           position: absolute;
           top: 0;
           left: 0;
-          width: 100%;
+          width: 90%;
           height: 100%;
           background-color: rgba(0, 0, 0, 0.6);
           color: white;
@@ -357,7 +339,7 @@ footer .seccion__footer {
           .personajes .personajes__carousel .personajes__cont .inicio__img__hover .inicio__img__overlay:hover {
             opacity: 1; }
           .personajes .personajes__carousel .personajes__cont .inicio__img__hover .inicio__img__overlay p {
-            font-size: 1rem;
+            font-size: 0.8rem;
             padding: 30px; }
       .personajes .personajes__carousel .personajes__cont:hover {
         transform: scale(1.1, 1.1); }
@@ -379,13 +361,14 @@ footer .seccion__footer {
     .inicio__noticias div img {
       border: 1px solid #7c0000;
       box-shadow: black 0px 0px 25px 10px;
-      transition: 0.5s; }
+      transition: 0.5s;
+      width: 500px; }
     .inicio__noticias div img:hover {
       transform: scale(1.1, 1.1);
       border: 2px solid #7c0000; }
     .inicio__noticias div iframe {
-      width: 550px;
-      height: 300px;
+      width: 500px;
+      height: 250px;
       margin-bottom: 60px;
       border: 1px solid #7c0000;
       box-shadow: black 0px 0px 25px 10px; }
@@ -409,7 +392,7 @@ footer .seccion__footer {
     justify-items: center;
     width: 80%; }
     .inicio__noticias .inicio__cap24 img {
-      width: 400px; }
+      width: 350px; }
   .inicio__noticias .inicio__tomo12 {
     background-image: url("../Media/Background.jpg");
     background-size: cover;
@@ -417,36 +400,27 @@ footer .seccion__footer {
     grid-area: InicioTomo12;
     width: 80%; }
     .inicio__noticias .inicio__tomo12 img {
-      width: 400px; }
+      width: 350px; }
 
 /* ------------------------------------------------------------------------------------------------- JUEGO -----------------------------------------------------------------------------------------------------------*/
-.juego__carousel {
-  display: flex;
-  justify-content: space-evenly; }
-  .juego__carousel .juego__card__surv {
-    background-color: #604417; }
-  .juego__carousel .juego__card__kill {
-    background-color: #3f0d12; }
-  .juego__carousel .juego__card {
-    background-size: cover;
-    display: flex;
-    flex-direction: column;
-    width: 20vw;
-    margin-top: 7rem;
-    margin-bottom: 7rem;
-    transition: 0.5s;
-    color: #ffffff;
-    box-shadow: #000000 0px 0px 25px 10px; }
-    .juego__carousel .juego__card:hover {
-      transform: scale(1.1, 1.1);
-      box-shadow: black 0px 0px 25px 10px; }
-    .juego__carousel .juego__card .juego__img__hover {
+.juego__card {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-row-gap: 3rem;
+  justify-items: center;
+  padding: 40px; }
+  .juego__card .card {
+    color: black;
+    box-shadow: #000000 0px 0px 25px 10px;
+    text-align: center;
+    border: none;
+    width: 50%;
+    transition: 0.5s; }
+    .juego__card .card:hover {
+      transform: scale(1.1, 1.1); }
+    .juego__card .card .juego__img__hover {
       position: relative; }
-      .juego__carousel .juego__card .juego__img__hover img {
-        display: block;
-        border-top-right-radius: 5px;
-        border-bottom-left-radius: 0px; }
-      .juego__carousel .juego__card .juego__img__hover .juego__img__overlay {
+      .juego__card .card .juego__img__hover .juego__img__overlay {
         position: absolute;
         top: 0;
         left: 0;
@@ -459,30 +433,234 @@ footer .seccion__footer {
         align-items: center;
         opacity: 0;
         transition: opacity 0.30s; }
-        .juego__carousel .juego__card .juego__img__hover .juego__img__overlay:hover {
+        .juego__card .card .juego__img__hover .juego__img__overlay:hover {
           opacity: 1; }
-        .juego__carousel .juego__card .juego__img__hover .juego__img__overlay p {
+        .juego__card .card .juego__img__hover .juego__img__overlay p {
           padding: 30px; }
-    .juego__carousel .juego__card h2 {
-      text-align: center;
-      margin: 0; }
-    .juego__carousel .juego__card .juego__kill__title {
-      background-image: linear-gradient(315deg, #3f0d12 0%, #8a0c0c 74%);
-      box-shadow: black 0px 0px 25px 10px;
-      border-bottom-left-radius: 5px; }
-    .juego__carousel .juego__card .juego__surv__title {
+    .juego__card .card .juego__surv__title {
       background-image: linear-gradient(315deg, #604417 0%, #b6a536 74%);
       box-shadow: black 0px 0px 25px 10px;
-      border-bottom-left-radius: 5px;
-      border-bottom-right-radius: 5px; }
+      border-bottom-right-radius: 5px;
+      border-bottom-left-radius: 5px; }
+      .juego__card .card .juego__surv__title h3 {
+        margin: 0; }
+    .juego__card .card .juego__kill__title {
+      background-image: linear-gradient(315deg, #3f0d12 0%, #8a0c0c 74%);
+      box-shadow: black 0px 0px 25px 10px;
+      border-bottom-right-radius: 5px;
+      border-bottom-left-radius: 5px; }
+      .juego__card .card .juego__kill__title h3 {
+        margin: 0; }
 
 .surv__bg {
-  background-image: url(../Media/Sobrevivientes/surv_bg.jpg);
+  background-image: url("../Media/Sobrevivientes/surv_bg.jpg");
   background-size: cover; }
 
 .killer__bg {
-  background-image: url(../Media/Asesinos/killer_bg.jpg);
+  background-image: url("../Media/Asesinos/killer_bg.jpg");
   background-size: cover; }
+
+/* ------------------------------------------------------------------------------------------------------------- COMUNIDAD -------------------------------------------------------------------------------------------*/
+/* --------------- Comunidad --------------- */
+.comunidad {
+  color: white;
+  background-color: #000000;
+  background-image: linear-gradient(315deg, black 0%, #0e0e0e 74%);
+  background-size: cover;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  text-align: center; }
+  .comunidad .comunidad__media img {
+    width: 100%;
+    box-shadow: #727272 0px 0px 25px 1px; }
+  .comunidad .comunidad__iconos {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    justify-items: center;
+    align-items: center;
+    width: 100%; }
+    .comunidad .comunidad__iconos img {
+      width: 100px;
+      border-radius: 100px;
+      transition: 0.5s; }
+      .comunidad .comunidad__iconos img:hover {
+        transform: scale(1.1, 1.1);
+        box-shadow: white 0px 0px 5px 1px;
+        border-radius: 100px; }
+    .comunidad .comunidad__iconos h4 {
+      padding: 20px; }
+
+/* --------------- Redes ---------------*/
+.comunidad__redes {
+  color: white;
+  background-color: #000000;
+  background-image: linear-gradient(315deg, black 0%, #0e0e0e 74%);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+  text-align: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  position: relative; }
+  .comunidad__redes .comunidad__redes__iconos {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    justify-items: center;
+    align-self: center;
+    width: 100%; }
+    .comunidad__redes .comunidad__redes__iconos img {
+      width: 100px;
+      border-radius: 100px;
+      transition: 0.5s; }
+      .comunidad__redes .comunidad__redes__iconos img:hover {
+        transform: scale(1.1, 1.1);
+        box-shadow: white 0px 0px 5px 1px;
+        border-radius: 100px; }
+    .comunidad__redes .comunidad__redes__iconos h4 {
+      padding: 20px; }
+  .comunidad__redes .comunidad__media img {
+    width: 100%;
+    box-shadow: #727272 0px 0px 25px 1px; }
+
+/* ------------------------------------------------------------------------------------------------------- NOTICIAS ------------------------------------------------------------------------------------------------ */
+.noticias__bg {
+  background-image: url("../Media/Background.jpg");
+  background-size: cover; }
+  .noticias__bg .noticias {
+    color: white;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "aniversario capitulo24" "aniversario tomo12" "titan rock";
+    padding: 50px; }
+    .noticias__bg .noticias .aniversario {
+      /* ---------- Aniversario ---------- */
+      background-image: url("../Media/Noticias/Noticias fondo.png");
+      box-shadow: black 0px 0px 25px 10px;
+      grid-area: aniversario; }
+      .noticias__bg .noticias .aniversario .aniversario__media iframe {
+        width: 600px;
+        height: 300px;
+        border: 1px solid #7c0000;
+        box-shadow: black 0px 0px 25px 10px;
+        margin-bottom: 40px; }
+      .noticias__bg .noticias .aniversario .aniversario__media img {
+        border: 1px solid #7c0000;
+        box-shadow: black 0px 0px 25px 10px;
+        transition: 0.5s; }
+        .noticias__bg .noticias .aniversario .aniversario__media img:hover {
+          transform: scale(1.1, 1.1);
+          border: 2px solid #7c0000; }
+    .noticias__bg .noticias .capitulo24 {
+      /* ---------- Capitulo 24 ---------- */
+      background-image: url("../Media/Noticias/Noticias fondo.png");
+      box-shadow: black 0px 0px 25px 10px;
+      grid-area: capitulo24; }
+      .noticias__bg .noticias .capitulo24 img {
+        width: 380px;
+        border: 1px solid #7c0000;
+        box-shadow: black 0px 0px 25px 10px;
+        transition: 0.5s; }
+        .noticias__bg .noticias .capitulo24 img:hover {
+          transform: scale(1.1, 1.1);
+          border: 2px solid #7c0000; }
+    .noticias__bg .noticias .tomo12 {
+      /* ---------- Tomo 12 ---------- */
+      background-image: url("../Media/Noticias/Noticias fondo.png");
+      box-shadow: black 0px 0px 25px 10px;
+      grid-area: tomo12; }
+      .noticias__bg .noticias .tomo12 img {
+        width: 380px;
+        border: 1px solid #7c0000;
+        box-shadow: black 0px 0px 25px 10px;
+        transition: 0.5s; }
+        .noticias__bg .noticias .tomo12 img:hover {
+          transform: scale(1.1, 1.1);
+          border: 2px solid #7c0000; }
+    .noticias__bg .noticias .titan {
+      background-image: url("../Media/Noticias/Noticias fondo.png");
+      box-shadow: black 0px 0px 25px 10px;
+      grid-area: titan; }
+      .noticias__bg .noticias .titan img {
+        width: 380px;
+        border: 1px solid #7c0000;
+        box-shadow: black 0px 0px 25px 10px;
+        transition: 0.5s; }
+        .noticias__bg .noticias .titan img:hover {
+          transform: scale(1.1, 1.1);
+          border: 2px solid #7c0000; }
+    .noticias__bg .noticias .rock {
+      background-image: url("../Media/Noticias/Noticias fondo.png");
+      box-shadow: black 0px 0px 25px 10px;
+      grid-area: rock; }
+      .noticias__bg .noticias .rock img {
+        width: 380px;
+        border: 1px solid #7c0000;
+        box-shadow: black 0px 0px 25px 10px;
+        transition: 0.5s; }
+        .noticias__bg .noticias .rock img:hover {
+          transform: scale(1.1, 1.1);
+          border: 2px solid #7c0000; }
+    .noticias__bg .noticias div {
+      margin: 40px;
+      padding: 15px; }
+      .noticias__bg .noticias div p {
+        margin: 0; }
+
+/* --------------------------------------------------------------------------------------------------- CONTACTO ------------------------------------------------------------------------------------------------------*/
+.contacto {
+  background-image: url("../Media/Background.jpg");
+  background-size: cover;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center; }
+  .contacto .formulario {
+    background-color: #ffffff;
+    display: grid;
+    padding: 1rem;
+    opacity: 0.9;
+    transition: 0.5s;
+    box-shadow: 0px 0px 6px 0px #000000cc;
+    width: 25vw;
+    margin-left: 500px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    border-radius: 10px; }
+    .contacto .formulario div {
+      margin: 1rem; }
+      .contacto .formulario div h2 {
+        text-align: center;
+        font-size: 1rem; }
+    .contacto .formulario:Hover {
+      box-shadow: 0px 0px 6px 5px #d8d8d86c; }
+    .contacto .formulario label {
+      font-size: 0.8rem; }
+  .contacto .form__text {
+    width: 25vw;
+    padding-left: 90px; }
+    .contacto .form__text p {
+      font-size: 1.4rem;
+      color: white;
+      animation: contacto_animacion;
+      animation-duration: 5s;
+      transition: 0.5s ease-in-out;
+      animation-iteration-count: infinite;
+      position: relative; }
+
+@keyframes contacto_animacion {
+  0% {
+    transform: translateY(0px); }
+  50% {
+    transform: translateY(-20px); }
+  100% {
+    transform: translateY(0px); } }
 
 /* --------------------------------------------------------------------------------------------------- INICIO --------------------------------------------------------------------------------------------------------*/
 /* ----- Media Queries Mobile Inicio Bienvenidos ----- */
@@ -491,64 +669,66 @@ footer .seccion__footer {
     display: flex;
     flex-direction: column;
     padding: 30px; }
-    .seccion__bienvenidos h2 {
-      font-size: 1rem; }
-    .seccion__bienvenidos h3, .seccion__bienvenidos p {
-      font-size: 0.8rem; }
+    .seccion__bienvenidos h3, .seccion__bienvenidos h4, .seccion__bienvenidos p {
+      font-size: 0.8rem;
+      margin: 0; }
     .seccion__bienvenidos .sobre__juego {
       padding: 20px;
       width: 100%; }
     .seccion__bienvenidos .plataformas1 {
       display: flex;
       flex-direction: column;
-      padding: 0;
-      margin-top: 20px; }
+      padding: 20px;
+      margin: 0;
+      width: 110%; }
       .seccion__bienvenidos .plataformas1 .plataformas2 {
-        width: 100%;
-        border: none;
-        padding: 20px;
+        padding: 30px;
         align-items: center;
-        margin-bottom: 20px; }
+        height: 10%; }
         .seccion__bienvenidos .plataformas1 .plataformas2 img {
           width: 40px;
-          margin-bottom: 10px;
-          transition: none; }
+          margin-bottom: 10px; }
         .seccion__bienvenidos .plataformas1 .plataformas2 img:hover {
           width: 40px; }
-      .seccion__bienvenidos .plataformas1 .mobile {
-        width: 100%; } }
+        .seccion__bienvenidos .plataformas1 .plataformas2 .plataformas__iconos {
+          grid-row-gap: 2rem; } }
 
 /* ----- Media Queries Mobile Inicio DLC ----- */
 @media screen and (max-width: 480px) {
   .dlc__seccion .dlc__carousel {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 2rem; }
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    padding-top: 50px;
+    padding-bottom: 50px; }
     .dlc__seccion .dlc__carousel .dlc__card {
-      margin: 1rem;
-      width: 85%; }
-      .dlc__seccion .dlc__carousel .dlc__card .dlc__card__body {
-        padding: 0px 15px 15px 15px;
+      width: 300px;
+      margin: 1rem; }
+      .dlc__seccion .dlc__carousel .dlc__card .inicio__dlc__hover img {
+        width: 300px; }
+      .dlc__seccion .dlc__carousel .dlc__card .inicio__dlc__hover .inicio__dlc__overlay {
+        padding: 0;
         margin: 0;
-        align-items: flex-start; }
-        .dlc__seccion .dlc__carousel .dlc__card .dlc__card__body p, .dlc__seccion .dlc__carousel .dlc__card .dlc__card__body h3 {
-          font-size: 0.7rem;
+        width: 300px; }
+        .dlc__seccion .dlc__carousel .dlc__card .inicio__dlc__hover .inicio__dlc__overlay ul {
+          font-size: 0.8rem;
           margin: 0; }
-        .dlc__seccion .dlc__carousel .dlc__card .dlc__card__body h3 {
-          padding-top: 15px; } }
+      .dlc__seccion .dlc__carousel .dlc__card h3 {
+        font-size: 0.8rem;
+        padding: 10px; } }
 
 /* ----- Media Queries Mobile Inicio De que lado estas?----- */
 @media screen and (max-width: 480px) {
   .encabezado__seccion3 h3 {
     padding-top: 10px;
-    padding-bottom: 10px; }
+    padding-bottom: 10px;
+    font-size: 0.8rem; }
   .personajes .personajes__carousel {
     margin: 4rem 6rem 4rem 6rem; }
     .personajes .personajes__carousel .personajes__cont {
       padding: 10px; }
       .personajes .personajes__carousel .personajes__cont h4 {
-        font-size: 1rem; }
+        font-size: 0.8rem; }
       .personajes .personajes__carousel .personajes__cont .personajes__surv__title, .personajes .personajes__carousel .personajes__cont .personajes__kill__title {
         width: 180px;
         padding: 10px; }
@@ -573,6 +753,8 @@ footer .seccion__footer {
       margin: 10px; }
       .inicio__noticias div iframe {
         display: none; }
+      .inicio__noticias div h3 {
+        font-size: 0.9rem; }
       .inicio__noticias div p {
         font-size: 0.8rem; }
     .inicio__noticias .inicio__aniversario {
@@ -591,20 +773,106 @@ footer .seccion__footer {
 /* ------------------------------------------------------------------------------------------------- JUEGO -----------------------------------------------------------------------------------------------------------*/
 /* ----- Media Queries Mobile Juego ----- */
 @media screen and (max-width: 480px) {
-  .juego__carousel {
+  .juego__card {
+    grid-template-columns: 1fr 1fr; }
+    .juego__card .card {
+      width: 70%; }
+      .juego__card .card .juego__img__hover .juego__img__overlay p {
+        font-size: 0.5rem;
+        padding: 5px; }
+      .juego__card .card .juego__surv__title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 5px; }
+        .juego__card .card .juego__surv__title h3 {
+          font-size: 0.6rem; }
+      .juego__card .card .juego__kill__title {
+        padding: 5px; }
+        .juego__card .card .juego__kill__title h3 {
+          font-size: 0.6rem; } }
+
+/* ----------------------------------------------------------------------------------------------------- COMUNIDAD -------------------------------------------------------------------------------------------------- */
+/* ----- Media Queries Mobile Comunidad ----- */
+@media screen and (max-width: 480px) {
+  .comunidad {
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 50px 50px 50px 50px; }
-    .juego__carousel .juego__card {
-      display: grid;
-      grid-template-columns: 1fr;
-      width: 50%;
-      margin: 10px; }
-      .juego__carousel .juego__card:hover {
-        transform: none; }
-      .juego__carousel .juego__card .juego__img__hover .juego__img__overlay p {
-        font-size: 0.7rem;
-        padding: 10px; }
-      .juego__carousel .juego__card h2 {
+    flex-direction: column;
+    padding: 40px; }
+    .comunidad .comunidad__media img {
+      width: 90%; }
+    .comunidad .comunidad__iconos {
+      padding-top: 30px; }
+      .comunidad .comunidad__iconos img {
+        width: 50px;
+        padding: 0;
+        margin: 0; }
+      .comunidad .comunidad__iconos h4 {
+        padding-top: 10px;
+        margin: 0;
+        font-size: 0.9rem; }
+  .comunidad__redes {
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 40px; }
+    .comunidad__redes .comunidad__redes__media img {
+      width: 90%; }
+    .comunidad__redes .comunidad__redes__iconos {
+      padding-top: 30px; }
+      .comunidad__redes .comunidad__redes__iconos img {
+        width: 50px;
+        padding: 0;
+        margin: 0; }
+      .comunidad__redes .comunidad__redes__iconos h4 {
+        padding-top: 10px;
+        margin: 0;
         font-size: 0.7rem; } }
+
+/* ------------------------------------------------------------------------------------------------------ NOTICIAS ---------------------------------------------------------------------------------------------------*/
+/* ----- Media Queries Mobile Noticias ----- */
+@media screen and (max-width: 480px) {
+  .noticias__bg .noticias {
+    display: flex;
+    flex-direction: column;
+    padding: 0; }
+    .noticias__bg .noticias h2 {
+      font-size: 0.8rem; }
+    .noticias__bg .noticias p {
+      font-size: 0.7rem; }
+    .noticias__bg .noticias .aniversario .aniversario__media {
+      padding: 0;
+      margin: 0; }
+      .noticias__bg .noticias .aniversario .aniversario__media img {
+        width: 100%; }
+      .noticias__bg .noticias .aniversario .aniversario__media iframe {
+        display: none; }
+    .noticias__bg .noticias .capitulo24 img, .noticias__bg .noticias .tomo12 img, .noticias__bg .noticias .titan img, .noticias__bg .noticias .rock img {
+      width: 80%; }
+    .noticias__bg .noticias div {
+      padding: 20px; } }
+
+/* -------------------------------------------------------------------------------------------- CONTACTO ----------------------------------------------------------------------------------------------------------- */
+/* ----- Media Queries Mobile Noticias ----- */
+@media screen and (max-width: 480px) {
+  .contacto {
+    display: flex;
+    flex-direction: column-reverse; }
+    .contacto .formulario {
+      padding: 0;
+      margin: 0;
+      width: 70%;
+      margin-bottom: 40px; }
+      .contacto .formulario h2 {
+        margin: 0; }
+      .contacto .formulario div {
+        margin: 15px; }
+      .contacto .formulario label {
+        font-size: 0.7rem; }
+      .contacto .formulario option {
+        font-size: 0.7rem; }
+    .contacto .form__text {
+      padding-top: 50px;
+      padding-left: 0;
+      width: 80%; }
+      .contacto .form__text p {
+        font-size: 0.9rem; } }

@@ -1,35 +1,24 @@
 
 /* ------------------------------------------------------------------------------------------------- JUEGO -----------------------------------------------------------------------------------------------------------*/
-.juego__carousel{
-    display: flex;
-    justify-content: space-evenly;
-    .juego__card__surv{
-        background-color: #604417;
-    }
-    .juego__card__kill{
-        background-color: #3f0d12;
-    }
-    .juego__card{
-        background-size: cover;
-        display: flex;
-        flex-direction: column;
-        width: 20vw;
-        margin-top: 7rem;
-        margin-bottom: 7rem;
-        transition: 0.5s;
-        color: #ffffff;
+.juego__card{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-row-gap: 3rem;
+    justify-items: center;
+    padding: 40px;
+    .card{
+        color: black;
         box-shadow: #000000 0px 0px 25px 10px;
+        text-align: center;
+        border: none;
+        width: 50%;
+        transition: 0.5s;
         &:hover{
             transform: scale(1.1,1.1);
-            box-shadow: black 0px 0px 25px 10px;        
+
         }
         .juego__img__hover{
             position: relative;
-            img{
-                display: block;
-                border-top-right-radius: 5px;
-                border-bottom-left-radius: 0px;
-            }
             .juego__img__overlay{
                 position: absolute;
                 top: 0;
@@ -51,31 +40,30 @@
                 }
             }
         }
-        h2{
-            text-align: center;
-            margin: 0;
+        .juego__surv__title{
+            background-image: linear-gradient(315deg, #604417 0%, #b6a536 74%);
+            box-shadow: black 0px 0px 25px 10px;
+            @include border-bottom-radius;
+            h3{
+                margin: 0;
+            }
         }
         .juego__kill__title{
             background-image: linear-gradient(315deg, #3f0d12 0%, #8a0c0c 74%);
             box-shadow: black 0px 0px 25px 10px;
-            border-bottom-left-radius: 5px;
+            @include border-bottom-radius;
+            h3{
+                margin: 0;
+            }
         }
-        .juego__surv__title{
-            background-image: linear-gradient(315deg, #604417 0%, #b6a536 74%);
-            box-shadow: black 0px 0px 25px 10px;
-            border-bottom-left-radius: 5px;
-            border-bottom-right-radius: 5px;
-        }
-        
     }
-} 
-
+}
 .surv__bg{
-    background-image: url(../Media/Sobrevivientes/surv_bg.jpg);
+    background-image: url("../Media/Sobrevivientes/surv_bg.jpg");
     background-size: cover;
 }
 .killer__bg{
-    background-image: url(../Media/Asesinos/killer_bg.jpg);
+    background-image: url("../Media/Asesinos/killer_bg.jpg");
     background-size: cover;
 }
 

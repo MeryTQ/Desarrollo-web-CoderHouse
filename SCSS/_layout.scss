@@ -9,7 +9,7 @@ body{
     overflow-x: hidden ;
 }
 h2{
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-family: "roboto";
 }
 h3{
@@ -17,11 +17,11 @@ h3{
     font-family: "roboto";
 }
 h4{
-    font-size: 1.3rem;
+    font-size: 1rem;
     font-family: "archivo narrow";
 }
 p{
-    font-size: 1rem;
+    font-size: 0.9rem;
     font-family: "archivo narrow";
 }
 .encabezado__secciones{
@@ -40,7 +40,7 @@ p{
 /* ----- Media Queries Mobile Encabezados ----- */
 @media screen and (max-width:480px){
     .encabezado__secciones h2{
-        font-size: 1rem;
+        font-size: 0.8rem;
         padding: 5px;
     }
 } 
@@ -60,68 +60,33 @@ header{
 
 /* ---------- NAV ---------- */ 
 nav{
-    width: 100%;
-    font-size: 1.1rem;
-    position: sticky; top:0;
-    background-color: rgb(0, 0, 0);
-    z-index: 1;
-    .menu{
-        margin: auto;
-        &, & ul{
-            list-style: none;
-            display: flex;
-            flex-direction: row;
-            justify-content: center;        
-        }
-        & li a{
-            background-color: black;
-            color: white;
-            text-decoration: none;
-            font-family: "archivo narrow";
-            padding: 12px 30px 12px 30px;
-            display: block;
-            animation-name: animacion_nav;
-            transition: 0.2s;        
-        }
-        &>li{ 
-            float: left;
-        }
-        & li a:hover{
-            background-color: white;
-            color: black;        
-        }
-        & li ul{
-            display: none;
-            position: absolute;
-            padding: 0;        
-        }
-        & li:hover ul{
-            display: block;
-        }
-        .descargar{
-            font-size: 1.2rem;
-            background-color: #7c0000;
-            color: white;
-            text-decoration: none;
-            font-family: "archivo narrow";
-            position: absolute;
-            display: flex;
-            padding: 10px 30px 10px 30px;
-            left: 91%;        
-        }
-        .descargar:hover{
-            background-color: #a70000;
-            color: white;        
+    background-color: black;
+    .barra{
+        background-color: #000000;
+        .barra__items{
+            justify-content: center;
+            a{
+                color: white;
+                font-family: "archivo narrow";
+                margin-left: 20px;
+                transition: 0.4s;
+                &:hover{
+                    color: #7c0000;
+                }
+            }
         }
     }
-    @keyframes animacion_nav{
-        0%{
-            background-color: black;
+}
+
+/* ----- Media Queries Mobile Nav ----- */
+@media screen and (max-width:480px) {
+    nav{
+        .barra{
+            button{
+                padding: 2px;
+            }
         }
-        100%{
-            background-color: white;
-        }
-    }    
+    }
 }
 
 /* ---------- BANNER ---------- */
@@ -130,7 +95,7 @@ nav{
     display: flex;
     justify-content: center;
     img{
-        width: 1900px;
+        width: 1700px;
     }
 }
 
@@ -169,34 +134,32 @@ footer{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         align-items: center;
-        padding: 50px;
         border-top: 5px solid #929292; 
+        padding: 30px;
         .menu__footer{
             ul{
                 list-style: none;
+                margin: 0; padding: 0;
             }
             a{
                 font-family: "archivo narrow";
                 color: white;   
-                text-decoration: none;         
+                text-decoration: none;        
             }
         }  
-        .unete{
-            display: none;       
-        } 
         .icono__redes{
             display: flex;
             flex-direction: row;
             justify-content: space-around; 
             img{
-                width: 40px;
+                width: 30px;
             }       
         }
         .icono__footer{
             display: flex;
-            flex-direction: row-reverse;
+            justify-content: flex-end;
             img{
-                width: 300px;
+                width: 35%;
             }        
         }
     }
@@ -212,9 +175,9 @@ footer{
             text-align: center;
             .menu__footer{
                 padding-bottom: 40px;
-            }
-            .unete{
-                padding-bottom: 40px;
+                a{
+                    font-size: 0.8rem;
+                }
             }
             .icono__redes{
                 display: flex;
@@ -223,16 +186,32 @@ footer{
                 width: 320px;
                 padding-bottom: 40px;
                 img{
-                    width: 30px;
+                    width: 20px;
                 }    
             }
             .icono__footer{
                 img{
-                    width: 200px;
+                    width: 150px;
                 }
             }
         }
     }
 }
 
+/* ---------- Border ----------*/
+@mixin border-bottom-radius {    
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+@mixin border-top-radius {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+ /* ---------- img Noticias ---------- */
+ @mixin img-noticias {
+    width: 380px;
+    border: 1px solid #7c0000;
+    box-shadow: black 0px 0px 25px 10px;
+    transition: 0.5s; 
+ }
 

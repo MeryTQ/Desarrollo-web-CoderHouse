@@ -1,0 +1,85 @@
+
+/* ------------------------------------------------------------------------------------------------------------- COMUNIDAD -------------------------------------------------------------------------------------------*/
+/* --------------- Comunidad --------------- */
+.comunidad{
+    color: white;
+    background-color: #000000;
+    background-image: linear-gradient(315deg, black 0%, #0e0e0e 74%);
+    background-size: cover;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    text-align: center;
+    .comunidad__media{
+        img{
+            width: 100%;
+            box-shadow: #727272 0px 0px 25px 1px;        
+        }
+    }
+    .comunidad__iconos{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        justify-items: center;
+        align-items: center;
+        width: 100%;    
+        img{
+            width: 100px;
+            border-radius: 100px;        
+            transition: 0.5s;
+            &:hover{
+                transform: scale(1.1,1.1);
+                box-shadow: white 0px 0px 5px 1px;
+                border-radius: 100px;            
+            }
+        }
+        h4{
+            padding: 20px;
+        }
+    }
+}
+
+/* --------------- Redes ---------------*/
+.comunidad__redes{
+    color: white;
+    background-color: #000000;
+    background-image: linear-gradient(315deg, black 0%, #0e0e0e 74%);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    position: relative;
+    .comunidad__redes__iconos{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        justify-items: center;
+        align-self: center;
+        width: 100%;  
+        img{
+            width: 100px;
+            border-radius: 100px;   
+            transition: 0.5s;
+            &:hover{
+                transform: scale(1.1,1.1);
+                box-shadow: white 0px 0px 5px 1px;
+                border-radius: 100px;            
+            }     
+        }  
+        h4{
+            padding: 20px;
+        }
+    }
+    .comunidad__media{
+        img{
+            width: 100%;
+            box-shadow: #727272 0px 0px 25px 1px;  
+        }
+    }
+}

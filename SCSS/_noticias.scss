@@ -1,0 +1,95 @@
+ 
+ /* ------------------------------------------------------------------------------------------------------- NOTICIAS ------------------------------------------------------------------------------------------------ */
+ .noticias__bg{
+    background-image: url("../Media/Background.jpg");
+    background-size: cover;
+    .noticias{
+        color: white;
+        text-align: center;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+        "aniversario capitulo24"
+        "aniversario tomo12"
+        "titan rock";
+        padding: 50px;
+        .aniversario{   /* ---------- Aniversario ---------- */
+            background-image: url("../Media/Noticias/Noticias\ fondo.png");
+            box-shadow: black 0px 0px 25px 10px;
+            grid-area: aniversario;       
+            .aniversario__media{
+                iframe{
+                    width: 600px;
+                    height: 300px;
+                    border: 1px solid #7c0000;
+                    box-shadow: black 0px 0px 25px 10px;  
+                    margin-bottom: 40px;              
+                }
+                img{
+                    border: 1px solid #7c0000;
+                    box-shadow: black 0px 0px 25px 10px;
+                    transition: 0.5s;    
+                    &:hover{
+                        transform: scale(1.1,1.1);
+                        border: 2px solid #7c0000;                    
+                    }            
+                }
+            }
+        }
+        .capitulo24{   /* ---------- Capitulo 24 ---------- */
+            background-image: url("../Media/Noticias/Noticias\ fondo.png");
+            box-shadow: black 0px 0px 25px 10px;
+            grid-area: capitulo24;   
+            img{
+                @include img-noticias;
+                &:hover{
+                    transform: scale(1.1,1.1);
+                    border: 2px solid #7c0000;                
+                }          
+            }     
+        }
+        .tomo12{   /* ---------- Tomo 12 ---------- */
+            background-image: url("../Media/Noticias/Noticias\ fondo.png");
+            box-shadow: black 0px 0px 25px 10px;
+            grid-area: tomo12;   
+            img{
+                @include img-noticias;
+                &:hover{
+                    transform: scale(1.1,1.1);
+                    border: 2px solid #7c0000;                
+                }    
+            }     
+        }
+        .titan{
+            background-image: url("../Media/Noticias/Noticias\ fondo.png");
+            box-shadow: black 0px 0px 25px 10px;
+            grid-area: titan;  
+            img{
+                @include img-noticias;
+                &:hover{
+                    transform: scale(1.1,1.1);
+                    border: 2px solid #7c0000;                
+                }            
+            }      
+        }
+        .rock{
+            background-image: url("../Media/Noticias/Noticias\ fondo.png");
+            box-shadow: black 0px 0px 25px 10px;
+            grid-area: rock;    
+            img{
+                @include img-noticias;
+                &:hover{
+                    transform: scale(1.1,1.1);
+                    border: 2px solid #7c0000;                
+                }        
+            }    
+        }
+        div{
+            margin: 40px;
+            padding: 15px;    
+            p{
+                margin: 0;
+            }
+        }
+    }
+ }

@@ -6,12 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow&display=swap" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon_io//favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon_io//favicon-16x16.png">
+    <link rel="manifest" href="./favicon_io//site.webmanifest">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="./Css/bootstrap.min.css">
     <link rel="stylesheet" href="./Css/estilo.css">
-    <meta name="description" content="Juego de terror multijugador 4 vs 1 ">
-    <meta name="keywords" content="dead by daylight, dbd, juego, gamer, game, horror, terror">
+    <meta name="description" content="Juego de terror multijugador 4 vs 1 disponible en todas las plataformas">
+    <meta name="keywords" content="dead by daylight, dbd, juego, gamer, game, horror, terror, steam, epicgames, plataformas, dlc, sobreviviente, asesino, killer, survivor, surv">
     <title>Dead by Daylight</title>
 </head>
 <body>
@@ -21,22 +25,22 @@
         </div>
     </header>
     
-    <nav> <!----- Inicio Menu Nav ----->
-        <ul class="menu"> 
-            <li><a href="./index.html">Inicio</a>
-                <ul>
-                    <li><a href="">Submenu1</a></li>
-                    <li><a href="">Submenu2</a></li>
-                    <li><a href="">Submenu3</a></li>
-                </ul>
-            </li>
-            <li><a href="./Pages/juego.html">Juego</a></li>
-            <li><a href="./Pages/comunidad.html">Comunidad</a></li>
-            <li><a href="./Pages/noticias.html">Noticias</a></li>
-            <li><a href="./Pages/contacto.html">Contacto</a></li>
-            <a class="descargar" href="./Pages/descargar.html">DESCARGAR</a>
-        </ul>
-    </nav>
+    <nav class="navbar navbar-expand-lg"> <!----- Inicio menu nav ----->
+        <div class="container-fluid barra">
+          <button class="navbar-toggler navbar-dark" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse barra__items" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-link" aria-current="page" href="./index.html">Inicio</a>
+              <a class="nav-link" href="./Pages/juego.html">Juego</a>
+              <a class="nav-link" href="./Pages/comunidad.html">Comunidad</a>
+              <a class="nav-link" href="./Pages/noticias.html">Noticias</a>
+              <a class="nav-link" href="./Pages/contacto.html">Contacto</a>
+            </div>
+          </div>
+        </div>
+      </nav>
     
     <main>
         <!----- Banner principal ----->
@@ -51,35 +55,30 @@
         </div>
         <section class="seccion__bienvenidos">  
             <article class="sobre__juego wow animate__animated animate__fadeIn" > <!----- Sobre el juego ----->
-                <h2>¿Queres saber de que se trata?</h2> <br>
+                <h3>¿Queres saber de que se trata?</h3> <br>
                 <p>Dead by Daylight es un juego de horror de multijugador (4 contra 1) en el que un jugador representa el rol del asesino despiadado y los 4 restantes juegan como supervivientes que intentan escapar de él para evitar ser capturados y asesinados.</p> <br>
-                <h2>Survivor:</h2>
+                <h4>Survivor:</h4>
                 <p>El objetivo de los sobrevivientes es escapar del área cerrada, lo que se puede hacer de dos maneras: reparando un cierto número de generadores deshabilitados (por lo general 
                 son cinco) para proporcionar potencia a los interruptores que abren grandes puertas metálicas para salir del área; o escapando a través del blacklock, una escotilla. Hay dos maneras de 
                 acceder a esta escotilla, se abre cuando queda un sobreviviente o mediante una llave.</p> <br>
-                <h2>Killer:</h2>
+                <h4>Killer:</h4>
                 <p>Al cazar a los supervivientes, el asesino debe capturarlos golpeándolos dos veces con su arma, atraparlos dentro de los casilleros, mientras reparan un generador o intentan salvar a un compañero. El asesino puede matar a los sobrevivientes arrojándolos sobre uno de los ganchos en el área y esperando que las garras de La Entidad terminen con ellos.</p>
             </article>
             
             <article class="plataformas1 wow animate__animated animate__fadeIn"> <!----- Plataformas disponibles ----->
                 <div class="plataformas2">
                     <div>
-                        <h2>¡Disponible en todas las plataformas!</h2> <br>
-                        <h3>Ahora tambien la version Mobile en Google Play</h3>
+                        <h3>¡Disponible en todas las plataformas!</h3> 
+                        <p>Ahora tambien la version Mobile en Google Play</p> <br>
                     </div> 
-                    <div class="plataformas__iconos1">
-                        <img src="./Media/Plataformas/Steam.png" alt="steam">
-                        <img src="./Media/Plataformas/Epic games.png" alt="epicgames">
-                        <img src="./Media/Plataformas/Play Station.png" alt="playstation">
+                    <div class="plataformas__iconos">
+                        <div><img src="./Media/Plataformas/Steam.png" alt="steam"></div>
+                        <div><img src="./Media/Plataformas/Epic games.png" alt="epicgames"></div>
+                        <div><img src="./Media/Plataformas/Play Station.png" alt="playstation"></div>
+                        <div><img src="./Media/Plataformas/Xbox.png" alt="xbox"></div>
+                        <div><img src="./Media/Plataformas/Nintendo.png" alt="nintendo"></div>                 
+                        <div><img src="./Media/Plataformas/Stadia.png" alt="stadia"></div>
                     </div>
-                    <div class="plataformas__iconos2">
-                        <img src="./Media/Plataformas/Xbox.png" alt="xbox">
-                        <img src="./Media/Plataformas/Nintendo.png" alt="nintendo">                  
-                        <img src="./Media/Plataformas/Stadia.png" alt="stadia">
-                    </div>
-                </div>
-                <div> 
-                    <img src="./Media/Bienvenidos/Mobile.jpeg" alt="Mobile" class="mobile"> 
                 </div>
             </article>
         </section>
@@ -102,35 +101,34 @@
                     <div class="carousel-item active">    <!---------- Carousel 1 ---------->
                         <div class="cards-wrapper dlc__carousel">
                             <div class="dlc__card""> <!---------- Card Sadako Rising---------->
-                                <img src="./Media/DLC/Sadako Rising.jpg" class="card-img-top" alt="DLC Sadako Rising">
-                                <div class="dlc__card__body">
-                                    <div>
-                                        <h3>Killer:</h3>
-                                        <p>- Sadako Rising</p>
-                                        <h3>Survivor:</h3>
-                                        <p>- Yoichi Asakawa.</p>
+                                <div class="inicio__dlc__hover">
+                                    <img src="./Media/DLC/Sadako Rising.jpg" alt="DLC Sadako Rising">
+                                    <div class="inicio__dlc__overlay">
+                                        <ul> Contiene:
+                                            <li>Asesino: The Onyro.</li>
+                                            <li>Sobreviviente: Yoichi Asakawa.</li>
+                                            <li>Llavero universal exclusivo.</li>
+                                        </ul>
                                     </div>
-                                    <div>
-                                        <h3>Cosmetics:</h3>
-                                        <p>- Llavero universal exclusivo.</p>
-                                    </div>
+                                </div>
+                                <div>
+                                    <h3> Sadako Rising </h3>
                                 </div>
                             </div>
                             <div class="dlc__card" > <!----- Card Resident Evil ----->
-                                <img src="./Media/DLC/Resident Evil.jpg" class="card-img-top" alt="DLC Sadako Rising">
-                                <div class="dlc__card__body">
-                                    <div>
-                                        <h3>Killer:</h3>
-                                        <p>- Nemesis.</p>
-                                        <h3>Survivor:</h3>
-                                        <p>- Jill Valentine y Leon S. Kennedy.</p>
+                                <div class="inicio__dlc__hover">
+                                    <img src="./Media/DLC/Resident Evil.jpg" alt="DLC Resident Evil">
+                                    <div class="inicio__dlc__overlay"> 
+                                        <ul> Contiene:
+                                            <li>Asesino: Némesi</li>
+                                            <li>Sobrevivientes: Jill Valentine y Leon S. Kenned</li>
+                                            <li>Mapa: Estación de policía de Raccon City.</li>
+                                            <li>Llavero universal exclusivo.</li>
+                                        </ul>
                                     </div>
-                                    <div>
-                                        <h3>Mapa:</h3>
-                                        <p>- Estacion de policia Raccoon City.</p>
-                                        <h3>Cosmetics:</h3>
-                                        <p>- Llavero universal exclusivo.</p>
-                                    </div>
+                                </div>
+                                <div>
+                                    <h3> Resident Evil </h3>
                                 </div>
                             </div>
                         </div>
@@ -139,37 +137,35 @@
                     <div class="carousel-item">   <!---------- Carousel 2 ---------->
                         <div class="cards-wrapper dlc__carousel">
                             <div class="dlc__card"> <!---------- Card Portrait of a Murder ---------->
-                                <img src="./Media/DLC/Murder.png" class="card-img-top" alt="DLC Portrait of a Murder">
-                                <div class="dlc__card__body">
-                                    <div>
-                                        <h3>Killer:</h3>
-                                        <p>- La Artista.</p>
-                                        <h3>Survivor:</h3>
-                                        <p>- Jonah Vasquez.</p>
-                                    </div>
-                                    <div>
-                                        <h3>Mapa:</h3>
-                                        <p>- Nido de cuervos.</p>
-                                        <h3>Cosmetics:</h3>
-                                        <p>- Item exclusivo para Jonah.</p>
-                                    </div>
+                                <div class="inicio__dlc__hover">
+                                    <img src="./Media/DLC/Murder.png" alt="DLC portrait of a murder">
+                                    <div class="inicio__dlc__overlay">
+                                        <ul> Contiene:
+                                            <li>Asesino: La Artista.</li>
+                                            <li>Sobreviviente: Jonah Vasquez.</li>
+                                            <li>Mapa: Nido de cuervos.</li>
+                                            <li>Item exclusivo para Jonah Vasques.</li>
+                                        </ul>
+                                    </div>  
+                                </div>
+                                <div>
+                                    <h3> Portrait of a Murder </h3>
                                 </div>
                             </div>
                             <div class="dlc__card"> <!---------- Card Saw ---------->
-                                <img src="./Media/DLC/Saw.jpg" class="card-img-top" alt="DLC Saw">
-                                <div class="dlc__card__body">
-                                    <div>
-                                        <h3>Killer:</h3>
-                                        <p>- La cerda.</p>
-                                        <h3>Survivor:</h3>
-                                        <p>- Detective Tapp.</p>
+                                <div class="inicio__dlc__hover">
+                                    <img src="./Media/DLC/Saw.jpg" alt="DLC Saw">
+                                    <div class="inicio__dlc__overlay">
+                                        <ul> Contiene:
+                                            <li>Asesino: La cerda.</li>
+                                            <li>Sobreviviente: Detective Tapp.</li>
+                                            <li>Mapa: Planta procesadora de carne Gideon.</li>
+                                            <li>Item exclusivo para el Detective Tapp.</li>
+                                        </ul>
                                     </div>
-                                    <div>
-                                        <h3>Mapa:</h3>
-                                        <p>- Planta procesadora de Carne.</p>
-                                        <h3>Cosmetics:</h3>
-                                        <p>- Item exclusivo para Tapp.</p>
-                                    </div>
+                                </div>
+                                <div>
+                                    <h3> Saw </h3>
                                 </div>
                             </div>
                         </div>
@@ -178,37 +174,35 @@
                     <div class="carousel-item">   <!---------- Carousel 3 ---------->
                         <div class="cards-wrapper dlc__carousel">
                             <div class="dlc__card">   <!---------- Card A Nightmare on Elm Street  ---------->
-                                <img src="./Media/DLC/Freddy.jpg" class="card-img-top" alt="DLC A Nightmare on Elm Street">
-                                <div class="dlc__card__body">
-                                    <div>
-                                        <h3>Killer:</h3>
-                                        <p>- La Pesadilla.</p>
-                                        <h3>Survivor:</h3>
-                                        <p>- Quentin Smith.</p>
+                                <div class="inicio__dlc__hover">
+                                    <img src="./Media/DLC/Freddy.jpg" alt="DLC A nightmare on Elm Street">
+                                    <div class="inicio__dlc__overlay">
+                                        <ul> Contiene:
+                                            <li>Asesino: La Pedasilla</li>
+                                            <li>Sobreviviente: Quentin Smith.</li>
+                                            <li>Mapa: Springwood - Guardería Badham.</li>
+                                            <li>Item exclusivo para Quentin Smith.</li>
+                                        </ul>
                                     </div>
-                                    <div>
-                                        <h3>Mapa:</h3>
-                                        <p>- Springwood - Guarderia Badham.</p>
-                                        <h3>Cosmetics:</h3>
-                                        <p>- Item exclusivo para Quentin.</p>
-                                    </div>
+                                </div>
+                                <div>
+                                    <h3> A Nightmare on Elm Street</h3>
                                 </div>
                             </div>
                             <div class="dlc__card">   <!---------- Card Halloween ---------->
-                                <img src="./Media/DLC/Halloween.jpg" class="card-img-top" alt="DLC Halloween">
-                                <div class="dlc__card__body">
-                                    <div>
-                                        <h3>Killer:</h3>
-                                        <p>- Michael Myers.</p>
-                                        <h3>Survivor:</h3>
-                                        <p>- Laurie Strode.</p>
+                                <div class="inicio__dlc__hover">
+                                    <img src="./Media/DLC/Halloween.jpg" alt="DLC Halloween">
+                                    <div class="inicio__dlc__overlay">
+                                        <ul> contiene:
+                                            <li>Asesino: Michael Myers.</li>
+                                            <li>Sobreviviente: Laurie Strode.</li>
+                                            <li>Mapa: Haddonfield - Calle Lampkin.</li>
+                                            <li>Item exclusivo para Laurie Strode.</li>
+                                        </ul>
                                     </div>
-                                    <div>
-                                        <h3>Mapa:</h3>
-                                        <p>- Haddonfield - Calle Lampkin.</p>
-                                        <h3>Cosmetics:</h3>
-                                        <p>- Item exclusivo para Laurie.</p>
-                                    </div>
+                                </div>
+                                <div>
+                                    <h3> Halloween </h3>
                                 </div>
                             </div>
                         </div>
@@ -350,7 +344,7 @@
         </div>
         </section>
 
-        <!-------------- SECCION 4 INICIO NOTICIAS --------------->
+        <!------------------------------------------------------------------------------------------- SECCION 4 INICIO NOTICIAS --------------------------------------------------------------------------------------->
 
         <div class="encabezado__secciones">
             <h2 > Noticias </h2>
@@ -378,7 +372,7 @@
             </div>
         </section>
     </main> 
-        <!--------------- SECCION 5 INICIO FOOTER --------------->
+        <!------------------------------------------------------------------------------------------- SECCION 5 INICIO FOOTER ----------------------------------------------------------------------------------------->
     <footer>
         <div class="seccion__footer">
             <div class="menu__footer"> <!----- Menú Footer ----->
@@ -391,16 +385,23 @@
                     <li><a href="./Pages/descargar.html">Descargar</a></li>
                 </ul> 
             </div> 
-            <div> <!----- Redes ----->
-                <div class="unete">
-                    <h3>Únete a la comunidad!</h3>
-                </div>
+            <div> <!----- Redes Footer ----->
                 <div class="icono__redes">
-                    <div><img src="./Media/Redes/Instagram.png" alt="Instagram"></div>
-                    <div><img src="./Media/Redes/Tiktok.png" alt=" Tik Tok"></div>
-                    <div><img src="./Media/Redes/Youtube.png" alt="Youtube"></div>
-                    <div><img src="./Media/Redes/Twitter.png" alt="Twitter"></div>
-                    <div><img src="./Media/Redes/Facebook.png" alt="Facebook"></div>
+                    <div>
+                        <a href="https://www.instagram.com/deadbydaylight/?hl=es" target="_blank"><img src="./Media/Redes/Instagram.png" alt="Instagram"></a>
+                    </div>
+                    <div>
+                        <a href="https://www.tiktok.com" target="_blank"><img src="./Media/Redes/Tiktok.png" alt="Tik Tok"></a>
+                    </div>
+                    <div>
+                        <a href="https://www.youtube.com/c/DeadbyDaylightBHVR" target="_blank"><img src="./Media/Redes/Youtube.png" alt="Youtube"></a>
+                    </div>
+                    <div>
+                        <a href="https://twitter.com/DeadByBHVR" target="_blank"><img src="./Media/Redes/Twitter.png" alt="Twitter"></a>
+                    </div>
+                    <div>
+                        <a href="https://www.facebook.com/DeadByDaylight/" target="_blank"><img src="./Media/Redes/Facebook.png" alt="Facebook"></a>
+                    </div>
                 </div>
             </div>
             <div class="icono__footer"> <!---- Icono Footer ----->

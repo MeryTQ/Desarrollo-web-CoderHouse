@@ -6,11 +6,9 @@
         display: flex;
         flex-direction: column;
         padding: 30px;
-        h2{
-            font-size: 1rem;
-        }
-        h3,p{
+        h3,h4,p{
             font-size: 0.8rem;
+            margin: 0;
         }
         .sobre__juego{
             padding: 20px;
@@ -19,26 +17,23 @@
         .plataformas1{
             display: flex;
             flex-direction: column;
-            padding: 0;
-            margin-top: 20px; 
+            padding: 20px; margin: 0;
+            width: 110%;
             .plataformas2{
-                width: 100%;
-                border: none;
-                padding: 20px;
-                align-items: center;
-                margin-bottom: 20px;  
+                padding: 30px;
+                align-items: center; 
+                height: 10%;
                 img{
                     width: 40px;
-                    margin-bottom: 10px;
-                    transition: none;            
+                    margin-bottom: 10px;           
                 }  
                 & img:hover{
                     width: 40px;
-                }    
+                } 
+                .plataformas__iconos{
+                    grid-row-gap: 2rem;
+                }   
             }  
-            .mobile{
-                width: 100%;
-            } 
         }
     }
 }
@@ -47,26 +42,33 @@
 @media screen and (max-width:480px){ 
     .dlc__seccion{
         .dlc__carousel{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin: 2rem;  
+            display: grid;
+            grid-template-columns: 1fr;
+            justify-items: center;
+            padding-top: 50px;
+            padding-bottom: 50px;
             .dlc__card{
+                width: 300px;
                 margin: 1rem;
-                width: 85%;  
-                .dlc__card__body{
-                    padding: 0px 15px 15px 15px;
-                    margin: 0;
-                    align-items: flex-start;          
-                    p,h3{
-                        font-size: 0.7rem;
+                .inicio__dlc__hover{
+                    img{
+                        width: 300px;
+                    }
+                    .inicio__dlc__overlay{
+                        padding: 0;
                         margin: 0;
+                        width: 300px;
+                        ul{
+                            font-size: 0.8rem;
+                            margin: 0;
+                        }
                     }
-                    h3{
-                        padding-top: 15px;
-                    }
-                }          
-            }  
+                }
+                h3{
+                    font-size: 0.8rem;
+                    padding: 10px;
+                }
+            }
         }
     }
 }
@@ -78,6 +80,7 @@
         h3{
             padding-top: 10px;
             padding-bottom: 10px;
+            font-size: 0.8rem;
         }
     }
     .personajes{
@@ -85,7 +88,7 @@
             margin: 4rem 6rem 4rem 6rem; 
             .personajes__cont{
                 h4{
-                    font-size: 1rem;
+                    font-size: 0.8rem;
                 }
                 padding: 10px;
                 .personajes__surv__title, .personajes__kill__title{
@@ -125,6 +128,9 @@
             iframe{
                 display: none;
             }
+            h3{
+                font-size: 0.9rem;
+            }
             p{
                 font-size: 0.8rem;
             }
@@ -155,29 +161,157 @@
 
 /* ----- Media Queries Mobile Juego ----- */
 @media screen and (max-width: 480px) {
-    .juego__carousel{
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        padding: 50px 50px 50px 50px;
-        .juego__card{
-            display: grid;
-            grid-template-columns: 1fr;
-            width: 50%;
-            margin: 10px;
-            &:hover{
-                transform: none;
-            }
-            .juego__img__hover{
-                .juego__img__overlay{
-                    p{
-                        font-size: 0.7rem;
-                        padding: 10px;
-                    }
+.juego__card{
+    grid-template-columns: 1fr 1fr;
+    .card{
+        width: 70%;
+        .juego__img__hover{
+            .juego__img__overlay{
+                p{
+                    font-size: 0.5rem;
+                    padding: 5px;
                 }
             }
-            h2{
+        }
+        .juego__surv__title{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 5px;
+            h3{
+                font-size: 0.6rem;
+            }
+        }
+        .juego__kill__title{
+            padding: 5px;
+            h3{
+                font-size: 0.6rem;
+            }
+        }
+    }
+}
+}
+
+/* ----------------------------------------------------------------------------------------------------- COMUNIDAD -------------------------------------------------------------------------------------------------- */
+
+/* ----- Media Queries Mobile Comunidad ----- */
+@media screen and (max-width: 480px) {
+    .comunidad{
+        display: flex;
+        flex-direction: column;
+        padding: 40px;
+        .comunidad__media{
+            img{
+                width: 90%;
+            }
+        }
+        .comunidad__iconos{
+            padding-top: 30px;
+            img{
+                width: 50px;
+                padding: 0;
+                margin: 0;        
+            }
+            h4{
+                padding-top: 10px;
+                margin: 0;
+                font-size: 0.9rem;
+            }
+        }
+    }
+    .comunidad__redes{
+        display: flex;
+        flex-direction: column-reverse;
+        padding: 40px;
+        .comunidad__redes__media{
+            img{
+                width: 90%;
+            }
+        }
+        .comunidad__redes__iconos{
+            padding-top: 30px;
+            img{
+                width: 50px;
+                padding: 0;
+                margin: 0; 
+            }
+            h4{
+                padding-top: 10px;
+                margin: 0;
                 font-size: 0.7rem;
+            }
+        }
+    }
+}
+
+/* ------------------------------------------------------------------------------------------------------ NOTICIAS ---------------------------------------------------------------------------------------------------*/
+ /* ----- Media Queries Mobile Noticias ----- */
+ @media screen and (max-width: 480px) {
+    .noticias__bg{
+        .noticias{
+            display: flex;
+            flex-direction: column;
+            padding: 0;
+            h2{
+                font-size: 0.8rem;
+            }
+            p{
+                font-size: 0.7rem;
+            }
+            .aniversario{
+                .aniversario__media{
+                    padding: 0;
+                    margin: 0;
+                    img{
+                        width: 100%; 
+                     }
+                     iframe{
+                         display: none;
+                     }
+                }
+            }
+            .capitulo24, .tomo12, .titan , .rock{
+                img{
+                    width: 80%;
+                }
+            }
+            div{
+                padding: 20px;
+            }
+        }
+    }
+ }
+
+ /* -------------------------------------------------------------------------------------------- CONTACTO ----------------------------------------------------------------------------------------------------------- */
+/* ----- Media Queries Mobile Noticias ----- */
+@media screen and (max-width: 480px) {
+    .contacto{
+        display: flex;
+        flex-direction: column-reverse;
+        .formulario{
+            padding: 0;
+            margin: 0;
+            width: 70%;
+            margin-bottom: 40px;
+            h2{
+                margin: 0;
+            }
+            div{
+                margin: 15px;
+            }
+            label{
+                font-size: 0.7rem;
+            }
+            option{
+                font-size: 0.7rem;
+            }
+        }
+        .form__text{
+            padding-top: 50px;
+            padding-left: 0;
+            width: 80%;
+            p{
+                font-size: 0.9rem;
             }
         }
     }

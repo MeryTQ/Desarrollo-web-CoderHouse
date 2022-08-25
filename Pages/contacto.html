@@ -6,10 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow&display=swap" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="../favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon_io//favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon_io//favicon-16x16.png">
+    <link rel="manifest" href="../favicon_io//site.webmanifest">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" href="../Css/bootstrap.min.css">
     <link rel="stylesheet" href="../Css/estilo.css">
-    <title>Contacto</title>
+    <meta name="description" content="¿Algun problema o sugerencia? Contactanos">
+    <meta name="keywords" content="dead by daylight, dbd, juego, gamer, game, horror, terror, sugerencia, formulario, problema, soporte, support">
+    <title>Dead By Daylight | Contacto</title>
 </head>
 <body>
     <header> <!----- Inicio Logo ----->
@@ -18,22 +24,22 @@
         </div>
     </header>
     
-    <nav> <!----- Inicio Menu Nav ----->
-        <ul class="menu"> 
-            <li><a href="../index.html">Inicio</a>
-                <ul>
-                    <li><a href="">Submenu1</a></li>
-                    <li><a href="">Submenu2</a></li>
-                    <li><a href="">Submenu3</a></li>
-                </ul>
-            </li>
-            <li><a href="../Pages/juego.html">Juego</a></li>
-            <li><a href="../Pages/comunidad.html">Comunidad</a></li>
-            <li><a href="../Pages/noticias.html">Noticias</a></li>
-            <li><a href="../Pages/contacto.html">Contacto</a></li>
-            <a class="descargar" href="./Pages/descargar.html">DESCARGAR</a>
-        </ul>
-    </nav>
+    <nav class="navbar navbar-expand-lg"> <!----- Contacto menu nav ----->
+        <div class="container-fluid barra">
+          <button class="navbar-toggler navbar-dark" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse barra__items" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-link" aria-current="page" href="../index.html">Inicio</a>
+              <a class="nav-link" href="../Pages/juego.html">Juego</a>
+              <a class="nav-link" href="../Pages/comunidad.html">Comunidad</a>
+              <a class="nav-link" href="../Pages/noticias.html">Noticias</a>
+              <a class="nav-link" href="../Pages/contacto.html">Contacto</a>
+            </div>
+          </div>
+        </div>
+      </nav>
 
     <main>
         <!--------------- Banner principal --------------->
@@ -41,8 +47,8 @@
             <img src="../Media/Banner.jpg" alt="Foto principal" width="1750px" class="wow animate__animated animate__fadeIn">
         </section> 
 
-        <div class="EncabezadoSecciones">
-            <h1>Contacto</h1>
+        <div class="encabezado__secciones">
+            <h2>Contacto</h2>
         </div>
 
         <!---------------------------------------------------------------------------------- FORMULARIO --------------------------------------------------------------------------------------------------------------->
@@ -82,15 +88,15 @@
                 </div>
             </div>
 
-            <div class="FormTexto wow animate__animated animate__fadeIn">
+            <div class="form__text wow animate__animated animate__fadeIn">
                 <p> Si tienes alguna sugerencia, necesitas soporte con el juego u otro asunto, por favor completa el formulario y nos pondremos en contacto. </p>
             </div>
         </div>
     </main>
     
     <footer> <!---------------------------------------------------------------------------- CONTACTO FOOTER ----------------------------------------------------------------------------------------------------------->
-        <div class="DivFooter">
-            <div class="MenuFooter"> <!----- Menú Footer ----->
+        <div class="seccion__footer">
+            <div class="menu__footer"> <!----- Menú Footer ----->
                 <ul>
                     <li><a href="../index.html">Inicio</a></li>
                     <li><a href="../Pages/juego.html">Juego</a></li>
@@ -101,18 +107,25 @@
                 </ul>
             </div>
             <div> <!----- Redes Footer ----->
-                <div class="unete">
-                    <h2>Únete a la comunidad!</h2>
-                </div>
-                <div class="IconoRedes">
-                    <div><img src="../Media/Redes/Instagram.png" alt="Instagram" width="40px"></div>
-                    <div><img src="../Media/Redes/Tiktok.png" alt=" Tik Tok" width="40px"></div>
-                    <div><img src="../Media/Redes/Youtube.png" alt="Youtube" width="40px"></div>
-                    <div><img src="../Media/Redes/Twitter.png" alt="Twitter" width="40px"></div>
-                    <div><img src="../Media/Redes/Facebook.png" alt="Facebook" width="40px"></div>
+                <div class="icono__redes">
+                    <div>
+                        <a href="https://www.instagram.com/deadbydaylight/?hl=es" target="_blank"><img src="../Media/Redes/Instagram.png" alt="Instagram"></a>
+                    </div>
+                    <div>
+                        <a href="https://www.tiktok.com" target="_blank"><img src="../Media/Redes/Tiktok.png" alt=" Tik Tok"></a>
+                    </div>
+                    <div>
+                        <a href="https://www.youtube.com/c/DeadbyDaylightBHVR" target="_blank"><img src="../Media/Redes/Youtube.png" alt="Youtube"></a>
+                    </div>
+                    <div>
+                        <a href="https://twitter.com/DeadByBHVR" target="_blank"><img src="../Media/Redes/Twitter.png" alt="Twitter"></a>
+                    </div>
+                    <div>
+                        <a href="https://www.facebook.com/DeadByDaylight/" target="_blank"><img src="../Media/Redes/Facebook.png" alt="Facebook"></a>
+                    </div>
                 </div>
             </div>
-            <div class="IconoFooter"> <!----- Icono Footer ----->
+            <div class="icono__footer"> <!----- Icono Footer ----->
                 <img src="../Media/Icono.png" alt="Icono Logo" width="300px">
             </div>
         </div>
