@@ -4,6 +4,7 @@
 /* ---------- INICIO - BIENVENIDOS - SECCION 1 ---------- */
 .seccion__bienvenidos{
     background-image: url("../Media/Bienvenidos/Fondo\ bienvenidos.jpg");
+    background-size: cover;
     display: flex;
     flex-direction: row;
     justify-items: center;
@@ -21,6 +22,7 @@
         margin-left: 30px; 
         .plataformas2{
             background-image: url("../Media/Background.jpg");
+            background-size: cover;
             box-shadow: black 0px 0px 25px 10px;
             text-align: center;
             color: white;
@@ -49,6 +51,7 @@
 /* ---------- INICIO - DLC - SECCION 2 ---------- */
 .dlc__seccion{
     background-image: url("../Media/DLC/DLC\ fondo.jpg");
+    background-size: cover;
     .dlc__carousel{
         display: flex;
         flex-direction: row;
@@ -137,6 +140,7 @@
 }
 .personajes{
     background-image: url("../Media/Personajes/Personajes\ fondo.jpg");
+    background-size: cover;
     .personajes__carousel{
         display: flex;
         flex-direction: row;
@@ -233,6 +237,7 @@
 /* ---------- INICIO - NOTICIAS - SECCION 3 ---------- */
 .inicio__noticias{
     background-image: url("../Media/Noticias/Noticias\ fondo\ 2.jpg");
+    background-size: cover;
     color: white;
     text-align: center;
     padding-top: 30px;

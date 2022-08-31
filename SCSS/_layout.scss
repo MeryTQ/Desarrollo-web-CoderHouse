@@ -54,13 +54,16 @@ header{
     justify-content: center;
     align-items: center;
     .icono{
-        width: 170px;
+        width: 140px;
     }
 }
 
 /* ---------- NAV ---------- */ 
 nav{
     background-color: black;
+    position: sticky;
+    top: 0;
+    z-index: 1;
     .barra{
         background-color: #000000;
         .barra__items{
@@ -68,7 +71,7 @@ nav{
             a{
                 color: white;
                 font-family: "archivo narrow";
-                margin-left: 20px;
+                margin-left: 30px;
                 transition: 0.4s;
                 &:hover{
                     color: #7c0000;
@@ -156,11 +159,13 @@ footer{
             }       
         }
         .icono__footer{
-            display: flex;
-            justify-content: flex-end;
-            img{
-                width: 35%;
-            }        
+            a{
+                display: flex;
+                justify-content: flex-end;
+                img{
+                    width: 35%;
+                }
+            }       
         }
     }
 }
@@ -190,8 +195,12 @@ footer{
                 }    
             }
             .icono__footer{
-                img{
-                    width: 150px;
+                a{
+                    img{
+                        display: flex;
+                        justify-content: center;
+                        width: 150px;
+                    }
                 }
             }
         }
